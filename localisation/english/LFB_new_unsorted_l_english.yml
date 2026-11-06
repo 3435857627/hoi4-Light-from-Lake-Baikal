@@ -39,8 +39,8 @@
   LFB_GAW_STATUS:0"The Result of the Western Uprising"
   RULE_OPTION_LONG_YUN_WETDREAM_DISABLED:0"Default"
   RULE_OPTION_LONG_YUN_WETDREAM_DISABLED_DESC:0"Long Yun will be defeated by the Nanjing government, and the northwest will continue to lie dormant, waiting for the right moment."
-  RULE_OPTION_LONG_YUN_WETDREAM_ENABLED:0"§RThe Gas Is Coming!§"
-  RULE_OPTION_LONG_YUN_WETDREAM_ENABLED_DESC:0"Long Yun will be able to invade Hunan and enter a stalemate with Nanjing. This may be an §Yopportunity§ for the revolutionaries in the northwest..."
+  RULE_OPTION_LONG_YUN_WETDREAM_ENABLED:0"§RThe Gas Is Coming!§!"
+  RULE_OPTION_LONG_YUN_WETDREAM_ENABLED_DESC:0"Long Yun will be able to invade Hunan and enter a stalemate with Nanjing. This may be an §Yopportunity§ for the revolutionaries in the northwest...§!"
 
   # News Event
   COX_news_event.7.t:0"[Get_newspaper_header] Battle of Hunan"
