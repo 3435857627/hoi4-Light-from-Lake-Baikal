@@ -654,7 +654,7 @@ COX_Liberation_of_Lanzhou = {
 		timeout_effect = {
 			GAN = {
 				clr_country_flag = GAN_Supply_lines_broken
-				remove_ideas = GAN_Supply_lines_broken
+				remove_ideas = GAN_Supply_lines_broken_idea
 				add_ideas = GAN_Supply_lines_across_East_Asia
 			}
 		}
