@@ -834,8 +834,8 @@ COX_landreform_end_effect = {
                             check_variable = {temp_COX_landreform_infrastructure_positive_score = 3}
                             check_variable = {temp_COX_landreform_infrastructure_positive_score = 2}
                     }
-                    set_variable = {COX_landreform_infrastructure_export = 3}
                 }
+                set_variable = {COX_landreform_infrastructure_export = 3}
             }
             else = {
                 set_variable = {COX_landreform_infrastructure_export = 2}
@@ -2012,9 +2012,9 @@ COX_landreform_dec_115_effect = {
                         compare = greater_than_or_equals
                     }
                 }
-                COX = {
-                    country_event = { id = COX_Landreform.107 }
-                }
+            }
+            COX = {
+                country_event = { id = COX_Landreform.107 }
             }
         }
             
