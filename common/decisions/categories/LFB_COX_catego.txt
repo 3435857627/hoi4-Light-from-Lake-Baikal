@@ -140,7 +140,7 @@ COX_Liberate_Shaanxi = {
 	visible = {
 		has_global_flag = LFB_NC_stage_2 #晋陕阶段
 		COX = {
-			NOT = has_country_flag = Shaanxi_gui_hidden
+			NOT = { has_country_flag = Shaanxi_gui_hidden }
 		}
 		
 	}

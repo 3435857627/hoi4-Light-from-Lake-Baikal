@@ -7,7 +7,7 @@ QIN_invasion = {
 		AND = {
 			tag = QIN
             NOT = {
-                has_global_glag = GAN_invasion_ongoing
+                has_global_flag = GAN_invasion_ongoing
             }
 		}
 	}

@@ -365,6 +365,7 @@ scripted_gui = {
 						check_variable = { CountryInfo_tab = 2 }
 					}
 				}
+				set_temp_variable = { f = CountryInfo_Selected }
 			}
 			center_desc_visible = {
 				has_variable = CountryInfo_Selected

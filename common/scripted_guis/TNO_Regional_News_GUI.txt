@@ -1,0 +1,166 @@
+scripted_gui = {
+	TNO_Regional_News_gui = {
+		window_name = "News_Region_Container"
+		parent_window_name = countrydecisionview
+
+		visible = {
+			has_country_flag = Region_News_Window_visible
+		}
+
+		effects = {
+			News_Antarctica_Checkbox_click = {
+				if = {
+					limit = {
+						has_country_flag = Custom_Antarctica_Interest
+					}
+					clr_country_flag = Custom_Antarctica_Interest
+					set_variable = { Antarctica_Checkbox_var = 1 }
+				}
+				else = {
+					set_country_flag = Custom_Antarctica_Interest
+					set_variable = { Antarctica_Checkbox_var = 2 }
+				}
+			}
+
+			News_Europe_Checkbox_click = {
+				if = {
+					limit = {
+						has_country_flag = Custom_Europe_Interest
+					}
+					clr_country_flag = Custom_Europe_Interest
+					set_variable = { Europe_Checkbox_var = 1 }
+				}
+				else = {
+					set_country_flag = Custom_Europe_Interest
+					set_variable = { Europe_Checkbox_var = 2 }
+				}
+			}
+
+			News_Asia_Checkbox_click = {
+				if = {
+					limit = {
+						has_country_flag = Custom_Asia_Interest
+					}
+					clr_country_flag = Custom_Asia_Interest
+					set_variable = { Asia_Checkbox_var = 1 }
+				}
+				else = {
+					set_country_flag = Custom_Asia_Interest
+					set_variable = { Asia_Checkbox_var = 2 }
+				}
+			}
+
+			News_America_Checkbox_click = {
+				if = {
+					limit = {
+						has_country_flag = Custom_America_Interest
+					}
+					clr_country_flag = Custom_America_Interest
+					set_variable = { America_Checkbox_var = 1 }
+				}
+				else = {
+					set_country_flag = Custom_America_Interest
+					set_variable = { America_Checkbox_var = 2 }
+				}
+			}
+
+			News_Africa_Checkbox_click = {
+				if = {
+					limit = {
+						has_country_flag = Custom_Africa_Interest
+					}
+					clr_country_flag = Custom_Africa_Interest
+					set_variable = { Africa_Checkbox_var = 1 }
+				}
+				else = {
+					set_country_flag = Custom_Africa_Interest
+					set_variable = { Africa_Checkbox_var = 2 }
+				}
+			}
+
+			News_Pacific_Checkbox_click = {
+				if = {
+					limit = {
+						has_country_flag = Custom_Oceania_Interest
+					}
+					clr_country_flag = Custom_Oceania_Interest
+					set_variable = { Pacific_Checkbox_var = 1 }
+				}
+				else = {
+					set_country_flag = Custom_Oceania_Interest
+					set_variable = { Pacific_Checkbox_var = 2 }
+				}
+			}
+
+			News_closebutton_click = {
+				clr_country_flag = Region_News_Window_visible
+			}
+		}
+
+		properties = {
+			News_Europe_Checkbox = {
+				frame = Europe_Checkbox_var
+			}
+			News_Asia_Checkbox = {
+				frame = Asia_Checkbox_var
+			}
+			News_Africa_Checkbox = {
+				frame = Africa_Checkbox_var
+			}
+			News_America_Checkbox = {
+				frame = America_Checkbox_var
+			}
+			News_Pacific_Checkbox = {
+				frame = Pacific_Checkbox_var
+			}
+			News_Antarctica_Checkbox = {
+				frame = Antarctica_Checkbox_var
+			}
+		}
+
+		triggers = {
+			News_Europe_Checkbox_click_enabled = {
+				NOT = { original_tag = COX }
+				NOT = { HasEuropeInterest2 = yes }
+			}
+			News_Asia_Checkbox_click_enabled = {
+				NOT = { OR = { original_tag = COX original_tag = XBJ } }
+				NOT = { HasAsiaInterest2 = yes  }
+			}
+			News_America_Checkbox_click_enabled = {
+				NOT = { HasAmericasInterest2 = yes  }
+			}
+			News_Pacific_Checkbox_click_enabled = {
+				NOT = { HasOceaniaInterest2 = yes  }
+			}
+			News_Africa_Checkbox_click_enabled = {
+				NOT = { HasAfricaInterest2 = yes  }
+			}
+			News_Antarctica_Checkbox_click_enabled = {
+				NOT = { HasAntarcticaInterest2 = yes  }
+			}
+		}
+	}
+
+	TNO_News_Button_GUI = {
+		window_name = "News_Button_GUI"
+		parent_window_name = event_header
+
+		effects = {
+			popup_news_button_click = {
+				if = {
+					limit = { NOT = { has_country_flag = Region_News_Window_visible } }
+					set_country_flag = Region_News_Window_visible
+					set_country_flag = gui_disable_arrows
+				}
+				else = {
+					clr_country_flag = Region_News_Window_visible
+				}
+			}
+		}
+
+		triggers = {
+			gui_alert_visible = { NOT = { has_country_flag = gui_disable_arrows } }
+		}
+	}
+}

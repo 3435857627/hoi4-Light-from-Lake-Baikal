@@ -181,6 +181,7 @@ TNO_run_socintern_script = {
 		}
 	}
 }
+}
 
 SocIntern_Tabulate_Votes = {
 	if = {
