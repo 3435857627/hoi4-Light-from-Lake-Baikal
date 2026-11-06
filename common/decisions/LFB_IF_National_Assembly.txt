@@ -2,7 +2,7 @@ National_Assembly={
     In_recess = {
         visible = {
             NOT = {
-                has_global_glag = Voting_now
+                has_global_flag = Voting_now
             }
         }
         available = {
