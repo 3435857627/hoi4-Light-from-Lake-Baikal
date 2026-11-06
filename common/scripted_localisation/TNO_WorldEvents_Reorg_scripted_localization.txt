@@ -1,0 +1,508 @@
+defined_text = {
+	name = Get_Europe_checkbox_tt
+	text = {
+		trigger = {
+			original_tag = COX
+		}
+		localization_key = "LFB_COX_Europe_Checkbox_tt"
+	}
+	text = {
+		trigger = {
+			original_tag = XBJ
+			has_country_flag = Custom_Europe_Interest
+		}
+		localization_key = "LFB_XBJ_Europe_Checkbox_ticked_tt"
+	}
+	text = {
+		trigger = {
+			original_tag = XBJ
+		}
+		localization_key = "LFB_XBJ_Europe_Checkbox_unticked_tt"
+	}
+
+
+	text = {
+		trigger = {
+			original_tag = GER
+		}
+		localization_key = "Europe_Ger_Checkbox_locked_tt"
+	}
+	text = {
+		trigger = {
+			is_in_faction_with = GER
+			NOT = {
+				original_tag = GER
+				capital_scope = { is_in_antarctica = yes }
+			}
+		}
+		localization_key = "Europe_Pakt_Checkbox_locked_tt"
+	}
+	text = {
+		trigger = {
+			check_variable = { ECON_SPHERE_LEADER = ITA }
+			NOT = {
+				capital_scope = { is_in_antarctica = yes }
+			}
+		}
+		localization_key = "Europe_Ita_Checkbox_locked_tt"
+	}
+	text = {
+		trigger = {
+			is_russian_nation = yes
+		}
+		localization_key = "Europe_Rus_Checkbox_locked_tt"
+	}
+	text = {
+		trigger = {
+			original_tag = TUR
+		}
+		localization_key = "Europe_Tur_Checkbox_locked_tt"
+	}
+	text = {
+		trigger = {
+			original_tag = GAL
+			has_government = fascism
+		}
+		localization_key = "Europe_Gal_Checkbox_locked_tt"
+	}
+	text = {
+		trigger = {
+			capital_scope = { is_in_antarctica = yes }
+		}
+		localization_key = "Antarctica_Checkbox_locked_tt"
+	}
+	text = {
+		trigger = {
+			capital_scope = { is_in_europe = yes }
+			NOT = {
+				capital_scope = { is_in_antarctica = yes }
+				is_in_faction_with = GER
+				check_variable = { ECON_SPHERE_LEADER = ITA }
+				is_russian_nation = yes
+				original_tag = TUR
+				original_tag = GER
+			}
+		}
+		localization_key = "Generic_Checkbox_locked_tt"
+	}
+	text = {
+		trigger = {
+			has_country_flag = Custom_Europe_Interest
+			NOT = { HasEuropeInterest2 = yes }
+		}
+		localization_key = "Europe_Checkbox_ticked_tt"
+	}
+	text = {
+		localization_key = "Europe_Checkbox_unticked_tt"
+	}
+}
+
+defined_text = {
+	name = Get_Asia_checkbox_tt
+	text = {
+		trigger = {
+			original_tag = COX
+		}
+		localization_key = "LFB_COX_Asia_Checkbox_tt"
+	}
+	text = {
+		trigger = {
+			original_tag = XBJ
+			has_country_flag = Custom_Asia_Interest
+		}
+		localization_key = "LFB_XBJ_Asia_Checkbox_ticked_tt"
+	}
+	text = {
+		trigger = {
+			original_tag = XBJ
+		}
+		localization_key = "LFB_XBJ_Asia_Checkbox_unticked_tt"
+	}
+
+
+	text = {
+		trigger = {
+			original_tag = JAP
+		}
+		localization_key = "Asia_Jap_Checkbox_locked_tt"
+	}
+	text = {
+		trigger = {
+			is_in_faction_with = JAP
+			NOT = {
+				original_tag = JAP
+				capital_scope = { is_in_antarctica = yes }
+			}
+		}
+		localization_key = "Asia_Sphere_Checkbox_locked_tt"
+	}
+	text = {
+		trigger = {
+			is_russian_nation = yes
+		}
+		localization_key = "Asia_Rus_Checkbox_locked_tt"
+	}
+	text = {
+		trigger = {
+			capital_scope = { is_in_antarctica = yes }
+		}
+		localization_key = "Antarctica_Checkbox_locked_tt"
+	}
+	text = {
+		trigger = {
+			OR = {
+				capital_scope = { is_in_asia = yes }
+				capital_scope = { is_in_middle_east = yes }
+			}
+			NOT = {
+				capital_scope = { is_in_antarctica = yes }
+				is_in_faction_with = JAP
+				is_russian_nation = yes
+				original_tag = JAP
+			}
+		}
+		localization_key = "Generic_Checkbox_locked_tt"
+	}
+	text = {
+		trigger = {
+			has_country_flag = Custom_Asia_Interest
+			NOT = { HasAsiaInterest2 = yes }
+		}
+		localization_key = "Asia_Checkbox_ticked_tt"
+	}
+	text = {
+		localization_key = "Asia_Checkbox_unticked_tt"
+	}
+}
+
+defined_text = {
+	name = Get_America_checkbox_tt
+	text = {
+		trigger = {
+			original_tag = COX
+			has_country_flag = Custom_America_Interest
+		}
+		localization_key = "LFB_COX_America_Checkbox_ticked_tt"
+	}
+	text = {
+		trigger = {
+			original_tag = COX
+		}
+		localization_key = "LFB_COX_America_Checkbox_unticked_tt"
+	}
+	text = {
+		trigger = {
+			original_tag = XBJ
+			has_country_flag = Custom_America_Interest
+		}
+		localization_key = "LFB_XBJ_America_Checkbox_ticked_tt"
+	}
+	text = {
+		trigger = {
+			original_tag = XBJ
+		}
+		localization_key = "LFB_XBJ_America_Checkbox_unticked_tt"
+	}
+
+
+	text = {
+		trigger = {
+			original_tag = USA
+		}
+		localization_key = "America_Usa_Checkbox_locked_tt"
+	}
+	text = {
+		trigger = {
+			is_in_faction_with = USA
+			NOT = {
+				original_tag = USA
+				capital_scope = { is_in_antarctica = yes }
+			}
+		}
+		localization_key = "America_Ofn_Checkbox_locked_tt"
+	}
+	text = {
+		trigger = {
+			original_tag = IBR
+		}
+		localization_key = "America_Ibr_Checkbox_locked_tt"
+	}
+	text = {
+		trigger = {
+			original_tag = MEX
+		}
+		localization_key = "America_Mex_Checkbox_locked_tt"
+	}
+	text = {
+		trigger = {
+			original_tag = BRA
+		}
+		localization_key = "America_Bra_Checkbox_locked_tt"
+	}
+	text = {
+		trigger = {
+			capital_scope = { is_in_antarctica = yes }
+		}
+		localization_key = "Antarctica_Checkbox_locked_tt"
+	}
+	text = {
+		trigger = {
+			OR = {
+				capital_scope = { is_in_north_america = yes }
+				capital_scope = { is_in_south_america = yes }
+			}
+			NOT = {
+				capital_scope = { is_in_antarctica = yes }
+				is_in_faction_with = USA
+				original_tag = IBR
+				original_tag = USA
+				original_tag = BRA
+				original_tag = MEX
+			}
+		}
+		localization_key = "Generic_Checkbox_locked_tt"
+	}
+	text = {
+		trigger = {
+			has_country_flag = Custom_America_Interest
+			NOT = { HasAmericasInterest2 = yes }
+		}
+		localization_key = "America_Checkbox_ticked_tt"
+	}
+	text = {
+		localization_key = "America_Checkbox_unticked_tt"
+	}
+}
+
+defined_text = {
+	name = Get_Africa_checkbox_tt
+	text = {
+		trigger = {
+			original_tag = COX
+			has_country_flag = Custom_Africa_Interest
+		}
+		localization_key = "LFB_COX_Africa_Checkbox_ticked_tt"
+	}
+	text = {
+		trigger = {
+			original_tag = COX
+		}
+		localization_key = "LFB_COX_Africa_Checkbox_unticked_tt"
+	}
+	text = {
+		trigger = {
+			original_tag = XBJ
+			has_country_flag = Custom_Africa_Interest
+		}
+		localization_key = "LFB_XBJ_Africa_Checkbox_ticked_tt"
+	}
+	text = {
+		trigger = {
+			original_tag = XBJ
+		}
+		localization_key = "LFB_XBJ_Africa_Checkbox_unticked_tt"
+	}
+
+
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					original_tag = GER
+					NOT = { has_government = communist }
+				}
+				original_tag = IBR
+				original_tag = ITA
+				original_tag = FRS
+				original_tag = ENG
+			}
+		}
+		localization_key = "Africa_Imperialist_Checkbox_locked_tt"
+	}
+	text = {
+		trigger = {
+			original_tag = JAP
+			NOT = { has_government = communist }
+		}
+		localization_key = "Africa_Jap_Checkbox_locked_tt"
+	}
+	text = {
+		trigger = {
+			original_tag = USA
+			NOT = { has_government = socialist }
+		}
+		localization_key = "Africa_Usa_Checkbox_locked_tt"
+	}
+	text = {
+		trigger = {
+			original_tag = USA
+			has_government = socialist
+		}
+		localization_key = "Africa_Wholesome_Usa_Checkbox_locked_tt"
+	}
+	text = {
+		trigger = {
+			original_tag = GER
+			has_government = communist
+		}
+		localization_key = "Africa_Wholesome_Ger_Checkbox_locked_tt"
+	}
+	text = {
+		trigger = {
+			original_tag = JAP
+			has_government = communist
+		}
+		localization_key = "Africa_Wholesome_Jap_Checkbox_locked_tt"
+	}
+	text = {
+		trigger = {
+			capital_scope = { is_in_antarctica = yes }
+		}
+		localization_key = "Antarctica_Checkbox_locked_tt"
+	}
+	text = {
+		trigger = {
+			capital_scope = { is_in_africa = yes }
+			NOT = {
+				capital_scope = { is_in_antarctica = yes }
+				original_tag = USA
+				original_tag = GER
+				original_tag = JAP
+				original_tag = IBR
+				original_tag = ITA
+				original_tag = FRS
+				original_tag = ENG
+			}
+		}
+		localization_key = "Generic_Checkbox_locked_tt"
+	}
+	text = {
+		trigger = {
+			has_country_flag = Custom_Africa_Interest
+			NOT = { HasAfricaInterest2 = yes }
+		}
+		localization_key = "Africa_Checkbox_ticked_tt"
+	}
+	text = {
+		localization_key = "Africa_Checkbox_unticked_tt"
+	}
+}
+
+defined_text = {
+	name = Get_Oceania_checkbox_tt
+	text = {
+		trigger = {
+			original_tag = COX
+			has_country_flag = Custom_Oceania_Interest
+		}
+		localization_key = "LFB_COX_Oceania_Checkbox_ticked_tt"
+	}
+	text = {
+		trigger = {
+			original_tag = COX
+		}
+		localization_key = "LFB_COX_Oceania_Checkbox_unticked_tt"
+	}
+	text = {
+		trigger = {
+			original_tag = XBJ
+			has_country_flag = Custom_Oceania_Interest
+		}
+		localization_key = "LFB_XBJ_Oceania_Checkbox_ticked_tt"
+	}
+	text = {
+		trigger = {
+			original_tag = XBJ
+		}
+		localization_key = "LFB_XBJ_Oceania_Checkbox_unticked_tt"
+	}
+
+
+	text = {
+		trigger = {
+			original_tag = JAP
+		}
+		localization_key = "Oceania_Jap_Checkbox_locked_tt"
+	}
+	text = {
+		trigger = {
+			is_in_faction_with = USA
+			NOT = { capital_scope = { is_in_australia = yes } }
+		}
+		localization_key = "Oceania_Ofn_Checkbox_locked_tt"
+	}
+	text = {
+		trigger = {
+			capital_scope = { is_in_antarctica = yes }
+		}
+		localization_key = "Antarctica_Checkbox_locked_tt"
+	}
+	text = {
+		trigger = {
+			capital_scope = { is_in_australia = yes }
+			NOT = {
+				capital_scope = { is_in_antarctica = yes }
+				original_tag = JAP
+			}
+		}
+		localization_key = "Generic_Checkbox_locked_tt"
+	}
+	text = {
+		trigger = {
+			has_country_flag = Custom_Oceania_Interest
+			NOT = { HasOceaniaInterest2 = yes }
+		}
+		localization_key = "Oceania_Checkbox_ticked_tt"
+	}
+	text = {
+		localization_key = "Oceania_Checkbox_unticked_tt"
+	}
+}
+
+defined_text = {
+	name = Get_Antarctica_checkbox_tt
+	text = {
+		trigger = {
+			original_tag = COX
+			has_country_flag = Custom_Antarctica_Interest
+		}
+		localization_key = "LFB_COX_Antarctica_Checkbox_ticked_tt"
+	}
+	text = {
+		trigger = {
+			original_tag = COX
+		}
+		localization_key = "LFB_COX_Antarctica_Checkbox_unticked_tt"
+	}
+	text = {
+		trigger = {
+			original_tag = XBJ
+			has_country_flag = Custom_Antarctica_Interest
+		}
+		localization_key = "LFB_XBJ_Antarctica_Checkbox_ticked_tt"
+	}
+	text = {
+		trigger = {
+			original_tag = XBJ
+		}
+		localization_key = "LFB_XBJ_Antarctica_Checkbox_unticked_tt"
+	}
+
+
+	text = {
+		trigger = {
+			HasAntarcticaInterest2 = yes
+		}
+		localization_key = "Antarctica_Checkbox_locked_tt"
+	}
+	text = {
+		trigger = {
+			has_country_flag = Custom_Antarctica_Interest
+			NOT = { HasAntarcticaInterest2 = yes }
+		}
+		localization_key = "Antarctica_Checkbox_ticked_tt"
+	}
+	text = {
+		localization_key = "Antarctica_Checkbox_unticked_tt"
+	}
+}
