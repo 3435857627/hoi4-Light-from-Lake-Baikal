@@ -124,7 +124,7 @@ scripted_gui = {
 				NOT = { HasEuropeInterest2 = yes }
 			}
 			News_Asia_Checkbox_click_enabled = {
-				NOT = { original_tag = COX }
+				NOT = { OR = { original_tag = COX original_tag = XBJ } }
 				NOT = { HasAsiaInterest2 = yes  }
 			}
 			News_America_Checkbox_click_enabled = {

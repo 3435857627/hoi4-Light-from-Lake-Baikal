@@ -108,15 +108,8 @@ defined_text = {
 	text = {
 		trigger = {
 			original_tag = XBJ
-			has_country_flag = Custom_Asia_Interest
 		}
-		localization_key = "LFB_XBJ_Asia_Checkbox_ticked_tt"
-	}
-	text = {
-		trigger = {
-			original_tag = XBJ
-		}
-		localization_key = "LFB_XBJ_Asia_Checkbox_unticked_tt"
+		localization_key = "LFB_XBJ_Asia_Checkbox_tt"
 	}
 
 
