@@ -131,8 +131,8 @@ COX_Nanking_Negotiation_category = {
 			if = {
 				limit = {
 					OR = {
-						COX_NN_CPC_willing = 0
-						COX_NN_KMT_willing = 0
+						check_variable = { COX_NN_CPC_willing = 0}
+						check_variable = { COX_NN_KMT_willing = 0}
 					}
 				}
 				set_country_flag = COX_Nanking_Negotiations_Failed_flag
@@ -206,8 +206,8 @@ COX_Nanking_Negotiation_category = {
 			if = {
 				limit = {
 					OR = {
-						COX_NN_CPC_willing = 0
-						COX_NN_KMT_willing = 0
+						check_variable = { COX_NN_CPC_willing = 0}
+						check_variable = { COX_NN_KMT_willing = 0}
 					}
 				}
 				set_country_flag = COX_Nanking_Negotiations_Failed_flag
@@ -318,8 +318,8 @@ COX_Nanking_Negotiation_category = {
 			if = {
 				limit = {
 					OR = {
-						COX_NN_CPC_willing = 0
-						COX_NN_KMT_willing = 0
+						check_variable = { COX_NN_CPC_willing = 0}
+						check_variable = { COX_NN_KMT_willing = 0}
 					}
 				}
 				set_country_flag = COX_Nanking_Negotiations_Failed_flag
@@ -397,8 +397,8 @@ COX_Nanking_Negotiation_category = {
 			if = {
 				limit = {
 					OR = {
-						COX_NN_CPC_willing = 0
-						COX_NN_KMT_willing = 0
+						check_variable = { COX_NN_CPC_willing = 0}
+						check_variable = { COX_NN_KMT_willing = 0}
 					}
 				}
 				set_country_flag = COX_Nanking_Negotiations_Failed_flag
@@ -500,8 +500,8 @@ COX_Nanking_Negotiation_category = {
 			if = {
 				limit = {
 					OR = {
-						COX_NN_CPC_willing = 0
-						COX_NN_KMT_willing = 0
+						check_variable = { COX_NN_CPC_willing = 0}
+						check_variable = { COX_NN_KMT_willing = 0}
 					}
 				}
 				set_country_flag = COX_Nanking_Negotiations_Failed_flag
@@ -628,8 +628,8 @@ fire_only_once = yes
 			if = {
 				limit = {
 					OR = {
-						COX_NN_CPC_willing = 0
-						COX_NN_KMT_willing = 0
+						check_variable = { COX_NN_CPC_willing = 0}
+						check_variable = { COX_NN_KMT_willing = 0}
 					}
 				}
 				set_country_flag = COX_Nanking_Negotiations_Failed_flag
@@ -733,8 +733,8 @@ fire_only_once = yes
 			if = {
 				limit = {
 					OR = {
-						COX_NN_CPC_willing = 0
-						COX_NN_KMT_willing = 0
+						check_variable = { COX_NN_CPC_willing = 0}
+						check_variable = { COX_NN_KMT_willing = 0}
 					}
 				}
 				set_country_flag = COX_Nanking_Negotiations_Failed_flag
@@ -970,8 +970,8 @@ fire_only_once = yes
 			if = {
 				limit = {
 					OR = {
-						COX_NN_CPC_willing = 0
-						COX_NN_KMT_willing = 0
+						check_variable = { COX_NN_CPC_willing = 0}
+						check_variable = { COX_NN_KMT_willing = 0}
 					}
 				}
 				set_country_flag = COX_Nanking_Negotiations_Failed_flag
