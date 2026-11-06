@@ -149,6 +149,18 @@ scripted_gui = {
 		effects = {
 			popup_news_button_click = {
 				if = {
+					limit = { original_tag = COX }
+					set_country_flag = Custom_Europe_Interest
+					set_country_flag = Custom_Asia_Interest
+					set_variable = { Europe_Checkbox_var = 2 }
+					set_variable = { Asia_Checkbox_var = 2 }
+				}
+				if = {
+					limit = { original_tag = XBJ }
+					set_country_flag = Custom_Asia_Interest
+					set_variable = { Asia_Checkbox_var = 2 }
+				}
+				if = {
 					limit = { NOT = { has_country_flag = Region_News_Window_visible } }
 					set_country_flag = Region_News_Window_visible
 					set_country_flag = gui_disable_arrows

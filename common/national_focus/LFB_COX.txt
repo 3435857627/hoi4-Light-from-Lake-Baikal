@@ -991,7 +991,7 @@ focus_tree = {#土改后建设时期
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
 				amount = 50
-				producer = SIK
+				producer = MEN
 			}
 			country_event = {
 				id = COX.87
