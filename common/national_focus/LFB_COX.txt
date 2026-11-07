@@ -898,10 +898,11 @@ focus_tree = {#土改后建设时期
 			focus = COX_Inspect_The_Army
 		}
 		completion_reward = {
-			delete_unit_template_and_units = {
-				division_template = "Xinjiang People's Volunteer Army"
-				disband = yes
-			}
+			# 2026-11-07：暂时停用「删除部队」效果（点该焦点即崩溃 C0000005，待查）
+			# delete_unit_template_and_units = {
+				# division_template = "Xinjiang People's Volunteer Army"
+				# disband = yes
+			# }
 			add_timed_idea = {
 				idea = old_red_army
 				days = 60
@@ -1813,12 +1814,6 @@ focus_tree = {#青海危机
 			}
 			army_experience = 50
 			TNO_improve_army_professionalism_low = yes
-			custom_effect_tooltip = COX_red_Guards_tech_1_tt
-			hidden_effect = {
-				set_technology = {
-					red_Guards_tech_1 = 1
-				}
-			}
 		}
 	}
 	focus = {

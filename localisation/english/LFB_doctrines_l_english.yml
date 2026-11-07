@@ -1,0 +1,28 @@
+﻿l_english:
+ # ===== Subdoctrine: Workers' and Peasants' Red Army (Army Core / infantry) =====
+ SUBDOCTRINE_COX_RED_ARMY: "Workers' and Peasants' Red Army"
+ SUBDOCTRINE_COX_RED_ARMY_DESC: "Xinjiang's industry cannot sustain a modern army, but it can sustain an army of the workers and peasants. We lack guns, tanks and trucks in abundance; what we have is discipline, party branches, and peasants willing to hand over their last sack of flour. The Red Guards do not need to be stronger than the enemy - only to fight where the enemy cannot deploy, and at a cost the enemy cannot bear."
+ COX_red_army_sanwan_reorganization: "Sanwan Reorganization"
+ COX_red_army_sanwan_reorganization_desc: "Scattered bands of armed men across the gobi and the oases are reorganized into units with designations, discipline and political commissars. From now on the Red Guards are not a crowd of peasants with rifles - they are an army."
+ COX_red_army_party_branch_in_company: "A Branch in Every Company"
+ COX_red_army_party_branch_in_company_desc: "Party branches are established down to company level, so orders no longer depend on a chain of officers. Even if the commander falls, the company still knows where it must go."
+ COX_red_army_officers_and_men_alike: "Officers and Men Alike"
+ COX_red_army_officers_and_men_alike_desc: "Officers eat, sleep and fight alongside their men. Pay is no longer a matter of money but of conviction and shared hardship - and such a unit can scatter and still reassemble itself."
+ COX_red_army_three_rules_eight_notices: "Three Rules and Eight Notices"
+ COX_red_army_three_rules_eight_notices_desc: "Take not a single needle or thread from the people. Our supplies come from captured stocks and from the villages, not from a supply line the enemy can cut at will."
+ COX_red_army_spark_starts_prairie_fire: "A Single Spark"
+ COX_red_army_spark_starts_prairie_fire_desc: "Every village is a base area; every Red Guard unit is an ember. What is a band of partisans today will be an army group tomorrow."
+ # ===== Subdoctrine: Harassment and Sabotage (Fire Support / combat_support) =====
+ SUBDOCTRINE_COX_HARASSMENT_SABOTAGE: "Harassment and Sabotage"
+ SUBDOCTRINE_COX_HARASSMENT_SABOTAGE_DESC: "We will not win a stand-up battle, but we can make the enemy's rear areas unbearable. Railways, bridges, fuel depots, telephone lines - the Red Guards Demolition Teams are not meant to hold back the armored tide, but to leave it without fuel, without roads, and without direction."
+ COX_harassment_sabotage_railway_sabotage: "Railway Sabotage"
+ COX_harassment_sabotage_railway_sabotage_desc: "Blow a stretch of track at night and a whole military train sits idle on the gobi by dawn. The demolition teams are not there to kill - they are there to make the enemy's timetable wrong forever."
+ COX_harassment_sabotage_mine_warfare: "Mine Warfare"
+ COX_harassment_sabotage_mine_warfare_desc: "Mine the roads the enemy must use and turn every kilometer into a gamble. Their engineers can clear mines, but they cannot clear an entire province."
+ COX_harassment_sabotage_sparrow_warfare: "Sparrow Warfare"
+ COX_harassment_sabotage_sparrow_warfare_desc: "Three or five men to a group: strike and run, run and strike again. When the enemy concentrates we vanish; when they disperse we appear behind them."
+ COX_harassment_sabotage_tunnel_warfare: "Tunnel Warfare"
+ COX_harassment_sabotage_tunnel_warfare_desc: "Link the villages, the karez and the gobi into one network under the earth. The enemy may hold the surface; we still hold what lies beneath it."
+ COX_harassment_sabotage_interdict_communications: "Interdicting Communications"
+ COX_harassment_sabotage_interdict_communications_desc: "One successful raid is worth ten frontal charges. Once the enemy's supply lines are cut into pieces, even the strongest division will come apart on its own."
+ # ===== Subdoctrine: People's War (Xinjiang) (Military Doctrine / operations_army) =====

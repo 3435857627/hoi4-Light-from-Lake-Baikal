@@ -1,0 +1,28 @@
+﻿l_simp_chinese:
+ # ===== 次学说：工农红军（陆军核心 / infantry）=====
+ SUBDOCTRINE_COX_RED_ARMY: "工农红军"
+ SUBDOCTRINE_COX_RED_ARMY_DESC: "新疆的工业养不起一支现代化的军队，却养得起一支属于工农的军队。我们没有足够的火炮、坦克与卡车，但我们有纪律、有支部、有愿意把最后一袋面交给部队的农民。赤卫队不需要比敌人更强——只需要在敌人无法展开的地方，以敌人无法承受的代价作战。"
+ COX_red_army_sanwan_reorganization: "三湾改编"
+ COX_red_army_sanwan_reorganization_desc: "把散落在戈壁与绿洲之间的武装整编成有番号、有纪律、有政治委员的部队。从此赤卫队不再是一群拿起枪的农民，而是一支军队。"
+ COX_red_army_party_branch_in_company: "支部建在连上"
+ COX_red_army_party_branch_in_company_desc: "把党支部建到连一级，命令不必再靠军官层层传达。哪怕指挥官阵亡，连队也知道自己该往哪里走。"
+ COX_red_army_officers_and_men_alike: "官兵一致"
+ COX_red_army_officers_and_men_alike_desc: "军官与士兵同吃、同住、同战斗，军饷不再靠钱发，而靠信念与共同的苦难维系。这样的部队打散了也能自己聚起来。"
+ COX_red_army_three_rules_eight_notices: "三大纪律八项注意"
+ COX_red_army_three_rules_eight_notices_desc: "不拿群众一针一线。部队的补给来自缴获与群众，而不是一条随时会被敌人切断的后勤线。"
+ COX_red_army_spark_starts_prairie_fire: "星火燎原"
+ COX_red_army_spark_starts_prairie_fire_desc: "每一个村庄都是根据地，每一支赤卫队都是火种。今天的一支游击队，明天就是一支集团军。"
+ # ===== 次学说：袭扰破坏（火力支援 / combat_support）=====
+ SUBDOCTRINE_COX_HARASSMENT_SABOTAGE: "袭扰破坏"
+ SUBDOCTRINE_COX_HARASSMENT_SABOTAGE_DESC: "我们打不赢正面决战，但我们可以让敌人的后方永远不得安宁。铁路、桥梁、油库、电话线——赤卫队破坏小组不负责顶住装甲洪流，它负责让装甲洪流没有油、没有路、没有方向。"
+ COX_harassment_sabotage_railway_sabotage: "破袭战"
+ COX_harassment_sabotage_railway_sabotage_desc: "夜里炸断一段铁路，白天就有一整列军列停在戈壁上。破坏小组的任务不是杀伤，而是让敌人的时间表永远对不上。"
+ COX_harassment_sabotage_mine_warfare: "地雷战"
+ COX_harassment_sabotage_mine_warfare_desc: "在敌人必经之路上埋雷，让每一公里都变成一次赌博。敌人的工兵可以排雷，但排不完一整片土地。"
+ COX_harassment_sabotage_sparrow_warfare: "麻雀战"
+ COX_harassment_sabotage_sparrow_warfare_desc: "三五个人一组，打了就跑，跑了再打。敌人集结时我们消失，敌人分散时我们出现在他们背后。"
+ COX_harassment_sabotage_tunnel_warfare: "地道战"
+ COX_harassment_sabotage_tunnel_warfare_desc: "把村庄、坎儿井与戈壁连成一张地下的网。敌人占领了地面，我们仍然拥有地下。"
+ COX_harassment_sabotage_interdict_communications: "交通破击"
+ COX_harassment_sabotage_interdict_communications_desc: "一次成功的破袭胜过十次正面冲锋。当敌人的补给线被切成碎片，再强的师也会自己瓦解。"
+ # ===== 次学说：人民战争（新疆）（军事学说 / operations_army）=====

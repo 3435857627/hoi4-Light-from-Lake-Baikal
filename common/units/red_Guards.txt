@@ -1,44 +1,125 @@
 sub_units = {
-	red_Guards = {  #赤卫队
-		sprite = infantry  #编制模型
-		map_icon_category = infantry  #地图显示模型 = 步兵
-		
-		priority = 800  #优先度 
-		ai_priority = 200  #AI优先度 = 200
-		active = no  # 开局是否存在
+	red_Guards = {  #赤卫队：主力填线兵种（不依赖炮兵/装甲，靠组织度、地形与缴获撑战线）
+		abbreviation = "RG"          #编制短名
+		sprite = infantry            #编制模型
+		map_icon_category = infantry #地图显示模型 = 步兵
+
+		priority = 900               #编制器里的排序（常规步兵 600 / TNO 步兵 1000）
+		ai_priority = 200
+		active = no                  #开局不可用，由科技 red_Guards_tech 解锁
 
 		type = {
-			infantry   #类型 = 步兵师单位
+			infantry
 		}
-		
-		group = infantry   #类型组 = 步兵单位
-		
-		categories = {  #种类
-			category_front_line  #前线单位
-			category_light_infantry  #轻步兵单位
-			category_all_infantry  #所有步兵类别
-			category_army  #军队类别
-		}
-		
-		#步兵属性
-		combat_width = 2 #战宽
-		equipment_capture_factor = 0.01
-		defense = 0.5
-		
-		#Size Definitions
-		max_strength = 25 #编制最大上限 = 25个
-		max_organisation = 70 #组织度上限 
-		default_morale = 1 # 组织度恢复 
-		manpower = 1000 #单位需求的人力 
 
-		#Misc Abilities
-		training_time = 30  #训练时间 = 30天
-		suppression = 1   #镇压能力 
-		weight = 0.5       #在运输船上的重量 
-		supply_consumption = 0.04  #消耗补给 
-	
-		need = {
-			infantry_equipment = 80  #每个单位所需武器
+		group = infantry
+
+		categories = {               #注意：不要放 category_light_infantry，赤卫队是主力而非轻步兵
+			category_front_line
+			category_all_infantry    #陆军学说的主力加成就是打在这个类别上
+			category_army
 		}
-    }	
-}	
+
+		combat_width = 2
+
+		#结构：比常规步兵更能熬夜——组织度更高、士气略高于常规但低于精锐
+		max_strength = 25
+		max_organisation = 70
+		default_morale = 0.4
+		manpower = 1000
+
+		#成本：装备需求低、训练快、吃补给少（工业劣势下靠数量填线）
+		training_time = 60
+		suppression = 1
+		weight = 0.5
+		supply_consumption = 0.05
+		transport = infantry_equipment
+
+		#不靠炮兵与装甲也能打：这三个字段是对“本营装备数值”的百分比修正（不是绝对值）
+		soft_attack = 0.10     # +10% 软攻（2026-11-07 由 +30% 回调：反坦克炮已自带软攻）
+		defense = 0.10         # +10% 防御（同上，回收白送的增益）
+		breakthrough = 0.20    # +20% 突破
+		#营属那 8 门炮只当自保：硬攻砍到 25%，不做主力反装甲手段
+		hard_attack = -0.75   # -75% 硬攻（2026-11-07 调整）
+
+		#缴获：工业跟不上就靠敌人送装备
+		equipment_capture_factor = 0.05
+
+		#装备：80 步枪 + 8 门反坦克炮（营属反装甲自保；成本仍低于 TNO 的 100 步枪 + 20 炮）
+		need = {
+			infantry_equipment = 80
+			anti_tank_equipment = 8
+		}
+
+		#地形：山地、丘陵、河流、森林 攻防加成，用于守线与反推
+		forest = {
+			attack = 0.15
+			defence = 0.10
+			movement = 0.05
+		}
+		hills = {
+			attack = 0.15
+			defence = 0.10
+			movement = 0.05
+		}
+		mountain = {
+			attack = 0.10
+			defence = 0.15
+			movement = 0.05
+		}
+		river = {
+			attack = 0.15
+			defence = 0.10
+			movement = 0.05
+		}
+	}
+
+	#赤卫队破坏小组：团属支援单位（regimental support），只带反坦克炮，不占步枪、不占编制宽度
+	red_Guards_anti_tank = {
+		abbreviation = "RGAT"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no                  #与赤卫队同一个科技解锁
+		affects_speed = no
+
+		type = {
+			infantry
+			support
+		}
+
+		group = support
+		allowed_battalion_groups = { infantry mobile combat_support }
+
+		categories = {
+			category_front_line
+			category_support_battalions
+			category_regimental_support_battalions   #团级支援（团属支援连）
+			category_army
+			category_anti_tank
+			category_mobile_anti_tank
+		}
+
+		divisional = no              #团属（不是师属支援连），1.19 的写法
+		combat_width = 0
+
+		#成本：不占步枪编制；24 门炮，约为 TNO 同类支援连（72 门）的三分之一
+		need = {
+			anti_tank_equipment = 24
+		}
+
+		manpower = 300
+		training_time = 90
+		max_organisation = 0
+		default_morale = 0.1
+		max_strength = 0.2
+		weight = 0.1
+		supply_consumption = 0.05
+
+		#只反装甲，不拼刺刀、也不守阵地
+		soft_attack = -0.50
+		defense = -0.40
+		breakthrough = 0.20    # +20% 突破（2026-11-07 由 -40% 调整）
+	}
+}

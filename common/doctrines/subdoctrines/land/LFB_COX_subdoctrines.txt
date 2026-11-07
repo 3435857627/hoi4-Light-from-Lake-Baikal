@@ -1,0 +1,181 @@
+# 贝加尔湖之光 —— COX 专属次学说（挂在 TNO「非常规战争」grand doctrine 之下）
+# 2026-11-07 新增：工农红军 / 袭扰破坏 / 人民战争（新疆）
+# 说明：TNO 的次学说结构 = track + 5 个 rewards 节点；节点里的 <子单位id> = { ... } 块只对该兵种生效。
+#       这里用到的子单位：red_Guards（赤卫队）、red_Guards_anti_tank（赤卫队破坏小组）、recon（侦察连）、
+#       logistics_company / signal_company 为原版支援连 id。
+
+COX_red_army = { #陆军核心：工农红军（赤卫队 + 侦察连）
+	track = infantry
+	name = SUBDOCTRINE_COX_RED_ARMY
+	description = SUBDOCTRINE_COX_RED_ARMY_DESC
+	icon = GFX_marine_elite_medium
+
+	xp_cost = 50
+	xp_type = army
+
+	available = {
+		has_doctrine = unconventional_warfare
+		tag = COX
+	}
+
+	ai_will_do = {
+		base = 10
+	}
+
+	# EFFECTS
+	effect = {
+		add_tech_bonus = {
+			bonus = 1
+			uses = 1
+			category = infantry_weapons
+			name = infantry_weapons
+		}
+	}
+	red_Guards = {
+		default_morale = 0.1
+		max_organisation = 5
+	}
+	recon = {
+		recon = 1
+		defense = 0.05
+	}
+
+	rewards = {
+		sanwan_reorganization = {
+			red_Guards = {
+				max_organisation = 5
+				default_morale = 0.1
+			}
+			recon = {
+				defense = 0.05
+				entrenchment = 1
+			}
+		}
+		party_branch_in_company = {
+			red_Guards = {
+				max_organisation = 5
+				defense = 0.05
+			}
+			recon = {
+				recon = 1
+			}
+			coordination_bonus = 0.05
+		}
+		officers_and_men_alike = {
+			effect = {
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = infantry_weapons
+					name = infantry_weapons
+				}
+			}
+			red_Guards = {
+				default_morale = 0.1
+				experience_loss_factor = -0.1
+			}
+			recon = {
+				breakthrough = 0.05
+			}
+		}
+		three_rules_eight_notices = {
+			effect = {
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = logistics_tech
+					name = logistics_tech
+				}
+			}
+			land_reinforce_rate = 0.02
+			red_Guards = {
+				supply_consumption = -0.1
+				equipment_capture_factor = 0.01
+			}
+		}
+		spark_starts_prairie_fire = {
+			enable_tactic = tactic_infantry_charge
+			experience_gain_army_unit_factor = 0.1
+			red_Guards = {
+				breakthrough = 0.15
+				max_organisation = 5
+			}
+			recon = {
+				breakthrough = 0.1
+				recon = 1
+				ap_attack = 0.1
+			}
+		}
+	}
+}
+
+COX_harassment_sabotage = { #火力支援：袭扰破坏（赤卫队破坏小组）
+	track = combat_support
+	name = SUBDOCTRINE_COX_HARASSMENT_SABOTAGE
+	description = SUBDOCTRINE_COX_HARASSMENT_SABOTAGE_DESC
+	icon = GFX_support_companies_medium
+
+	xp_cost = 50
+	xp_type = army
+
+	available = {
+		has_doctrine = unconventional_warfare
+		tag = COX
+	}
+
+	ai_will_do = {
+		base = 10
+	}
+
+	# EFFECTS
+	effect = {
+		add_tech_bonus = {
+			bonus = 1
+			uses = 1
+			category = infantry_weapons
+			name = infantry_weapons
+		}
+	}
+	red_Guards_anti_tank = {
+		max_organisation = 5
+		default_morale = 0.1
+	}
+
+	rewards = {
+		railway_sabotage = {
+			red_Guards_anti_tank = {
+				hard_attack = 0.1
+				breakthrough = 0.05
+			}
+		}
+		mine_warfare = {
+			red_Guards_anti_tank = {
+				defense = 0.15
+				entrenchment = 1
+			}
+		}
+		sparrow_warfare = {
+			red_Guards_anti_tank = {
+				ap_attack = 0.1
+				hard_attack = 0.05
+				supply_consumption = -0.05
+			}
+		}
+		tunnel_warfare = {
+			dig_in_speed_factor = 0.2
+			red_Guards_anti_tank = {
+				max_organisation = 5
+				defense = 0.1
+			}
+		}
+		interdict_communications = {
+			coordination_bonus = 0.1
+			red_Guards_anti_tank = {
+				breakthrough = 0.2
+				hard_attack = 0.15
+				equipment_capture_factor = 0.02
+			}
+		}
+	}
+}
+
