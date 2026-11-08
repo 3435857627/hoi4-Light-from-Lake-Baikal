@@ -1,0 +1,37 @@
+spriteTypes = {
+
+	# 崩溃日志里 33563 条 "Couldnt find texticon" 的重灾区：
+	# common/units 里新增的师级单位类型，引擎会去找 GFX_unit_<type>_icon_small，
+	# 找不到就每 tick 重试一次，最终刷满日志并导致闪退。这里补齐。
+	spriteType = {
+		name = "GFX_unit_red_Guards_icon_small"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_unit_red_guards_icon.dds"
+		noOfFrames = 2
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_unit_red_Guards_anti_tank_icon_small"
+		texturefile = "gfx/texticons/unit_anti_tank_icon_small.dds"
+		noOfFrames = 2
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_unit_militia_icon_small"
+		texturefile = "gfx/texticons/unit_militia_icon_small.dds"
+		noOfFrames = 2
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_unit_IFV_flame_tank_icon_small"
+		texturefile = "gfx/texticons/medium_flamethrower_tank_icon_small.dds"
+		noOfFrames = 2
+		legacy_lazy_load = no
+	}
+
+	# 土改 GUI 文案里的 £GFX_COX_lr_infrastructure，图在但没注册
+	spriteType = {
+		name = "GFX_COX_lr_infrastructure"
+		texturefile = "gfx/scripted_gui/COX_landreform/texticons/infrastructure.png"
+		legacy_lazy_load = no
+	}
+}

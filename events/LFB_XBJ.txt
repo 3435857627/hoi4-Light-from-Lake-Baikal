@@ -355,7 +355,6 @@ country_event = {
 						id = -1
 					}
 					promote_leader = yes
-					promote_leader = paternalism_subtype
 				}
 			}
 		}
