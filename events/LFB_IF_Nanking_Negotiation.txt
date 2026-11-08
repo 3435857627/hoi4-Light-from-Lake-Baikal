@@ -268,7 +268,6 @@ country_event = {
 							id = -1
 						}
 						promote_leader = yes
-						paternalism_subtype = paternalism_transitioning_democracy_subtype
 					}
 				}
 				COX_Sun_Fo = {
@@ -927,7 +926,6 @@ country_event = {
 						advisor = {
 							slot = security_minister
 							idea_token = COX_Mao_Anying_2_sec
-							allowed = { original_tag = COX }
 							traits = {
 								security_minister
 								proponents_of_planned_economy
@@ -949,7 +947,6 @@ country_event = {
 						advisor = {
 							slot = economy_minister
 							idea_token = COX_Liu_Shaoqi_3_eco
-							allowed = { original_tag = COX }
 							traits = {
 								economy_minister
 								COX_Liu_Shaoqi_traits
@@ -966,7 +963,6 @@ country_event = {
 						advisor = {
 							slot = foreign_minister
 							idea_token = COX_Chen_Yi_2_for
-							allowed = { original_tag = COX }
 							traits = {
 								foreign_minister
 								for_well_connected
@@ -1076,7 +1072,6 @@ country_event = {
 						advisor = {
 							slot = security_minister
 							idea_token = COX_Mao_Anying_2_sec
-							allowed = { original_tag = COX }
 							traits = {
 								security_minister
 								proponents_of_planned_economy
@@ -1098,7 +1093,6 @@ country_event = {
 						advisor = {
 							slot = economy_minister
 							idea_token = COX_Liu_Shaoqi_3_eco
-							allowed = { original_tag = COX }
 							traits = {
 								economy_minister
 								COX_Liu_Shaoqi_traits
@@ -1115,7 +1109,6 @@ country_event = {
 						advisor = {
 							slot = foreign_minister
 							idea_token = COX_Chen_Yi_2_for
-							allowed = { original_tag = COX }
 							traits = {
 								foreign_minister
 								for_well_connected

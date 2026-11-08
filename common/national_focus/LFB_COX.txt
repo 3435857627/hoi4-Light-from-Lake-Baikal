@@ -3810,7 +3810,6 @@ focus_tree = {#PRC_IF
 					advisor = {
 						slot = security_minister
 						idea_token = COX_Lu_Dongsheng_sec
-						allowed = { original_tag = COX }
 						traits = {
 							army_infantry_2
 						}

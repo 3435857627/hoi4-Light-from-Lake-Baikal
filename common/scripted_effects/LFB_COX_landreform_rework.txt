@@ -1183,7 +1183,6 @@ COX_landreform_finish_effect = {
                 COX_lr_wc_success_1
             }
         }
-        add_dynamic_modifier = { modifier = COX_landform_ended_modifier }
         #最终清理变量
         clear_array = COX_landreform_dec_done_array 
         clear_variable = COX_landreform_progress_export

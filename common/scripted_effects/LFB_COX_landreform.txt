@@ -592,7 +592,6 @@ COX_land_reform_monthly_effect = {
             set_variable = { COX_landform_ended_effect_value4 = COX_landform_ended_effect_value2 }
             divide_variable = { COX_landform_ended_effect_value4 = 100 }
             remove_dynamic_modifier = { modifier = COX_fs_modifier }
-            add_dynamic_modifier = { modifier = COX_landform_ended_modifier }
             country_event = COX_landreform.1
         }
 

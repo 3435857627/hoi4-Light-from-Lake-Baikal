@@ -16,7 +16,7 @@ characters = {
 		country_leader = {
 			desc = "POLITICS_MASANOBU_TSUJI_DESC"
 			expire = "2000.1.1"
-			ideology = ultranationalism_ultramilitarism_subtype
+			ideology = ultranationalism_stratocracy_subtype
 			traits = { mad_dog }
 			id = -1
 		}

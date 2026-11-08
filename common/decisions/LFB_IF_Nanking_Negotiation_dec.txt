@@ -543,7 +543,6 @@ COX_Nanking_Negotiation_category = {
 				advisor = {
 					slot = economy_minister
 					idea_token = COX_Liu_Shaoqi_2_eco
-					allowed = { original_tag = COX }
 					traits = {
 						economy_minister
 						COX_Liu_Shaoqi_traits
@@ -777,7 +776,6 @@ fire_only_once = yes
 				advisor = {
 					slot = head_of_government
 					idea_token = COX_Mao_Anying_ROC_hog
-					allowed = { original_tag = COX }
 					traits = {
 						head_of_government
 						proponents_of_planned_economy	
@@ -811,7 +809,6 @@ fire_only_once = yes
 				advisor = {
 					slot = head_of_government
 					idea_token = COX_Mao_Anying_DRC_hog
-					allowed = { original_tag = COX }
 					traits = {
 						head_of_government
 						proponents_of_planned_economy	
@@ -842,7 +839,6 @@ fire_only_once = yes
 				advisor = {
 					slot = head_of_government
 					idea_token = COX_Mao_Anying_CR_hog
-					allowed = { original_tag = COX }
 					traits = {
 						head_of_government
 						proponents_of_planned_economy	
@@ -891,7 +887,6 @@ fire_only_once = yes
 				advisor = {
 					slot = head_of_government
 					idea_token = COX_Sun_Fo_ROC_hog
-					allowed = { original_tag = COX }
 					traits = { the_son_of_the_founder }
 					ledger = civilian
 					cost = -1
@@ -913,7 +908,6 @@ fire_only_once = yes
 				advisor = {
 					slot = head_of_government
 					idea_token = COX_Sun_Fo_DRC_hog
-					allowed = { original_tag = COX }
 					traits = { the_son_of_the_founder }
 					ledger = civilian
 					cost = -1
@@ -935,7 +929,6 @@ fire_only_once = yes
 				advisor = {
 					slot = head_of_government
 					idea_token = COX_Sun_Fo_CR_hog
-					allowed = { original_tag = COX }
 					traits = { the_son_of_the_founder }
 					ledger = civilian
 					cost = -1
