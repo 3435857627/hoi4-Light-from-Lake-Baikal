@@ -193,19 +193,19 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_COX_artillery_1945_medium"
-		texturefile = "gfx/interface/technologies/COX_Artillery_45.dds"
+		texturefile = "gfx/interface/technologies/COX_Artillery_45.png"
 	}
 	SpriteType = {
 		name = "GFX_COX_artillery_1950_medium"
-		texturefile = "gfx/interface/technologies/COX_Artillery_50.dds"
+		texturefile = "gfx/interface/technologies/COX_Artillery_50.png"
 	}
 	SpriteType = {
 		name = "GFX_COX_artillery_1970_medium"
-		texturefile = "gfx/interface/technologies/COX_Artillery_70.dds"
+		texturefile = "gfx/interface/technologies/COX_Artillery_70.png"
 	}
 	SpriteType = {
 		name = "GFX_COX_artillery_1990_medium"
-		texturefile = "gfx/interface/technologies/COX_Artillery_90.dds"
+		texturefile = "gfx/interface/technologies/COX_Artillery_90.png"
 	}
 
 	SpriteType = {
@@ -711,27 +711,27 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_COX_strat_stealth_1980_medium"
-		texturefile = "gfx/interface/technologies/RUS_Stealth_Strategic_Bomber_80.dds"
+		texturefile = "gfx/interface/technologies/RUS_Strategic_Bomber_80.dds"
 	}
 	SpriteType = {
 		name = "GFX_COX_strat_stealth_1990_medium"
-		texturefile = "gfx/interface/technologies/RUS_Stealth_Strategic_Bomber_90.dds"
+		texturefile = "gfx/interface/technologies/RUS_Strategic_Bomber_80.dds"
 	}
 	SpriteType = {
 		name = "GFX_COX_tac_stealth_1980_medium"
-		texturefile = "gfx/interface/technologies/RUS_Stealth_Tactical_Bomber_80.dds"
+		texturefile = "gfx/interface/technologies/RUS_Tactical_Bomber_80.dds"
 	}
 	SpriteType = {
 		name = "GFX_COX_tac_stealth_1990_medium"
-		texturefile = "gfx/interface/technologies/RUS_Stealth_Tactical_Bomber_90.dds"
+		texturefile = "gfx/interface/technologies/RUS_Tactical_Bomber_80.dds"
 	}
 	SpriteType = {
 		name = "GFX_COX_light_stealth_1980_medium"
-		texturefile = "gfx/interface/technologies/RUS_Stealth_Fighter_80.dds"
+		texturefile = "gfx/interface/technologies/RUS_Fighter_70.dds"
 	}
 	SpriteType = {
 		name = "GFX_COX_light_stealth_1990_medium"
-		texturefile = "gfx/interface/technologies/RUS_Stealth_Fighter_90.dds"
+		texturefile = "gfx/interface/technologies/RUS_Fighter_70.dds"
 	}
 
 	## COX Helicopters ##
