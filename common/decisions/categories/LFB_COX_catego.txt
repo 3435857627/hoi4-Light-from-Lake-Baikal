@@ -116,6 +116,7 @@ COX_early_industrial_development = {
 
 COX_Liberation_of_Lanzhou = {
 	icon = GFX_Liberation_of_Lanzhou2
+	picture = GFX_COX_Liberation_of_Lanzhou_pic
 	allowed = {
 		tag = COX
 	}

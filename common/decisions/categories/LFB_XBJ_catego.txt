@@ -1,6 +1,6 @@
 XBJ_northwest_crisis = {
 	icon = GFX_XBJ_northwest_crisis
-	picture = GFX_XBJ_northwest_crisis_picJ
+	picture = GFX_XBJ_northwest_crisis_pic
 	allowed = {
 		tag = XBJ
 	}
