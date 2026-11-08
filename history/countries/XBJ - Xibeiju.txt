@@ -178,6 +178,11 @@ set_technology = {
 	military_construction_1 = 1
 }
 
+#与新疆苏区一致：赤卫队科技（对应 COX_Militia_Normalized）
+set_technology = {
+	red_Guards_tech = 1
+}
+
 #NSB tech
 if = {
 	limit = {

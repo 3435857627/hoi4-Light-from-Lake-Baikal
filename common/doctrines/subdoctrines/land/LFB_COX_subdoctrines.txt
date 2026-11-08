@@ -15,7 +15,10 @@ COX_red_army = { #陆军核心：工农红军（赤卫队 + 侦察连）
 
 	available = {
 		has_doctrine = unconventional_warfare
-		tag = COX
+		OR = {
+			tag = COX
+			tag = XBJ
+		}
 	}
 
 	ai_will_do = {
@@ -120,7 +123,10 @@ COX_harassment_sabotage = { #火力支援：袭扰破坏（赤卫队破坏小组
 
 	available = {
 		has_doctrine = unconventional_warfare
-		tag = COX
+		OR = {
+			tag = COX
+			tag = XBJ
+		}
 	}
 
 	ai_will_do = {
