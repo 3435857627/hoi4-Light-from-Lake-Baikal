@@ -1351,6 +1351,12 @@ focus_tree = {#土改后建设时期
 				days = 0
 				random = 12
 			}
+			build_railway = {
+				level = 1
+				fallback = yes
+				path = { 19392 19422 19386 12907 17210 }
+			}
+			custom_effect_tooltip = COX_Finish_Sheng_Railway_tt
 		}
 	}
 	focus = {
