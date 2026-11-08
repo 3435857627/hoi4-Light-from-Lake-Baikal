@@ -1,0 +1,676 @@
+# LFB_COX：整文件覆盖 TNO 的 operations_army_subdoctrines.txt（同路径替换，避免同 id 重复出现两张卡）
+# 与 TNO 原版的差异只有一处：guerrilla_operational_doctrine 的 attrition_of_the_will 里追加了 red_Guards 块
+# TNO 更新本文件后需要重新同步（保留 TNO 原版其余内容逐字不动）
+
+coin_operational_doctrine = { #Anti-Insurgency Tactics
+	track = operations_army
+	name = SUBDOCTRINE_COIN_OPERATIONAL_DOCTRINE
+	description = SUBDOCTRINE_COIN_OPERATIONAL_DOCTRINE_DESC
+	icon = GFX_strategic_cycles_medium
+
+	xp_cost = 100
+	xp_type = army
+
+	available = {
+		NOT = { has_doctrine = unconventional_warfare }
+	}
+
+	ai_will_do = {
+		base = 10
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					tag = UKR
+					AND = {
+						tag = FUK
+						FUK = { is_in_faction_with = GER }
+					}
+					tag = SHO
+					tag = SIG
+					tag = GNG
+					tag = CHI
+					tag = PHI
+					AND = {
+						tag = ALG
+						is_in_faction_with = FRA
+					}
+					tag = SLG
+					tag = CRO
+					AND = {
+						tag = GRE
+						has_government = despotism
+					}
+					AND = {
+						tag = KRK
+						has_government = despotism
+					}
+					tag = VOR
+					AND = {
+						tag = EQG
+						is_in_faction_with = IBR
+					}
+					AND = {
+						tag = SAO
+						is_in_faction_with = IBR
+					}
+					AND = {
+						tag = CBV
+						is_in_faction_with = IBR
+					}
+					AND = {
+						tag = ANG
+						is_in_faction_with = IBR
+					}
+					AND = {
+						tag = MZB
+						is_in_faction_with = IBR
+					}
+					AND = {
+						tag = MOR
+						is_in_faction_with = IBR
+					}
+					AND = {
+						tag = SAF
+						is_in_faction_with = IBR
+					}
+					AND = {
+						tag = IME
+						is_in_faction_with = ITA
+					}
+					AND = {
+						tag = IEA
+						is_in_faction_with = ITA
+					}
+					AND = {
+						tag = HAI
+						is_subject_of = DOM
+					}
+					tag = MEX
+				}
+			}
+		}
+	}
+
+	# EFFECTS
+	effect = {
+		add_tech_bonus = {
+			bonus = 1
+			uses = 1
+			category = military_police_tech
+			name = military_police_tech
+		}
+	}
+	military_police = {
+		max_organisation = 10
+		default_morale = 0.1
+		defense = 0.1
+		experience_loss_factor = -0.1
+	}
+
+	rewards = {
+		cordon_sanitaire = {
+			required_garrison_factor = 0.1
+			light_infantry = {
+				defense = 0.1
+				suppression = 0.25
+			}
+			infantry = {
+				defense = 0.1
+				suppression = 0.5
+			}
+			elite_infantry = {
+				defense = 0.1
+				suppression = 0.5
+			}
+			cavalry = {
+				defense = 0.1
+				suppression = 0.5
+			}
+			military_police = {
+				suppression_factor = 0.05
+			}
+		}
+		butcher_and_bolt = {
+			enable_tactic = tactic_infantry_charge
+			motorized = {
+				defense = 0.1
+				suppression = 0.5
+			}
+			IFV = {
+				defense = 0.1
+				suppression = 0.5
+			}
+			APC = {
+				defense = 0.1
+				suppression = 0.5
+			}
+			armored_car = {
+				defense = 0.1
+				soft_attack = 0.05
+				suppression = 1
+			}
+			military_police = {
+				suppression_factor = 0.05
+			}
+		}
+		secure_collect_protect = {
+			local_resources_factor = 0.1
+			stability_factor = 0.075
+			defensive_war_stability_factor = 0.15
+			political_power_gain = 0.1
+			maintenance_company = {
+				default_morale = 0.15
+				max_organisation = 15
+				defense = 0.1
+			}
+		}
+		innocence_proves_nothing = {
+			enable_tactic = tactic_preemptive_strike
+			required_garrison_factor = -0.1
+			AC_recon = {
+				defense = 0.1
+				default_morale = 0.15
+				max_organisation = 15
+				initiative = 0.01
+				suppression_factor = 0.05
+			}
+			IFV_recon = {
+				default_morale = 0.15
+				max_organisation = 15
+				defense = 0.1
+				initiative = 0.01
+				suppression_factor = 0.05
+			}
+			signal_company = {
+				default_morale = 0.15
+				max_organisation = 15
+				initiative = 0.05
+				suppression_factor = 0.05
+			}
+		}
+		zero_tolerance = {
+			enable_tactic = tactic_overwhelming_attack
+			resistance_activity = -0.1
+			resistance_target = -0.1
+			military_police = {
+				defense = 0.3
+				soft_attack = 0.3
+				hard_attack = 0.3
+				max_organisation = 15
+				default_morale = 0.3
+				experience_loss_factor = -0.2
+				suppression_factor = 0.1
+			}
+		}
+	}
+}
+
+guerrilla_operational_doctrine = { #Insurgency Tactics
+	track = operations_army
+	name = SUBDOCTRINE_GUERRILLA_OPERATIONAL_DOCTRINE
+	description = SUBDOCTRINE_GUERRILLA_OPERATIONAL_DOCTRINE_DESC
+	icon = GFX_overwhelming_strikes_medium
+
+	xp_cost = 100
+	xp_type = army
+
+	available = {
+		has_doctrine = unconventional_warfare
+	}
+
+
+	ai_will_do = {
+		base = 10
+	}
+
+	# EFFECTS
+	out_of_supply_factor = -0.2
+	pocket_penalty = -0.25
+	cas_damage_reduction = 0.3
+	enable_tactic = tactic_guerrilla_tactics
+	rewards = {
+		amongst_the_masses = {
+			conscription_factor = 0.1
+			org_loss_at_low_org_factor = 0.2
+			army_core_defence_factor = 0.1
+			supply_combat_penalties_on_core_factor = -0.3
+		}
+		ex_nihilo = {
+			effect = {
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = logistics_tech
+					name = logistics_tech
+				}
+			}
+			land_reinforce_rate = 0.02
+			local_supply_impact_factor = 0.2
+			org_loss_at_low_org_factor = 0.2
+			org_loss_when_moving = -0.1
+			logistics_company = {
+				max_organisation = 10
+				default_morale = 0.1
+				fuel_consumption_factor = -0.1
+				equipment_capture_factor = 0.1
+			}
+		}
+		behind_every_blade_of_grass = {
+			effect = {
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = recon_tech
+					name = recon_tech
+				}
+			}
+			enable_tactic = tactic_infantry_charge
+			acclimatization_cold_climate_gain_factor = 0.1
+			acclimatization_hot_climate_gain_factor = 0.1
+			land_night_attack = 0.1
+			recon = {
+				defense = 0.15
+				breakthrough = 0.1
+				recon = 2
+				ap_attack = 0.1
+			}
+		}
+		attrition_of_the_will = {
+			dig_in_speed_factor = 0.2
+			org_loss_at_low_org_factor = 0.2
+			light_infantry = {
+				default_morale = 0.1
+				equipment_capture_factor = 0.02
+			}
+			red_Guards = { #LFB COX：追加赤卫队（与 light_infantry 并存）
+				default_morale = 0.1
+				equipment_capture_factor = 0.02
+			}
+		}
+		warriors_of_the_flea = {
+			planning_speed = 0.15
+			org_loss_at_low_org_factor = -0.1
+			effect = {
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = infantry_weapons
+					name = infantry_weapons
+				}
+			}
+			experience_gain_army_unit = 0.15
+			experience_loss_factor = -0.25
+			coordination_bonus = 0.1
+		}
+	}
+}
+
+specops_operational_doctrine = { #Rambo Tactics
+	track = operations_army
+	name = SUBDOCTRINE_SPECOPS_OPERATIONAL_DOCTRINE
+	description = SUBDOCTRINE_SPECOPS_OPERATIONAL_DOCTRINE_DESC
+	icon = GFX_army_interoperability_medium
+
+	xp_cost = 100
+	xp_type = army
+
+	available = {
+		NOT = { has_doctrine = maneuver_warfare }
+	}
+
+
+	ai_will_do = {
+		base = 0
+	}
+
+	# EFFECTS
+	effect = {
+		add_tech_bonus = {
+			bonus = 1
+			uses = 1
+			category = special_forces_tech
+			name = special_forces_tech
+		}
+	}
+	conscription_factor = -0.15
+	command_power_gain_mult = 0.15
+	special_forces_cap_flat = 10
+	category_recon = {
+		max_organisation = 15
+		default_morale = 0.2
+		recon = 1
+	}
+
+	rewards = {
+		adaptive_combat_training = {
+			training_time_factor = 0.10
+			experience_gain_army_unit_factor = 0.1
+			terrain_penalty_reduction = 0.10
+			acclimatization_cold_climate_gain_factor = 0.1
+			acclimatization_hot_climate_gain_factor = 0.1
+		}
+		battlefield_self_sufficiency = {
+			supply_consumption_factor = -0.15
+			local_supply_impact_factor = 0.1
+			special_forces_no_supply_grace = 20
+			special_forces_out_of_supply_factor = -0.3
+			category_special_forces = {
+				equipment_capture_factor = 0.02
+			}
+		}
+		dynamic_battleplanning = {
+			planning_speed = 0.35
+			land_night_attack = 0.1
+			dig_in_speed_factor = 0.15
+			logistics_company = {
+				max_organisation = 10
+				default_morale = 0.15
+			}
+		}
+		valorous_service = {
+			grant_medal_cost_factor = 0.5
+			war_support_factor = 0.15
+			field_officer_promotion_penalty = 0.25
+			experience_gain_army_unit_factor = 0.1
+			army_org_factor = 0.1
+			initiative_factor = 0.1
+			experience_loss_factor = 0.3
+		}
+		creme_de_la_creme = {
+			elite_infantry = {
+				max_organisation = 30
+				defense = 0.1
+				soft_attack = 0.1
+				hard_attack = 0.1
+				entrenchment = 2
+				maximum_speed = 0.1
+				default_morale = 0.2
+			}
+			category_special_forces = {
+				max_organisation = 10
+				defense = 0.1
+				soft_attack = 0.1
+				hard_attack = 0.1
+				entrenchment = 2
+				maximum_speed = 0.1
+			}
+		}
+
+	}
+}
+
+combined_operational_doctrine = { #Combined Arms Tactics
+	track = operations_army
+	name = SUBDOCTRINE_COMBINED_OPERATIONAL_DOCTRINE
+	description = SUBDOCTRINE_COMBINED_OPERATIONAL_DOCTRINE_DESC
+	icon = GFX_commando_landing_operations_medium
+
+	xp_cost = 100
+	xp_type = army
+
+	available = {
+		NOT = { has_doctrine = unconventional_warfare }
+		NOT = { has_doctrine = defensive_warfare }
+	}
+
+
+	ai_will_do = {
+		base = 10
+	}
+
+	# EFFECTS
+	signal_company = {
+		initiative = 0.05
+		max_organisation = 10
+		default_morale = 0.1
+		defense = 0.1
+	}
+	coordination_bonus = 0.1
+	planning_speed = 0.1
+	enable_tactic = tactic_overwhelming_attack
+	rewards = {
+		naval_support = {
+			invasion_preparation = 0.2
+			naval_invasion_penalty = -0.1
+			navy_carrier_air_targetting_factor = 0.1
+			marine = {
+				max_organisation = 30
+				defense = 0.15
+				entrenchment = 2
+				maximum_speed = 0.1
+				default_morale = 0.25
+			}
+		}
+		air_land_battle = {
+			air_superiority_bonus_in_combat = 0.1
+			air_mission_efficiency = 0.15
+			air_mission_xp_gain_factor = 0.15
+			attack_helicopter_company = {
+				max_organisation = 10
+				defense = 0.075
+				soft_attack = 0.075
+				default_morale = 0.15
+			}
+		}
+		cogs_in_the_machine = {
+			maintenance_company = {
+				max_organisation = 10
+				default_morale = 0.1
+				reliability_factor = 0.1
+			}
+			category_recon = {
+				max_organisation = 10
+				default_morale = 0.1
+				recon = 1
+			}
+			logistics_company = {
+				max_organisation = 10
+				default_morale = 0.15
+			}
+		}
+		iron_warriors = {
+			category_all_armor = {
+				max_organisation = 10
+				default_morale = 0.1
+				defense = 0.1
+				breakthrough = 0.1
+			}
+		}
+		all_in = {
+			category_army = {
+				max_organisation = 5
+				breakthrough = 0.1
+			}
+			combat_width_factor = 0.15
+			carrier_traffic = 0.1
+			coordination_bonus = 0.25
+			max_command_power_mult = 0.2
+			additional_brigade_column_size = 1
+			enable_tactic = tactic_breakthrough
+		}
+	}
+}
+
+spearhead_operational_doctrine = { #Spearhead Tactics
+	track = operations_army
+	name = SUBDOCTRINE_SPEARHEAD_OPERATIONAL_DOCTRINE
+	description = SUBDOCTRINE_SPEARHEAD_OPERATIONAL_DOCTRINE_DESC
+	icon = GFX_assault_concentration_medium
+
+	xp_cost = 100
+	xp_type = army
+
+	available = {
+		has_doctrine = maneuver_warfare
+	}
+
+
+	ai_will_do = {
+		base = 10
+	}
+
+	# EFFECTS
+	coordination_bonus = 0.1
+	enable_tactic = tactic_breakthrough
+	logistics_company = {
+		max_organisation = 15
+		default_morale = 0.2
+		defense = 0.1
+	}
+	rewards = {
+		sweep_the_field = {
+			army_speed_factor = 0.1
+			transport_capacity = -0.1
+			breakthrough_factor = 0.1
+			army_fuel_consumption_factor = 0.15
+		}
+		long_haul_deep_pockets = {
+			army_fuel_capacity_factor = 0.2
+			no_supply_grace = 120
+			logistics_company = {
+				max_organisation = 10
+				default_morale = 0.1
+				fuel_consumption_factor = -0.05
+				supply_consumption_factor = -0.1
+			}
+		}
+		air_land_battle = {
+			air_cas_present_factor = 0.1
+			air_home_defence_factor = 0.1
+			coordination_bonus = 0.1
+			enable_tactic = tactic_overwhelming_attack
+			attack_helicopter_company = {
+				max_organisation = 10
+				defense = 0.075
+				soft_attack = 0.075
+				default_morale = 0.15
+			}
+		}
+		preparing_is_half_the_battle = {
+			planning_speed = 0.15
+			maintenance_company = {
+				max_organisation = 10
+				default_morale = 0.1
+				reliability_factor = 0.1
+			}
+			category_recon = {
+				max_organisation = 10
+				default_morale = 0.1
+				recon = 1
+			}
+			additional_brigade_column_size = 1
+		}
+		indestructible = {
+			breakthrough_factor = 0.15
+			category_all_armor = {
+				max_organisation = 10
+				default_morale = 0.1
+			}
+		}
+	}
+}
+
+defense_operational_doctrine = { #Defense in Depth Tactics
+	track = operations_army
+	name = SUBDOCTRINE_DEFENSE_OPERATIONAL_DOCTRINE
+	description = SUBDOCTRINE_DEFENSE_OPERATIONAL_DOCTRINE_DESC
+	icon = GFX_strategic_depth_exploitation_medium
+
+	xp_cost = 100
+	xp_type = army
+
+	available = {
+		has_doctrine = defensive_warfare
+	}
+
+
+	ai_will_do = {
+		base = 10
+	}
+
+	# EFFECTS
+	max_dig_in = 5
+	dig_in_speed_factor = 0.2
+	static_anti_air_hit_chance_factor = 0.10
+	army_core_defence_factor = 0.1
+	engineer = {
+		max_organisation = 10
+		default_morale = 0.1
+		entrenchment = 5
+	}
+	mbt_engineer = {
+		max_organisation = 10
+		default_morale = 0.1
+		entrenchment = 5
+	}
+
+	rewards = {
+		army_reserve_training = {
+			training_time_army_factor = 0.15
+			conscription_factor = 0.1
+			light_infantry = {
+				max_organisation = 10
+				entrenchment = 1
+				default_morale = 0.1
+			}
+		}
+		supply_chain_reinforcement = {
+			supply_combat_penalties_on_core_factor = -0.1
+			local_supply_impact_factor = 0.1
+			supply_consumption_factor = -0.1
+			logistics_company = {
+				max_organisation = 10
+				default_morale = 0.1
+				defense = 0.1
+			}
+		}
+		prepared_redoubt_system = {
+			max_dig_in = 10
+			recon_factor_while_entrenched = 0.15
+			land_bunker_effectiveness_factor = 0.15
+			coastal_bunker_effectiveness_factor = 0.15
+			engineer = {
+				max_organisation = 10
+				entrenchment = 5
+			}
+			mbt_engineer = {
+				max_organisation = 10
+				entrenchment = 5
+			}
+		}
+		this_well_defend = {
+			war_stability_factor = 0.2
+			war_support_factor = 0.15
+			max_command_power_mult = 0.2
+			infantry = {
+				entrenchment = 1
+				default_morale = 0.1
+			}
+			elite_infantry = {
+				entrenchment = 2
+				default_morale = 0.1
+			}
+			mountaineers = {
+				entrenchment = 2
+				default_morale = 0.1
+			}
+		}
+		mountain_cannot_bow = {
+			dig_in_speed_factor = 0.2
+			max_dig_in = 5
+			army_speed_factor = -0.1
+			engineer = {
+				max_organisation = 15
+				default_morale = 0.15
+				entrenchment = 10
+			}
+			mbt_engineer = {
+				max_organisation = 15
+				default_morale = 0.15
+				entrenchment = 10
+			}
+			additional_brigade_column_size = 1
+		}
+	}
+}
