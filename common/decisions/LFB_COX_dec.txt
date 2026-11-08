@@ -1453,7 +1453,7 @@ Open_the_Gate_of_Steiner = {
 						days = 1
 					}
 					country_event = {
-						id = XBJ.30
+						id = XBJ.31
 						days = 3
 					}
 				}

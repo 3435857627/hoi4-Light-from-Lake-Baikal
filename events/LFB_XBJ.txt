@@ -548,14 +548,14 @@ country_event = {
 }
 
 country_event = {
-	id = XBJ.30
-	title = XBJ.30.t
-	desc = XBJ.30.d
+	id = XBJ.31
+	title = XBJ.31.t
+	desc = XBJ.31.d
 	picture = GFX_COX_shentou_END
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
-		name = XBJ.30.a
+		name = XBJ.31.a
 		complete_national_focus = YUN_playing_to_our_strengths
 		complete_national_focus = YUN_survey_the_land
 		complete_national_focus = YUN_open_new_mines
