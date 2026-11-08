@@ -1804,12 +1804,6 @@ XBJ_Qinghai_Civilwar_setup = {
 		transfer_state = 604
 		transfer_state = 764
 		transfer_state = 2025
-		604 = {
-			add_core_of = XBJ
-		}
-		764 = {
-			add_core_of = XBJ
-		}
 		906 = {
 			add_resource = {
 				type = power

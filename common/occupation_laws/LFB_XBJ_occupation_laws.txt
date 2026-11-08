@@ -1,0 +1,29 @@
+# 贝加尔湖之光 —— 西北局专属占领政策：工作组维稳
+# 2026-11-08 新增。
+# 设定：不派兵驻守，只派工作队下去登记户口、清理旧政权残余、组织生产互助，治安交给本地积极分子。
+# 机制：required_garrison_factor = -1 表示不需要任何驻军；resistance_target 取负值把叛乱目标压到 0，
+#       所以既不会涨叛乱、也不会因为缺驻军而掉顺从度；同时保留正的 compliance_gain，让占领州慢慢积累顺从度。
+
+XBJ_work_group_pacification = {
+	icon = 1
+	sound_effect = "Martial_Law_Interface_No_Garrison"
+
+	visible = {
+		tag = XBJ
+	}
+
+	state_modifier = {
+		required_garrison_factor = -1
+		resistance_target = -0.5
+		compliance_gain = 0.02
+	}
+
+	suppressed_state_modifier = {
+		required_garrison_factor = -1
+		resistance_target = -0.5
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}

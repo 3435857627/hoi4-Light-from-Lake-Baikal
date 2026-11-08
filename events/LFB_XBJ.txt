@@ -245,15 +245,6 @@ country_event = {
 	option = {
 		name = XBJ.16.a
 		hidden_effect = {
-			#马家军原有的核心州同时并入西北局的核心领土，否则只是占领、不产人力
-			QIN = {
-				every_state = {
-					limit = {
-						is_core_of = QIN
-					}
-					add_core_of = XBJ
-				}
-			}
 			annex_country = {
 				target = QIN
 				transfer_troops = no

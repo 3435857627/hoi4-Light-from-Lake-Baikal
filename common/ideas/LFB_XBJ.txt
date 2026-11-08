@@ -64,6 +64,8 @@ ideas = {
 			modifier = {
 				consumer_goods_use_modifier = -1
 				political_power_gain = 1
+				#工作组在解放区动员非核心人口（2% 基数 + 25%），补上不设核心带来的人力缺口
+				non_core_manpower = 0.25
 			}
 		}
 		XBJ_Northwest_Working_Group = {
@@ -77,6 +79,8 @@ ideas = {
 			picture = special_working_group
 			modifier = {
 				political_power_gain = 1
+				#同上：工作组维稳，非核心人口可征召比例 2% -> 27%
+				non_core_manpower = 0.25
 			}
 		}
 		XBJ_Qinghai_Crisis = {

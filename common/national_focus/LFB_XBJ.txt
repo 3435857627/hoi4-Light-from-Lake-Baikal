@@ -305,12 +305,12 @@ focus_tree = {
 		relative_position_id = XBJ_The_Dust_Settles
 		available = {
 			OR = {
-				601 = { is_core_of = ROOT }
-				604 = { is_core_of = ROOT }
-				616 = { is_core_of = ROOT }
-				764 = { is_core_of = ROOT }
-				906 = { is_core_of = ROOT }
-				2025 = { is_core_of = ROOT }
+				601 = { is_owned_by = ROOT }
+				604 = { is_owned_by = ROOT }
+				616 = { is_owned_by = ROOT }
+				764 = { is_owned_by = ROOT }
+				906 = { is_owned_by = ROOT }
+				2025 = { is_owned_by = ROOT }
 			}
 		}
 		completion_reward = {
