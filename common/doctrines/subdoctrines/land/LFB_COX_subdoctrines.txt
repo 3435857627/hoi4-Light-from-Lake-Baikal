@@ -4,7 +4,7 @@
 #       这里用到的子单位：red_Guards（赤卫队）、red_Guards_anti_tank（赤卫队破坏小组）、recon（侦察连）、
 #       logistics_company / signal_company 为原版支援连 id。
 
-COX_red_army = { #陆军核心：工农红军（赤卫队 + 侦察连）
+COX_red_army = { #陆军核心：工农红军（赤卫队）
 	track = infantry
 	name = SUBDOCTRINE_COX_RED_ARMY
 	description = SUBDOCTRINE_COX_RED_ARMY_DESC
@@ -25,7 +25,9 @@ COX_red_army = { #陆军核心：工农红军（赤卫队 + 侦察连）
 		base = 10
 	}
 
-	# EFFECTS
+	# 基础：科研 + 组织度 +15。
+	# 组织度 +15 不是补长板，而是抵消「非常规战争」大战略 category_army 给的 -15，净组织度保持 70。
+	# 士气/缴获率才是长板，不加。
 	effect = {
 		add_tech_bonus = {
 			bonus = 1
@@ -35,36 +37,33 @@ COX_red_army = { #陆军核心：工农红军（赤卫队 + 侦察连）
 		}
 	}
 	red_Guards = {
-		default_morale = 0.1
-		max_organisation = 5
-	}
-	recon = {
-		recon = 1
-		defense = 0.05
+		max_organisation = 15
 	}
 
 	rewards = {
+		# 1 乌鲁木齐改编：把杂牌编进同一套建制与补给 -> 补「补给消耗」
 		sanwan_reorganization = {
+			land_reinforce_rate = 0.02
 			red_Guards = {
-				max_organisation = 5
-				default_morale = 0.1
-			}
-			recon = {
-				defense = 0.05
-				entrenchment = 1
+				supply_consumption_factor = -0.10
 			}
 		}
+		# 2 政务军官：政委掌握部队真实状况、维持指挥连续性 -> 补「经验损失」
 		party_branch_in_company = {
-			red_Guards = {
-				max_organisation = 5
-				defense = 0.05
-			}
-			recon = {
-				recon = 1
-			}
 			coordination_bonus = 0.05
+			red_Guards = {
+				experience_loss_factor = -0.15
+			}
 		}
+		# 3 官兵平等：士兵愿意承担风险、基层能自行判断 -> 补「堑壕」
 		officers_and_men_alike = {
+			dig_in_speed_factor = 0.20
+			red_Guards = {
+				entrenchment = 2
+			}
+		}
+		# 4 知己知彼：识破敌军手段 -> 科研卡（步兵武器 + 反坦克）
+		three_rules_eight_notices = {
 			effect = {
 				add_tech_bonus = {
 					bonus = 0.5
@@ -72,42 +71,19 @@ COX_red_army = { #陆军核心：工农红军（赤卫队 + 侦察连）
 					category = infantry_weapons
 					name = infantry_weapons
 				}
-			}
-			red_Guards = {
-				default_morale = 0.1
-				experience_loss_factor = -0.1
-			}
-			recon = {
-				breakthrough = 0.05
-			}
-		}
-		three_rules_eight_notices = {
-			effect = {
 				add_tech_bonus = {
 					bonus = 0.5
 					uses = 1
-					category = logistics_tech
-					name = logistics_tech
+					technology = infantry_at2
+					name = infantry_at2
 				}
 			}
-			land_reinforce_rate = 0.02
-			red_Guards = {
-				supply_consumption = -0.1
-				equipment_capture_factor = 0.01
-			}
 		}
+		# 5 凤凰涅槃：临机决断、抓住战机 -> 进攻战术 + 补「战斗宽度」
 		spark_starts_prairie_fire = {
-			enable_tactic = tactic_infantry_charge
-			experience_gain_army_unit_factor = 0.1
-			red_Guards = {
-				breakthrough = 0.15
-				max_organisation = 5
-			}
-			recon = {
-				breakthrough = 0.1
-				recon = 1
-				ap_attack = 0.1
-			}
+			enable_tactic = tactic_human_wave_tactics
+			combat_width_factor = 0.10
+			experience_gain_army_unit_factor = 0.10
 		}
 	}
 }
@@ -133,7 +109,7 @@ COX_harassment_sabotage = { #火力支援：袭扰破坏（赤卫队破坏小组
 		base = 10
 	}
 
-	# EFFECTS
+	# 基础：科研（infantry_weapons 类别已涵盖反坦克科技）
 	effect = {
 		add_tech_bonus = {
 			bonus = 1
@@ -142,46 +118,77 @@ COX_harassment_sabotage = { #火力支援：袭扰破坏（赤卫队破坏小组
 			name = infantry_weapons
 		}
 	}
+	# 抵消「非常规战争」大战略给所有 category_army 单位的 +2% 缴获：
+	# 破坏小组是支援连，不应参与装备回收。
 	red_Guards_anti_tank = {
-		max_organisation = 5
-		default_morale = 0.1
+		equipment_capture_factor = -0.02
 	}
 
 	rewards = {
+		# 1 要道伏击：伏击车队 -> 破坏小组硬攻 + 火炮科技卡
 		railway_sabotage = {
+			effect = {
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = artillery
+					name = artillery
+				}
+			}
 			red_Guards_anti_tank = {
-				hard_attack = 0.1
-				breakthrough = 0.05
+				hard_attack = 0.15
 			}
 		}
+		# 2 诱敌深入：放进来打、分散隐蔽 -> 堑壕 + 对空生存
 		mine_warfare = {
+			cas_damage_reduction = 0.10
 			red_Guards_anti_tank = {
-				defense = 0.15
 				entrenchment = 1
 			}
 		}
+		# 3 地道作战：地下网路 -> 堑壕值/堑壕速度 + 防御战术卡
 		sparrow_warfare = {
+			dig_in_speed_factor = 0.20
+			enable_tactic = tactic_delay
 			red_Guards_anti_tank = {
-				ap_attack = 0.1
-				hard_attack = 0.05
-				supply_consumption = -0.05
+				entrenchment = 1
 			}
 		}
+		# 4 小规模袭扰：打了就跑、专挑装甲薄弱处 -> 穿甲 + 支援科技卡
 		tunnel_warfare = {
-			dig_in_speed_factor = 0.2
+			effect = {
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = recon_tech
+					name = recon_tech
+				}
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = engineers_tech
+					name = engineers_tech
+				}
+			}
 			red_Guards_anti_tank = {
-				max_organisation = 5
-				defense = 0.1
+				ap_attack = 0.15
 			}
 		}
+		# 5 密集夜袭：夜间抵近爆破 -> 硬攻/突破 + 火炮科技卡
 		interdict_communications = {
-			coordination_bonus = 0.1
+			coordination_bonus = 0.05
+			effect = {
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = artillery
+					name = artillery
+				}
+			}
 			red_Guards_anti_tank = {
-				breakthrough = 0.2
 				hard_attack = 0.15
-				equipment_capture_factor = 0.02
+				breakthrough = 0.10
 			}
 		}
 	}
 }
-

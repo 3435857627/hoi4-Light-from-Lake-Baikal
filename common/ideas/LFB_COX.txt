@@ -111,6 +111,18 @@ ideas = {
 				military_expenditures_factor = -0.1
 			}	
 		}	
+		COX_wandering_6 = {
+			picture = wandering
+			name = "COX_wandering_home"
+			modifier = {
+				army_morale_factor = 0.05
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				war_support_factor = 0.05
+				training_time_factor = -0.1
+				military_expenditures_factor = -0.1
+			}
+		}
 		XIN_Morale_Waved = {
 			picture = jiaofei
 			name = "XIN_Morale_Waved"
@@ -174,7 +186,7 @@ ideas = {
 				compliance_gain = 0.20
 				war_support_factor = 0.15
 				stability_factor = 0.15
-				political_power_factor = -0.15
+				political_power_factor = 0.15
 				civilian_expenditures_factor = 0.1
 				consumer_goods_use_modifier = -0.03
 			}
@@ -516,15 +528,25 @@ ideas = {
 			name = "chaotic_band"
 			modifier = {
 				conscription_factor = -0.1
-				stability_weekly_factor = -0.003
+				stability_factor = -0.03
 			}
 		}
+
 		chaotic_band3 = {
 			picture = chaotic_band
 			name = "chaotic_band"
 			modifier = {
 				conscription_factor = -0.05
-				stability_weekly_factor = -0.001
+				stability_factor = -0.01
+			}
+		}
+
+		border_order = {
+			picture = chaotic_band
+			name = "border_order"
+			modifier = {
+				conscription_factor = 0.10
+				stability_factor = 0.05
 			}
 		}
 		south_sik_out_of_control = {
@@ -584,49 +606,12 @@ ideas = {
 			}
 		}
 
-		Transform_the_old_army2 = {
-			picture = qi_bing
-			name = "Transform_the_old_army"
-			modifier = {
-				army_org_factor = 0.05
-			}
-		}
-
-		Transform_the_old_army3 = {
-			picture = qi_bing
-			name = "Transform_the_old_army"
-			modifier = {
-				dig_in_speed_factor = 0.1
-				army_speed_factor = 0.05
-			}
-		}
-
 		Transform_the_old_army12 = {
 			picture = qi_bing
 			name = "Transform_the_old_army"
 			modifier = {
 				attrition = -0.1
-				army_org_factor = 0.05
-			}
-		}
-
-		Transform_the_old_army13 = {
-			picture = qi_bing
-			name = "Transform_the_old_army"
-			modifier = {
-				attrition = -0.1
-				dig_in_speed_factor = 0.1
-				army_speed_factor = 0.05
-			}
-		}
-
-		Transform_the_old_army23 = {
-			picture = qi_bing
-			name = "Transform_the_old_army"
-			modifier = {
-				army_org_factor = 0.05
-				dig_in_speed_factor = 0.1
-				army_speed_factor = 0.05
+				training_time_army_factor = -0.1
 			}
 		}
 
@@ -635,9 +620,8 @@ ideas = {
 			name = "Transform_the_old_army"
 			modifier = {
 				attrition = -0.1
-				army_org_factor = 0.05
-				dig_in_speed_factor = 0.1
-				army_speed_factor = 0.05
+				training_time_army_factor = -0.1
+				army_speed_factor = 0.1
 			}
 		}
 		comrade_friendship = {

@@ -7,4 +7,14 @@ technologies = {
 			red_Guards_anti_tank
 		}
 	}
+	# 由决议「给赤卫队派发防空武器」授予：给赤卫队营加 10 具单兵防空武器需求（获得对空攻击）
+	red_Guards_aa = {
+		allow = { always = no }
+		red_Guards = {
+			need = {
+				anti_air_shoulder_equipment = 10
+			}
+		}
+	}
+
 }

@@ -765,7 +765,6 @@ focus_tree = {#土改后建设时期
 				gdp_growth_temp = 1
 			}
 			econ_gdp_growth_change = yes
-			COX_militia_reform_startup = yes
 			hidden_effect = {
 				country_event = {
 					id = COX.90
@@ -1040,6 +1039,7 @@ focus_tree = {#土改后建设时期
 				remove_idea = new_red_army_third
 				add_idea = new_red_army_final
 			}
+			set_country_flag = COX_red_army_reborn		#解锁赤卫队决议组
 			TNO_improve_army_professionalism_med = yes			#军队职业度正常改善
 		}
 	}
@@ -1650,12 +1650,18 @@ focus_tree = {#土改后建设时期
 			focus = COX_Check_What_We_Missed
 		}
 		completion_reward = {
-			set_technology = {
-				red_Guards_tech = 1
-			}
 			swap_ideas = {
 				remove_idea = COX_wandering_4
 				add_idea = COX_wandering_5
+			}
+			if = {
+				limit = {
+					has_completed_focus = COX_The_Last_Fight_Against_Japanese_Invader
+				}
+				swap_ideas = {
+					remove_idea = COX_wandering_5
+					add_idea = COX_wandering_6
+				}
 			}
 		}
 	}
@@ -2661,6 +2667,16 @@ focus_tree = {#IF线
 		x = 0
 		y = 0
 		completion_reward = {
+			if = {
+				limit = {
+					has_idea = COX_wandering_5
+				}
+				swap_ideas = {
+					remove_idea = COX_wandering_5
+					add_idea = COX_wandering_6
+				}
+			}
+			add_research_slot = 1
 			if = {
 				limit = {
 					has_country_flag = XBJ_northwest_crisis_denfence_Jap_vic

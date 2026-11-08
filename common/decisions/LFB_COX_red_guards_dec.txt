@@ -1,0 +1,165 @@
+# COX 决议：赤卫队（2026-11-08：原「军事改革」决议并入本组）
+# 解锁：国策「检阅革命军队」COX_Inspect_The_Army
+COX_red_guards = {
+	# ===== 资源兑换：指挥点 -> 陆军经验 =====
+	COX_Assign_commanders_and_fighters = {
+		icon = GFX_XBJ_working_group
+		available = {
+			command_power > 50
+		}
+		complete_effect = {
+			add_command_power = -50
+			army_experience = 20
+		}
+		custom_cost_text = decision_cost_50_cp
+		days_re_enable = 30
+		ai_will_do = { factor = 0 }
+	}
+	# ===== 资源兑换：陆军经验 -> 学说精通度（1:2）=====
+	COX_Organize_large_scale_military_training = {
+		icon = GFX_Mao_comes_as_a_lightning
+		available = {
+			has_army_experience > 25
+		}
+		complete_effect = {
+			army_experience = -25
+			add_mastery = {
+				amount = 50
+				folder = land
+			}
+		}
+		days_re_enable = 30
+		ai_will_do = { factor = 0 }
+	}
+	# ===== 改革 I：确立指战员平等关系 =====
+	COX_Establish_equal_relations_between_commanders_and_fighters = {
+		icon = GFX_Red_Army_comes_as_a_lightning
+		cost = 20
+		fire_only_once = yes
+		available = {
+			has_completed_focus = COX_Inspect_The_Army
+		}
+		complete_effect = {
+			army_experience = 25
+			COX_old_army_idea_advance = yes
+			country_event = COX.201
+		}
+		ai_will_do = { factor = 0 }
+	}
+	# ===== 改革 II：组织民主化 =====
+	COX_Organizational_democratization = {
+		icon = GFX_second_land_reform
+		cost = 20
+		fire_only_once = yes
+		available = {
+			has_idea = Transform_the_old_army1
+			has_manpower > 2000
+		}
+		complete_effect = {
+			add_manpower = -2000
+			army_experience = 25
+			COX_old_army_idea_advance = yes
+			TNO_improve_army_professionalism_med = yes
+			country_event = COX.202
+		}
+		ai_will_do = { factor = 0 }
+	}
+	# ===== 改革 III：普及游击战，发扬运动战 =====
+	COX_Popularize_guerrilla_warfare_and_carry_forward_mobile_warfare = {
+		icon = GFX_XBJ_Soviet_Military_Support
+		cost = 20
+		fire_only_once = yes
+		available = {
+			has_idea = Transform_the_old_army12
+		}
+		complete_effect = {
+			COX_old_army_idea_advance = yes
+			add_mastery = {
+				amount = 75
+				folder = land
+			}
+			country_event = COX.203
+		}
+		ai_will_do = { factor = 0 }
+	}
+	# ===== 混乱的边境：1 -> 2 -> 3 =====
+	COX_Mobilize_militia_to_strengthen_border_defense = {
+		icon = GFX_Red_Army_comes_as_a_lightning
+		cost = 10
+		available = {
+			OR = {
+				has_idea = chaotic_band
+				has_idea = chaotic_band2
+			}
+			has_manpower > 4000
+			has_equipment = {
+				infantry_equipment > 400
+			}
+		}
+		complete_effect = {
+			add_manpower = -4000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -400
+			}
+			COX_chaotic_band_downgrade = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+	# ===== 收官：新军队，新面貌 =====
+	COX_New_army_new_look = {
+		icon = GFX_Mao_comes_as_a_lightning
+		cost = 50
+		fire_only_once = yes
+		available = {
+			has_idea = Transform_the_old_army123
+			has_idea = chaotic_band3
+			has_equipment = {
+				infantry_equipment > 600
+			}
+		}
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 800
+			}
+			swap_ideas = {
+				remove_idea = chaotic_band3
+				add_idea = border_order
+			}
+			set_technology = {
+				red_Guards_tech = 1
+			}
+			COX_new_army_setup = yes
+			army_experience = 50
+			add_mastery = {
+				amount = 100
+				folder = land
+			}
+			TNO_improve_army_professionalism_med = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+	# ===== 装备：给赤卫队派发防空武器 =====
+	COX_issue_aa_weapons = {
+		icon = GFX_XBJ_Soviet_Military_Support
+		cost = 25
+		fire_only_once = yes
+		available = {
+			has_tech = red_Guards_tech
+			OR = {
+				has_tech = infantry_aa1
+				has_tech = infantry_aa2
+				has_tech = infantry_aa4
+				has_tech = infantry_aa6
+				has_tech = infantry_aa8
+			}
+		}
+		complete_effect = {
+			set_technology = {
+				red_Guards_aa = 1
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+}

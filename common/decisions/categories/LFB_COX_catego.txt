@@ -84,20 +84,6 @@ COX_coring_category = {
 	visible_when_empty = no
 }
 
-COX_militia_reform = {
-	icon = GFX_second_land_reform
-	allowed = {
-		tag = COX
-	}
-	visible = {
-		has_completed_focus = COX_Inspect_The_Army
-		has_country_flag = COX_militia_reform_on_going
-	}
-	available = {
-		always = yes
-	}
-	visible_when_empty = no
-}
 
 COX_early_industrial_development = {
 	icon = GFX_second_land_reform

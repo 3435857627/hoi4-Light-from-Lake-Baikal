@@ -1,56 +1,41 @@
-COX_militia_reform_startup = {
-	hidden_effect = {
-		set_variable = { COX_militia_training_process = 0 }
-		set_country_flag = COX_militia_reform_on_going
-		COX_militia_reform_var_effect_cal = yes
-		add_dynamic_modifier = {
-			modifier = COX_militia_dynamic_modifiers
+# COX 军事改革（旧系统）精简为赤卫队决议组的三个脚本效果（2026-11-08）
+# 旧的训练度变量、动态修正、启动效果全部删除。
+
+# 旧军队理念升级：1 -> 12 -> 123
+COX_old_army_idea_advance = {
+	if = {
+		limit = {
+			has_idea = Transform_the_old_army1
 		}
+		swap_ideas = {
+			remove_idea = Transform_the_old_army1
+			add_idea = Transform_the_old_army12
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = Transform_the_old_army12
+		}
+		swap_ideas = {
+			remove_idea = Transform_the_old_army12
+			add_idea = Transform_the_old_army123
+		}
+	}
+	else = {
+		add_ideas = Transform_the_old_army1
 	}
 }
 
-COX_militia_reform_var_effect_cal = {
-	set_variable = { COX_militia_training_process_effect1 = COX_militia_training_process }
-	set_variable = { COX_militia_training_process_effect2 = COX_militia_training_process }
-	set_variable = { COX_militia_training_process_effect3 = COX_militia_training_process }
-	multiply_variable = { COX_militia_training_process_effect1 = 0.6 }
-	multiply_variable = { COX_militia_training_process_effect2 = 0.2 }
-	multiply_variable = { COX_militia_training_process_effect3 = 0.05 }
-	add_to_variable = { COX_militia_training_process_effect1 = -50 }
-	add_to_variable = { COX_militia_training_process_effect2 = -20 }
-	multiply_variable = { COX_militia_training_process_effect1 = 0.01 }
-	multiply_variable = { COX_militia_training_process_effect2 = 0.01 }
-	multiply_variable = { COX_militia_training_process_effect3 = 0.01 }
-	force_update_dynamic_modifier = yes
-}
-
-COX_militia_reform_var_increase_slightly = {
-	add_to_variable = { COX_militia_training_process = 10 }
-	clamp_variable = { var = COX_militia_training_process max = 100 min = 0 }
-	COX_militia_reform_var_effect_cal = yes
-	custom_effect_tooltip = COX_militia_reform_var_increase_slightly	
-}
-
-COX_militia_reform_var_increase = {
-	add_to_variable = { COX_militia_training_process = 15 }
-	clamp_variable = { var = COX_militia_training_process max = 100 min = 0 }
-	COX_militia_reform_var_effect_cal = yes
-	custom_effect_tooltip = COX_militia_reform_var_increase	
-}
-
-COX_militia_reform_var_increase_greatly = {
-	add_to_variable = { COX_militia_training_process = 20 }
-	clamp_variable = { var = COX_militia_training_process max = 100 min = 0 }
-	COX_militia_reform_var_effect_cal = yes
-	custom_effect_tooltip = COX_militia_reform_var_increase_greatly	
-}
-
-COX_chaotic_band_idea_change = {
+# 混乱的边境降级：1 -> 2 -> 3
+COX_chaotic_band_downgrade = {
 	if = {
 		limit = {
-			has_idea = chaotic_band3
+			has_idea = chaotic_band
 		}
-		remove_ideas = chaotic_band3
+		swap_ideas = {
+			remove_idea = chaotic_band
+			add_idea = chaotic_band2
+		}
 	}
 	else_if = {
 		limit = {
@@ -61,13 +46,47 @@ COX_chaotic_band_idea_change = {
 			add_idea = chaotic_band3
 		}
 	}
-	else_if = {
-		limit = {
-			has_idea = chaotic_band
+}
+
+# 收官：建两个赤卫队编制，并刷 1 个精锐师 + 3 个守备师
+COX_new_army_setup = {
+	division_template = {
+		name = "精锐工农红军师"
+		priority = 1
+		division_names_group = COX_Infantry
+		regiments = {
+			red_Guards = { x = 0 y = 0 }
+			red_Guards = { x = 0 y = 1 }
+			red_Guards = { x = 1 y = 0 }
+			red_Guards = { x = 1 y = 1 }
+			red_Guards = { x = 2 y = 0 }
+			red_Guards = { x = 2 y = 1 }
 		}
-		swap_ideas = {
-			remove_idea = chaotic_band
-			add_idea = chaotic_band2
+		regimental_support = {
+			red_Guards_anti_tank = { x = 0 y = 0 }
+		}
+	}
+	division_template = {
+		name = "工农红军守备师"
+		priority = 2
+		division_names_group = COX_Infantry
+		regiments = {
+			red_Guards = { x = 0 y = 0 }
+			red_Guards = { x = 0 y = 1 }
+			red_Guards = { x = 1 y = 0 }
+			red_Guards = { x = 1 y = 1 }
+		}
+	}
+	random_owned_controlled_state = {
+		create_unit = {
+			division = "name = \"工农红军第一师\" division_template = \"精锐工农红军师\" start_experience_factor = 0.5 start_equipment_factor = 0.75"
+			owner = ROOT
+			count = 1
+		}
+		create_unit = {
+			division = "name = \"工农红军守备师\" division_template = \"工农红军守备师\" start_experience_factor = 0.35 start_equipment_factor = 0.65"
+			owner = ROOT
+			count = 3
 		}
 	}
 }

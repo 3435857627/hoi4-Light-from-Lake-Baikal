@@ -285,7 +285,7 @@ guerrilla_operational_doctrine = { #Insurgency Tactics
 			}
 			red_Guards = { #LFB COX：追加赤卫队（与 light_infantry 并存）
 				default_morale = 0.1
-				equipment_capture_factor = 0.02
+				equipment_capture_factor = 0.005   #缴获（2026-11-08 下调）
 			}
 		}
 		warriors_of_the_flea = {

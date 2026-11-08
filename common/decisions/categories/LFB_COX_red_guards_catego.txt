@@ -1,0 +1,17 @@
+# COX 决议组：赤卫队（赤卫队/破坏小组相关决议都放这里）
+# 解锁：国策「检阅革命军队」COX_Inspect_The_Army（2026-11-08 军事改革并入）
+COX_red_guards = {
+	icon = GFX_decision_category_generic_arms_crate
+	desc = COX_red_guards_desc
+
+	allowed = {
+		tag = COX
+	}
+	visible = {
+		OR = {
+			has_completed_focus = COX_Inspect_The_Army
+			has_country_flag = COX_red_army_reborn
+		}
+	}
+	visible_when_empty = yes
+}
