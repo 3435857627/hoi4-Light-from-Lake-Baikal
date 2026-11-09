@@ -144,6 +144,16 @@ COX_landreform_startup = {
     #这里留给事件-420天最终结算之前要触发一些剧情事件来为“最终事件”铺垫
 }
 COX_landreform_refresh = {
+    #未选择区域（或被清空）时默认选中乌鲁木齐 617，避免 [TOKEN] 为空拼出非法变量名
+    if = {
+        limit = {
+            NOT = { check_variable = { COX_landreform_selected_region = 617 } }
+            NOT = { check_variable = { COX_landreform_selected_region = 957 } }
+            NOT = { check_variable = { COX_landreform_selected_region = 618 } }
+            NOT = { check_variable = { COX_landreform_selected_region = 619 } }
+        }
+        set_variable = { COX_landreform_selected_region = 617 }
+    }
     COX_ladreform_clamp_values = yes
     meta_effect = {
         text = {
@@ -914,8 +924,7 @@ COX_landreform_roundup = {#清除有关变量
         clr_country_flag = COX_landreform_224_fired
 
         #arrays
-        clear_array = COX_landreform_regions_array 
-        clear_array = COX_landreform_dec_all_array 
+        #数组的清空挪到 finish_effect：此时 GUI 已关闭，避免同帧清空动态列表绑定的数组
     }
     617 = {#中央
         clear_variable = COX_landreform_local_progress
@@ -969,6 +978,9 @@ COX_landreform_roundup = {#清除有关变量
 #真·结束效果，在事件链末尾触发
 COX_landreform_finish_effect = {
     COX = {
+        #土改已结束、GUI 已关闭，此时再清空数组，避免同帧清空 GUI 动态列表绑定的数组
+        clear_array = COX_landreform_regions_array
+        clear_array = COX_landreform_dec_all_array
         set_country_flag = COX_land_reform_succeeded
         clear_array = TNO_assorted_laws
         set_temp_variable = { temp_law = token:COX_land_reform_succeeded_law }
@@ -1193,6 +1205,10 @@ COX_landreform_finish_effect = {
 ###GUI相关###
 COX_landreform_GUI_get_decisions = {
     clear_array = COX_landreform_GUI_dec_array #GUI用
+    #防御：未选择区域（selected_region 被清空或非法）时给循环边界安全默认值（空区间），
+    #否则 for_loop_effect 的 start/end 未赋值，会以垃圾值循环导致崩溃
+    set_temp_variable = { temp_loop_low = 0 }
+    set_temp_variable = { temp_loop_up = 0 }
     if = {
         limit = {
             check_variable = {
