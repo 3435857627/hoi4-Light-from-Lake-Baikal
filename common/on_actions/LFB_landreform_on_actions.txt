@@ -1,0 +1,25 @@
+﻿on_actions = {
+	#土改结算与 GUI 拆除都挪出「任务超时」那一帧：超时只打标记，日结时再执行
+	on_daily = {
+		effect = {
+			#1) 倒计时结束的第二天：执行结算（打包变量 + 排事件）
+			if = {
+				limit = {
+					tag = COX
+					has_country_flag = COX_landreform_settle_pending
+				}
+				clr_country_flag = COX_landreform_settle_pending
+				COX_landreform_end_effect = yes
+			}
+			#2) 结算的第二天：拆 GUI（清旗标/关窗口），变量清空在事件链末尾的 finish_effect
+			if = {
+				limit = {
+					tag = COX
+					has_country_flag = COX_landreform_cleanup_pending
+				}
+				clr_country_flag = COX_landreform_cleanup_pending
+				COX_landreform_roundup = yes
+			}
+		}
+	}
+}

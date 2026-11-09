@@ -860,8 +860,8 @@ COX_landreform_end_effect = {
 
     log = "[GetDateText]: [Root.GetName]: landreform export test[?COX.COX_landreform_progress_export][?COX_landreform_infrastructure_export][?COX_landreform_militia_export]"
     
-    #只关 GUI（清旗标）；变量清空已在 finish_effect，事件延迟一天弹，避免与 GUI 拆除同帧
-    COX_landreform_roundup = yes
+    #不在结算帧拆 GUI：打上待清理标记，交给第二天的 on_daily 执行 roundup（清旗标/关 GUI）
+    set_country_flag = COX_landreform_cleanup_pending
     #事件
     if = {
         limit = {
