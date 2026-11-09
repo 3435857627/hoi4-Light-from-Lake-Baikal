@@ -20,7 +20,20 @@ on_actions = {
 				clr_country_flag = COX_landreform_cleanup_pending
 				COX_landreform_roundup = yes
 			}
-			#3) 土改进行中：确保底栏土改图标不会因为 TNO 其它 GUI 清掉 country_has_gui 而消失
+			#3) 兜底倒计时：任务计时器丢了（旧存档/超时帧异常）也不会永远不结算
+			if = {
+				limit = {
+					tag = COX
+					has_country_flag = COX_landreform_ongoing
+					NOT = { has_country_flag = COX_landreform_settle_pending }
+				}
+				add_to_variable = { COX_landreform_day_counter = 1 }
+				if = {
+					limit = { check_variable = { COX_landreform_day_counter > 419 } }
+					set_country_flag = COX_landreform_settle_pending
+				}
+			}
+			#4) 土改进行中：确保底栏土改图标不会因为 TNO 其它 GUI 清掉 country_has_gui 而消失
 			if = {
 				limit = {
 					tag = COX

@@ -8,6 +8,8 @@
 
         #full scope variables
         set_variable = { COX_landreform_progress = 0 }
+        #兜底倒计时：即使倒计时任务丢失也能正常结算（on_daily 每天 +1，满 420 结算）
+        set_variable = { COX_landreform_day_counter = 0 }
         set_variable = { COX_landreform_militia = 0 }
         set_variable = { COX_landreform_militia_change = 0 }
         set_variable = { COX_landreform_selected_region = 617 }
@@ -918,6 +920,7 @@ COX_landreform_finish_effect = {
     COX = {
         #土改已结束、GUI 已关闭，此时再清变量（含四个地区的局部变量）
         clear_variable = COX_landreform_progress
+        clear_variable = COX_landreform_day_counter
         clear_variable = COX_landreform_militia
         clear_variable = COX_landreform_militia_change
         clear_variable = COX_landreform_selected_region
