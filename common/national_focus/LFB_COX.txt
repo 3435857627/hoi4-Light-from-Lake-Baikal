@@ -1,4 +1,4 @@
-focus_tree = {#进攻新疆
+﻿focus_tree = {#进攻新疆
 	id = COX_attack_XIN
 	country = {
 		factor = 0
@@ -3170,7 +3170,7 @@ focus_tree = {#IF线
 			}
 			add_stability = 0.1
 			add_war_support = 0.1
-			remove_ideas = low_support
+			remove_ideas = { COX_low_support COX_low_support_hardly_raised COX_low_support_slightly_raised } #原来写的是不存在的 idea low_support
 		}
 	}
 	focus = {
