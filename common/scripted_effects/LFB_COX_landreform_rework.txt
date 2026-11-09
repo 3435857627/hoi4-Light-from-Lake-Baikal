@@ -1,4 +1,4 @@
-COX_landreform_startup = {
+﻿COX_landreform_startup = {
     
     COX = {
         #country flags
@@ -860,6 +860,7 @@ COX_landreform_end_effect = {
 
     log = "[GetDateText]: [Root.GetName]: landreform export test[?COX.COX_landreform_progress_export][?COX_landreform_infrastructure_export][?COX_landreform_militia_export]"
     
+    #只关 GUI（清旗标）；变量清空已在 finish_effect，事件延迟一天弹，避免与 GUI 拆除同帧
     COX_landreform_roundup = yes
     #事件
     if = {
@@ -867,7 +868,7 @@ COX_landreform_end_effect = {
             always = no #给失败预留的判定
         }
         COX = {
-            country_event = COX_landreform.401 #可以改成失败事件链的入口
+            country_event = { id = COX_landreform.401 days = 1 } #可以改成失败事件链的入口
         }
     }
     else = {
@@ -885,12 +886,12 @@ COX_landreform_end_effect = {
                 }
             }
             COX = {
-                country_event = COX_landreform.401
+                country_event = { id = COX_landreform.401 days = 1 }
             }
         }
         else = {
             COX = {
-                country_event = COX_landreform.402
+                country_event = { id = COX_landreform.402 days = 1 }
             }
         }
     }
@@ -898,6 +899,24 @@ COX_landreform_end_effect = {
 }
 COX_landreform_roundup = {#清除有关变量
     COX = {
+        clr_country_flag = COX_landreform_ongoing
+        clr_country_flag = country_has_gui
+        clr_country_flag = COX_land_reform_GUI_visible_flag
+        clr_country_flag = COX_landreform_yang_zhicheng
+        clr_country_flag = COX_landreform_chen_yun
+        clr_country_flag = COX_landreform_zhang_wentian
+        clr_country_flag = COX_landreform_liu_shaoqi
+        clr_country_flag = COX_landreform_99_fired
+        clr_country_flag = COX_landreform_223_fired
+        clr_country_flag = COX_landreform_224_fired
+
+        #变量与数组的清空都挪到 finish_effect（那里 GUI 早已关闭）
+    }
+}
+#真·结束效果，在事件链末尾触发
+COX_landreform_finish_effect = {
+    COX = {
+        #土改已结束、GUI 已关闭，此时再清变量（含四个地区的局部变量）
         clear_variable = COX_landreform_progress
         clear_variable = COX_landreform_militia
         clear_variable = COX_landreform_militia_change
@@ -912,72 +931,54 @@ COX_landreform_roundup = {#清除有关变量
         clear_variable = COX_landreform_local_infrastructure_tt_value
         clear_variable = COX_landreform_local_support_tt_value
         clear_variable = COX_landreform_local_unrest_tt_value
-        clr_country_flag = COX_landreform_ongoing
-        clr_country_flag = country_has_gui
-        clr_country_flag = COX_land_reform_GUI_visible_flag
-        clr_country_flag = COX_landreform_yang_zhicheng
-        clr_country_flag = COX_landreform_chen_yun
-        clr_country_flag = COX_landreform_zhang_wentian
-        clr_country_flag = COX_landreform_liu_shaoqi
-        clr_country_flag = COX_landreform_99_fired
-        clr_country_flag = COX_landreform_223_fired
-        clr_country_flag = COX_landreform_224_fired
-
-        #arrays
-        #数组的清空挪到 finish_effect：此时 GUI 已关闭，避免同帧清空动态列表绑定的数组
-    }
-    617 = {#中央
-        clear_variable = COX_landreform_local_progress
-        clear_variable = COX_landreform_local_infrastructure
-        clear_variable = COX_landreform_local_infrastructure_expectation
-        clear_variable = COX_landreform_local_unrest
-        clear_variable = COX_landreform_local_unrest_change
-        clear_variable = COX_landreform_local_support
-        clear_variable = COX_landreform_local_support_increase_factor
-        clear_variable = COX_landreform_local_support_decrease_factor
-        clear_variable = COX_landreform_local_militia_demand
-        clr_state_flag = COX_landreform_update_avaliable
-    }
-    957 = {#东疆
-        clear_variable = COX_landreform_local_progress
-        clear_variable = COX_landreform_local_infrastructure
-        clear_variable = COX_landreform_local_infrastructure_expectation
-        clear_variable = COX_landreform_local_unrest
-        clear_variable = COX_landreform_local_unrest_change
-        clear_variable = COX_landreform_local_support
-        clear_variable = COX_landreform_local_support_increase_factor
-        clear_variable = COX_landreform_local_support_decrease_factor
-        clear_variable = COX_landreform_local_militia_demand
-        clr_state_flag = COX_landreform_update_avaliable
-    }
-    618 = {#北疆
-        clear_variable = COX_landreform_local_progress
-        clear_variable = COX_landreform_local_infrastructure
-        clear_variable = COX_landreform_local_infrastructure_expectation
-        clear_variable = COX_landreform_local_unrest
-        clear_variable = COX_landreform_local_unrest_change
-        clear_variable = COX_landreform_local_support
-        clear_variable = COX_landreform_local_support_increase_factor
-        clear_variable = COX_landreform_local_support_decrease_factor
-        clear_variable = COX_landreform_local_militia_demand
-        clr_state_flag = COX_landreform_update_avaliable
-    }
-    619 = {#南疆
-        clear_variable = COX_landreform_local_progress
-        clear_variable = COX_landreform_local_infrastructure
-        clear_variable = COX_landreform_local_infrastructure_expectation
-        clear_variable = COX_landreform_local_unrest
-        clear_variable = COX_landreform_local_unrest_change
-        clear_variable = COX_landreform_local_support
-        clear_variable = COX_landreform_local_support_increase_factor
-        clear_variable = COX_landreform_local_support_decrease_factor
-        clear_variable = COX_landreform_local_militia_demand
-        clr_state_flag = COX_landreform_update_avaliable
-    }
-}
-#真·结束效果，在事件链末尾触发
-COX_landreform_finish_effect = {
-    COX = {
+        617 = {#中央
+            clear_variable = COX_landreform_local_progress
+            clear_variable = COX_landreform_local_infrastructure
+            clear_variable = COX_landreform_local_infrastructure_expectation
+            clear_variable = COX_landreform_local_unrest
+            clear_variable = COX_landreform_local_unrest_change
+            clear_variable = COX_landreform_local_support
+            clear_variable = COX_landreform_local_support_increase_factor
+            clear_variable = COX_landreform_local_support_decrease_factor
+            clear_variable = COX_landreform_local_militia_demand
+            clr_state_flag = COX_landreform_update_avaliable
+        }
+        957 = {#东疆
+            clear_variable = COX_landreform_local_progress
+            clear_variable = COX_landreform_local_infrastructure
+            clear_variable = COX_landreform_local_infrastructure_expectation
+            clear_variable = COX_landreform_local_unrest
+            clear_variable = COX_landreform_local_unrest_change
+            clear_variable = COX_landreform_local_support
+            clear_variable = COX_landreform_local_support_increase_factor
+            clear_variable = COX_landreform_local_support_decrease_factor
+            clear_variable = COX_landreform_local_militia_demand
+            clr_state_flag = COX_landreform_update_avaliable
+        }
+        618 = {#北疆
+            clear_variable = COX_landreform_local_progress
+            clear_variable = COX_landreform_local_infrastructure
+            clear_variable = COX_landreform_local_infrastructure_expectation
+            clear_variable = COX_landreform_local_unrest
+            clear_variable = COX_landreform_local_unrest_change
+            clear_variable = COX_landreform_local_support
+            clear_variable = COX_landreform_local_support_increase_factor
+            clear_variable = COX_landreform_local_support_decrease_factor
+            clear_variable = COX_landreform_local_militia_demand
+            clr_state_flag = COX_landreform_update_avaliable
+        }
+        619 = {#南疆
+            clear_variable = COX_landreform_local_progress
+            clear_variable = COX_landreform_local_infrastructure
+            clear_variable = COX_landreform_local_infrastructure_expectation
+            clear_variable = COX_landreform_local_unrest
+            clear_variable = COX_landreform_local_unrest_change
+            clear_variable = COX_landreform_local_support
+            clear_variable = COX_landreform_local_support_increase_factor
+            clear_variable = COX_landreform_local_support_decrease_factor
+            clear_variable = COX_landreform_local_militia_demand
+            clr_state_flag = COX_landreform_update_avaliable
+        }
         #土改已结束、GUI 已关闭，此时再清空数组，避免同帧清空 GUI 动态列表绑定的数组
         clear_array = COX_landreform_regions_array
         clear_array = COX_landreform_dec_all_array
