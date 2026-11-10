@@ -13,8 +13,8 @@
 | 改 | **只改调试副本** `D:\HOI4Mods\LFB_Dev`；永远不要改游戏安装目录 |
 | 备份 | 改前先 `Copy-Item` 到 `D:\HOI4Mods\LFB_Dev\_backup\<文件名>.<yyyyMMdd_HHmmss>.bak` |
 | 测 | **完全重启 HOI4**（脚本与本地化都不热重载），看 `...\Hearts of Iron IV\logs\error.log` |
-| 传 | 先比对 dev 与仓库差异 → 只复制本次改过的文件 → `git add -A` → `git commit -F 消息文件` → `git push` → 校验 `HEAD == origin` |
-| 禁 | 改游戏目录；把 `descriptor.mod`、`_backup\` 同步进仓库；盲目录镜像（会覆盖掉上游修复） |
+| 传（仅用户要求时） | 先比对 dev 与仓库差异 → 只复制本次改过的文件 → `git add -A` → `git commit -F 消息文件` → `git push` → 校验 `HEAD == origin` |
+| 禁 | 改游戏目录；把 `descriptor.mod`、`_backup\` 同步进仓库；盲目录镜像（会覆盖掉上游修复）；**未经要求 `fetch`/`pull`/`merge` 远端，或把仓库文件复制进调试副本** |
 
 ---
 
@@ -112,7 +112,9 @@ Select-String -Path "$log\error.log" -Pattern 'LFB|red_Guard|COX_' -Encoding UTF
 
 ## 4. 同步到 git（最容易翻车的一步）
 
-### 4.1 先看仓库状态，落后就先追上
+> **2026-11-10 用户约定：除非用户明确要求，不要随意 `git fetch` / `pull` / `merge` 远端，也不要把仓库里的文件复制进调试副本。** 本节命令只在用户要求同步 / 提交时执行；平时以调试副本为准，不要让仓库内容自己“流”进来。
+
+### 4.1 先看仓库状态，落后就先追上（仅用户要求同步时）
 
 ```powershell
 & $git -C $repo status -sb          # 形如 "## 1.7.0_Compat...origin/1.7.0_Compat [behind N]"
@@ -120,7 +122,7 @@ Select-String -Path "$log\error.log" -Pattern 'LFB|red_Guard|COX_' -Encoding UTF
 & $git -C $repo merge --ff-only origin/1.7.0_Compat
 ```
 
-> 该仓库经常"fetch 到新提交但工作区没动"：看到 `behind N` 就执行上面的 `merge --ff-only` 落地，不要直接 commit，否则会分叉。
+> 该仓库经常“fetch 到新提交但工作区没动”：**用户要求同步时**，看到 `behind N` 就执行上面的 `merge --ff-only` 落地，不要直接 commit，否则会分叉；**没被要求就不要动远端引用**。
 
 ### 4.2 比对调试副本与仓库（排除 `.git`、`_backup`、`descriptor.mod`）
 
@@ -191,9 +193,9 @@ $env:GIT_TERMINAL_PROMPT="0"
 & $git -C $repo rev-parse HEAD origin/1.7.0_Compat   # 两行必须相同
 ```
 
-### 4.6 反向同步：把仓库里的上游修复带回调试副本
+### 4.6 反向同步：把仓库里的上游修复带回调试副本（需用户确认）
 
-提交后，仓库里可能有些文件比调试副本新（别人刚提交的头像、图标、事件）。把它们复制回调试副本，保证"调试副本 = 仓库 + 自己的 `descriptor.mod` + `_backup\`"：
+提交后，仓库里可能有些文件比调试副本新（别人刚提交的头像、图标、事件）。**先向用户说明是哪几个文件、为什么需要**，得到同意后再把它们复制回调试副本，保证“调试副本 = 仓库 + 自己的 `descriptor.mod` + `_backup\`”：
 
 ```powershell
 $up=@("events\LFB_COX.txt","gfx\interface\counters\divisions_large\red_guards_icon.dds")
@@ -229,7 +231,9 @@ foreach($rel in $up){ Copy-Item (Join-Path $repo $rel) (Join-Path $dev $rel) -Fo
 7. **`.mod` 字段是 `picture=` 不是 `thumbnail=`**；`supported_version` 写 `"1.19.*"`。
 8. **调试副本的 `descriptor.mod` 名字是「LFB Dev 调试版」**，仅本地用，不要同步进仓库。
 9. **不要用 `robocopy /MIR` 从调试副本镜像到仓库**：会把上游修复覆盖回旧版。用 4.2 的哈希比对 + 定向复制。
-10. **崩溃诊断**：先看 `crashes\<时间>\exception.txt`（异常码/地址）与 `meta.yml`（mod 列表、启动参数），再看 `logs\error.log` 末尾；`game.log` 往往没被复制进崩溃包，复现前先备份 `logs`。`minidump.dmp` 可解析出"异常流"（异常码、读写地址、出错 RVA）。
+10. **崩溃诊断**：先看 `crashes\<时间>\exception.txt`（异常码/地址）与 `meta.yml`（mod 列表、启动参数），再看 `logs\error.log` 末尾；`game.log` 往往没被复制进崩溃包，复现前先备份 `logs`。`minidump.dmp` 可解析出“异常流”（异常码、读写地址、出错 RVA）。
+11. **不要随意取用 git 仓库内容**（2026-11-10 用户约定）：未经用户明确要求，不执行 `git fetch` / `pull` / `merge`，也不把仓库里的文件复制进调试副本；调试副本只接受用户确认过的改动，需要同步先问。
+12. **`_backup\` 文件名可能大小写撞车**：`common/scripted_effects/LFB_XBJ_northwest_crisis.txt` 与 `common/scripted_localisation/LFB_XBJ_Northwest_crisis.txt` 只差大小写，Windows 文件系统不区分大小写，`_backup\<文件名>.<时间戳>.bak` 会互相覆盖。备份时在文件名里加模块后缀（如 `.scripted_effects.` / `.scripted_localisation.`）。
 
 ---
 
@@ -259,3 +263,4 @@ foreach($rel in $up){ Copy-Item (Join-Path $repo $rel) (Join-Path $dev $rel) -Fo
 - 已推送：`4560f58 赤卫队定稿 / COX 专属次学说 / 修复点国策必崩`（本地与 origin 一致）。
 - 未提交：`localisation/simp_chinese/LFB_doctrines_l_simp_chinese.yml`（次学说文本更新）、`docs/COX次学说_设计.md`（第七节）、本手册。
 - 待办：工农红军 / 袭扰破坏的**数值重做**（「知己知彼」「诱敌深入」「地道作战」三个节点的现行效果与文字不符）；英文本地化；兵模方案（暂定不动）。
+- **2026-11-10 约定**：不主动取用仓库 / 远端内容（`fetch` / `pull` / `merge` / 复制仓库文件均需用户要求）。此前一次 `pull --ff`（`551fd97` 修 COX `remove_ideas`）已按用户要求撤回，本地仓库回到 `ae1f500`；origin 上仍有 `551fd97`，未再拉取。

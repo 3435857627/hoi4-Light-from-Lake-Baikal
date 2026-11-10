@@ -1,5 +1,17 @@
 
 on_actions = {
+	#2026-11-10：把「工作组维稳」设为西北局的默认占领政策
+	#作用域说明：set_occupation_law 只有在 THIS == PREV（都是同一个国家）时才设「该国默认法」，
+	#所以写成 XBJ = { XBJ = { ... } }；外层进入 XBJ，内层再进同一个 tag，PREV 也就成了 XBJ。
+	on_startup = {
+		effect = {
+			XBJ = {
+				XBJ = {
+					set_occupation_law = XBJ_work_group_pacification
+				}
+			}
+		}
+	}
 	on_weekly_XBJ = {
 		effect = {
 			every_state = {

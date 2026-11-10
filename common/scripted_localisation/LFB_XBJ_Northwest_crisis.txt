@@ -1,7 +1,7 @@
 defined_text = {
 	name = XBJ_NWC_Getregion
 	text = {
-		trigger = { check_variable = { XBJ_northwest_crisis_target^XBJ_northwest_crisis_acted_state = 2022 } }
+		trigger = { check_variable = { XBJ_northwest_crisis_target^XBJ_northwest_crisis_acted_state = 2433 } }
 		localization_key = "XBJ_NWC_Getregion_XJ"
 	}
 	text = {

@@ -435,7 +435,7 @@ XBJ_northwest_crisis_gui_update_task = {
 	if = {
 		limit = {
 			NOT = {
-				state = 2022
+				state = 2433
 				state = 1302
 			}
 			check_variable = {
@@ -454,7 +454,7 @@ XBJ_northwest_crisis_gui_update_task = {
 	if = {
 		limit = {
 			NOT = {
-				state = 2022
+				state = 2433
 				state = 1302
 			}
 			check_variable = {
@@ -470,7 +470,7 @@ XBJ_northwest_crisis_gui_update_task = {
 	if = {
 		limit = {
 			NOT = {
-				state = 2022
+				state = 2433
 				state = 1302
 			}
 			check_variable = {
@@ -489,7 +489,7 @@ XBJ_northwest_crisis_gui_update_task = {
 	if = {
 		limit = {
 			NOT = {
-				state = 2022
+				state = 2433
 				state = 1302
 			}
 			check_variable = {
@@ -505,7 +505,7 @@ XBJ_northwest_crisis_gui_update_task = {
 	if = {
 		limit = {
 			NOT = {
-				state = 2022
+				state = 2433
 				state = 1302
 			}
 			check_variable = {
@@ -524,7 +524,7 @@ XBJ_northwest_crisis_gui_update_task = {
 	if = {
 		limit = {
 			NOT = {
-				state = 2022
+				state = 2433
 				state = 1302
 			}
 			check_variable = {
@@ -543,7 +543,7 @@ XBJ_northwest_crisis_gui_update_task = {
 	if = {
 		limit = {
 			NOT = {
-				state = 2022
+				state = 2433
 				state = 1302
 			}
 			check_variable = {
@@ -562,7 +562,7 @@ XBJ_northwest_crisis_gui_update_task = {
 	if = {
 		limit = {
 			NOT = {
-				state = 2022
+				state = 2433
 				state = 1302
 			}
 			check_variable = {
@@ -581,7 +581,7 @@ XBJ_northwest_crisis_gui_update_task = {
 	if = {
 		limit = {
 			NOT = {
-				state = 2022
+				state = 2433
 				state = 1302
 			}
 			check_variable = {
@@ -600,7 +600,7 @@ XBJ_northwest_crisis_gui_update_task = {
 	if = {
 		limit = {
 			NOT = {
-				state = 2022
+				state = 2433
 				state = 1302
 			}
 			check_variable = {
@@ -618,7 +618,7 @@ XBJ_northwest_crisis_gui_update_task = {
 	}
 	if = {
 		limit = {
-			state = 2022
+			state = 2433
 			NOT = {
 				has_state_flag = XBJ_northwest_crisis_this_state_task_11_ongoing
 			}
@@ -631,7 +631,7 @@ XBJ_northwest_crisis_gui_update_task = {
 	}
 	if = {
 		limit = {
-			state = 2022
+			state = 2433
 			NOT = {
 				has_state_flag = XBJ_northwest_crisis_this_state_task_12_ongoing
 			}
@@ -862,7 +862,7 @@ XBJ_northwest_crisis_gui_working_group_task_timeout_effect = {
 			if = {
 				limit = {
 					NOT = {
-						has_template = "Infantry Division"
+						has_template = "Red Guards"
 					}
 				}
 				division_template = {
@@ -870,26 +870,16 @@ XBJ_northwest_crisis_gui_working_group_task_timeout_effect = {
 					division_names_group = COX_Infantry
 					is_locked = no
 					regiments = {
-						light_infantry = {
-							x = 0
-							y = 0
-						}
-						light_infantry = {
-							x = 0
-							y = 1
-						}
-						light_infantry = {
-							x = 1
-							y = 0
-						}
-						light_infantry = {
-							x = 2
-							y = 0
-						}
-						light_infantry = {
-							x = 3
-							y = 0
-						}
+						red_Guards = { x = 0 y = 0 }
+						red_Guards = { x = 0 y = 1 }
+						red_Guards = { x = 0 y = 2 }
+						red_Guards = { x = 1 y = 0 }
+						red_Guards = { x = 1 y = 1 }
+						red_Guards = { x = 1 y = 2 }
+					}
+					regimental_support = {
+						red_Guards_anti_tank = { x = 0 y = 0 }
+						red_Guards_anti_tank = { x = 1 y = 0 }
 					}
 					support = {
 					}
@@ -1006,34 +996,20 @@ XBJ_northwest_crisis_gui_working_group_task_timeout_effect = {
 				division_names_group = COX_Infantry
 				is_locked = no
 				regiments = {
-					light_infantry = {
-						x = 0
-						y = 0
-					}
-					light_infantry = {
-						x = 0
-						y = 1
-					}
-					light_infantry = {
-						x = 1
-						y = 0
-					}
-					infantry = {
-						x = 1
-						y = 1
-					}
-					infantry = {
-						x = 2
-						y = 0
-					}
-					infantry = {
-						x = 2
-						y = 1
-					}
-					elite_infantry = {
-						x = 3
-						y = 0
-					}
+					red_Guards = { x = 0 y = 0 }
+					red_Guards = { x = 0 y = 1 }
+					red_Guards = { x = 0 y = 2 }
+					red_Guards = { x = 1 y = 0 }
+					red_Guards = { x = 1 y = 1 }
+					red_Guards = { x = 1 y = 2 }
+					red_Guards = { x = 2 y = 0 }
+					red_Guards = { x = 2 y = 1 }
+					red_Guards = { x = 2 y = 2 }
+				}
+				regimental_support = {
+					red_Guards_anti_tank = { x = 0 y = 0 }
+					red_Guards_anti_tank = { x = 1 y = 0 }
+					red_Guards_anti_tank = { x = 2 y = 0 }
 				}
 				support = {
 				}
@@ -1490,7 +1466,7 @@ XBJ_northwest_crisis_gui_working_group_task_timeout_effect_tt = {
 			if = {
 				limit = {
 					NOT = {
-						has_template = "Infantry Division"
+						has_template = "Red Guards"
 					}
 				}
 				division_template = {
@@ -1498,26 +1474,16 @@ XBJ_northwest_crisis_gui_working_group_task_timeout_effect_tt = {
 					division_names_group = COX_Infantry
 					is_locked = no
 					regiments = {
-						light_infantry = {
-							x = 0
-							y = 0
-						}
-						light_infantry = {
-							x = 0
-							y = 1
-						}
-						light_infantry = {
-							x = 1
-							y = 0
-						}
-						light_infantry = {
-							x = 2
-							y = 0
-						}
-						light_infantry = {
-							x = 3
-							y = 0
-						}
+						red_Guards = { x = 0 y = 0 }
+						red_Guards = { x = 0 y = 1 }
+						red_Guards = { x = 0 y = 2 }
+						red_Guards = { x = 1 y = 0 }
+						red_Guards = { x = 1 y = 1 }
+						red_Guards = { x = 1 y = 2 }
+					}
+					regimental_support = {
+						red_Guards_anti_tank = { x = 0 y = 0 }
+						red_Guards_anti_tank = { x = 1 y = 0 }
 					}
 					support = {
 					}
@@ -1634,34 +1600,20 @@ XBJ_northwest_crisis_gui_working_group_task_timeout_effect_tt = {
 				division_names_group = COX_Infantry
 				is_locked = no
 				regiments = {
-					light_infantry = {
-						x = 0
-						y = 0
-					}
-					light_infantry = {
-						x = 0
-						y = 1
-					}
-					light_infantry = {
-						x = 1
-						y = 0
-					}
-					infantry = {
-						x = 1
-						y = 1
-					}
-					infantry = {
-						x = 2
-						y = 0
-					}
-					infantry = {
-						x = 2
-						y = 1
-					}
-					elite_infantry = {
-						x = 3
-						y = 0
-					}
+					red_Guards = { x = 0 y = 0 }
+					red_Guards = { x = 0 y = 1 }
+					red_Guards = { x = 0 y = 2 }
+					red_Guards = { x = 1 y = 0 }
+					red_Guards = { x = 1 y = 1 }
+					red_Guards = { x = 1 y = 2 }
+					red_Guards = { x = 2 y = 0 }
+					red_Guards = { x = 2 y = 1 }
+					red_Guards = { x = 2 y = 2 }
+				}
+				regimental_support = {
+					red_Guards_anti_tank = { x = 0 y = 0 }
+					red_Guards_anti_tank = { x = 1 y = 0 }
+					red_Guards_anti_tank = { x = 2 y = 0 }
 				}
 				support = {
 				}
@@ -1957,7 +1909,7 @@ XBJ_test = {
 					state = 906
 					state = 601
 					state = 2025
-					state = 2022
+					state = 2433
 				}
 			}
 			meta_effect = {

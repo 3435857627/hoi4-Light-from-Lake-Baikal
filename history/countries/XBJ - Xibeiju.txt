@@ -9,6 +9,7 @@ recruit_character = XBJ_Bo_Yibo
 add_manpower = 5000
 set_stability = 1
 set_war_support = 1
+set_research_slots = 3
 
 add_ideas = {
 	# faction ideas 
@@ -64,7 +65,7 @@ add_ideas = {
 	tno_industrial_expertise_incompetent
 	tno_industrial_equipment_power_tools
 	tno_agriculture_subsistence
-	tno_research_facilities_basic
+	tno_research_facilities_outdated
 	tno_academic_base_mass_illiteracy
 	tno_admin_efficiency_nonexistent_state_apparatus
 

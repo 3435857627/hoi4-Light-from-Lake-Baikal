@@ -16,7 +16,7 @@ focus_tree = {
 				has_war_with = GAN
 			}
 		}
-		cost = 3
+		cost = 2
 		completion_reward = {
 			add_political_power = 15
 			country_event = { id = XBJ.1 }
@@ -31,7 +31,7 @@ focus_tree = {
 	focus = {
 		id = XBJ_We_Protect_The_Poor
 		icon = GFX_goal_XBJ_We_Protect_The_Poor
-		cost = 3
+		cost = 2
 		prerequisite = { focus = XBJ_Infiltrate_Powder_Keg }
 		x = -2
 		y = 1
@@ -57,7 +57,7 @@ focus_tree = {
 	focus = {
 		id = XBJ_We_Bring_Peace_And_Security
 		icon = GFX_goal_XBJ_We_Bring_Peace_And_Security
-		cost = 3
+		cost = 2
 		prerequisite = { focus = XBJ_Infiltrate_Powder_Keg }
 		x = 0
 		y = 1
@@ -83,7 +83,7 @@ focus_tree = {
 	focus = {
 		id = XBJ_We_Carried_Enough_Food
 		icon = GFX_goal_XBJ_We_Carried_Enough_Food
-		cost = 3
+		cost = 2
 		prerequisite = { focus = XBJ_Infiltrate_Powder_Keg }
 		x = 2
 		y = 1
@@ -137,7 +137,7 @@ focus_tree = {
 	focus = {
 		id = XBJ_The_Dust_Settles
 		icon = GFX_goal_XBJ_The_Dust_Settles
-		cost = 5
+		cost = 2
 		prerequisite = { focus = XBJ_Support_Madunjing }
 		x = 0
 		y = 1
@@ -185,7 +185,7 @@ focus_tree = {
 	focus = {
 		id = XBJ_Experience_Of_Xinjiang_Land_Reform
 		icon = GFX_goal_XBJ_Experience_Of_Xinjiang_Land_Reform
-		cost = 5
+		cost = 2
 		prerequisite = { focus = XBJ_The_Dust_Settles }
 		x = -2
 		y = 2
@@ -206,7 +206,7 @@ focus_tree = {
 	focus = {
 		id = XBJ_Pursue_The_Aggressors
 		icon = GFX_goal_XBJ_Pursue_The_Aggressors
-		cost = 5
+		cost = 2
 		prerequisite = { focus = XBJ_The_Dust_Settles}
 		x = 2
 		y = 2
@@ -227,7 +227,7 @@ focus_tree = {
 	focus = {
 		id = XBJ_Take_Over_Chamber_Of_Commerce
 		icon = GFX_goal_XBJ_Take_Over_Chamber_Of_Commerce
-		cost = 5
+		cost = 2
 		prerequisite = {focus = XBJ_The_Dust_Settles }
 		x = -4
 		y = 1
@@ -251,7 +251,7 @@ focus_tree = {
 	focus = {
 		id = XBJ_Nationalized_Huangzhong
 		icon = GFX_goal_XBJ_Nationalized_Huangzhong
-		cost = 5
+		cost = 2
 		prerequisite = { focus = XBJ_The_Dust_Settles }
 		x = 0
 		y = 1
@@ -273,7 +273,7 @@ focus_tree = {
 	focus = {
 		id = XBJ_Crack_Down_On_Iman_System
 		icon = GFX_goal_XBJ_Crack_Down_On_Iman_System
-		cost = 5
+		cost = 2
 		prerequisite = { focus = XBJ_The_Dust_Settles }
 		x = 4
 		y = 1
@@ -294,7 +294,7 @@ focus_tree = {
 	focus = {
 		id = XBJ_Qinghai_Peoples_Government
 		icon = GFX_goal_XBJ_Qinghai_Peoples_Government
-		cost = 5
+		cost = 2
 		prerequisite = { focus = XBJ_Take_Over_Chamber_Of_Commerce }
 		prerequisite = { focus = XBJ_Experience_Of_Xinjiang_Land_Reform }
 		prerequisite = { focus = XBJ_Nationalized_Huangzhong }
@@ -326,7 +326,7 @@ focus_tree = {
 	focus = {
 		id = XBJ_Guard_Against_Enemies_In_The_East
 		icon = GFX_goal_XBJ_Guard_Against_Enemies_In_The_East
-		cost = 5
+		cost = 2
 		prerequisite = { focus = XBJ_Qinghai_Peoples_Government }
 		x = 0
 		y = 1
