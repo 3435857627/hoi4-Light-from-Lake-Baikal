@@ -15,7 +15,7 @@ COX_red_guards = {
 		days_re_enable = 30
 		ai_will_do = { factor = 0 }
 	}
-	# ===== 资源兑换：陆军经验 -> 学说精通度（1:2）=====
+	# ===== 一次性：陆军经验换永久精通度增长（每日 +0.25）=====
 	COX_Organize_large_scale_military_training = {
 		icon = GFX_Mao_comes_as_a_lightning
 		available = {
@@ -23,12 +23,14 @@ COX_red_guards = {
 		}
 		complete_effect = {
 			army_experience = -25
-			add_mastery = {
-				amount = 50
+			add_daily_mastery = {
+				amount = 0.25
+				days = 36500
+				name = COX_organize_training_mastery
 				folder = land
 			}
 		}
-		days_re_enable = 30
+		fire_only_once = yes
 		ai_will_do = { factor = 0 }
 	}
 	# ===== 改革 I：确立指战员平等关系 =====
