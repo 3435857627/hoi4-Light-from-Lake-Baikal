@@ -1,4 +1,4 @@
-﻿guiTypes = {
+guiTypes = {
 	containerWindowType = {
 		name = "COX_land_reform_GUI_Opener"
 		size = { width = 220 height = 8 }

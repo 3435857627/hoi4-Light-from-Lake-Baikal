@@ -1,4 +1,4 @@
-﻿spriteTypes = {	
+spriteTypes = {	
 	frameAnimatedSpriteType = {
 		name = "GFX_Portrait_cyber_mao"
 		texturefile = "gfx/leaders/COX/cyber_mao.dds"
