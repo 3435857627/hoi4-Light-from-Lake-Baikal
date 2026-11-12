@@ -8,7 +8,7 @@ COX_red_army = { #陆军核心：工农红军（赤卫队）
 	track = infantry
 	name = SUBDOCTRINE_COX_RED_ARMY
 	description = SUBDOCTRINE_COX_RED_ARMY_DESC
-	icon = GFX_marine_elite_medium
+	icon = GFX_COX_red_army_medium
 
 	xp_cost = 50
 	xp_type = army
@@ -92,7 +92,7 @@ COX_harassment_sabotage = { #火力支援：袭扰破坏（赤卫队破坏小组
 	track = combat_support
 	name = SUBDOCTRINE_COX_HARASSMENT_SABOTAGE
 	description = SUBDOCTRINE_COX_HARASSMENT_SABOTAGE_DESC
-	icon = GFX_support_companies_medium
+	icon = GFX_COX_harassment_sabotage_medium
 
 	xp_cost = 50
 	xp_type = army

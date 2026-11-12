@@ -1,0 +1,14 @@
+spriteTypes = {
+
+	# COX 专属次学说图标（72x72，与 TNO 原版 doctrine 图标尺寸一致）
+	SpriteType = {
+		name = "GFX_COX_red_army_medium"
+		texturefile = "gfx/interface/doctrines/COX_red_army.png"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_COX_harassment_sabotage_medium"
+		texturefile = "gfx/interface/doctrines/COX_harassment_sabotage.png"
+		alwaystransparent = yes
+	}
+}
