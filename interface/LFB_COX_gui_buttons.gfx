@@ -1,0 +1,11 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_COX_landreform_button"
+		texturefile = "gfx/interface/COX/COX_landreform_button.png"
+	}
+	spriteType = {
+		name = "GFX_COX_gaw_button"
+		texturefile = "gfx/interface/COX/COX_gaw_button.png"
+	}
+}

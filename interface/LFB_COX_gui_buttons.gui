@@ -1,0 +1,27 @@
+guiTypes = {
+
+	#国家界面「政治」页（内阁一行右侧空白处）的两个启动按钮
+	containerWindowType = {
+		name = "COX_gui_buttons"
+		size = { width = 400 height = 140 }
+		position = { x = 0 y = 289 }
+
+		buttonType = {
+			name = "COX_landreform_button"
+			spriteType = "GFX_COX_landreform_button"
+			position = { x = 238 y = 36 }
+			pdx_tooltip = "COX_landreform_button_tt"
+			clicksound = click_ok
+			oversound = ui_menu_over
+		}
+
+		buttonType = {
+			name = "COX_gaw_button"
+			spriteType = "GFX_COX_gaw_button"
+			position = { x = 310 y = 36 }
+			pdx_tooltip = "COX_gaw_button_tt"
+			clicksound = click_ok
+			oversound = ui_menu_over
+		}
+	}
+}

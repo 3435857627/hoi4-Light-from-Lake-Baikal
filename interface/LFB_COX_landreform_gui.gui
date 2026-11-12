@@ -1,4 +1,4 @@
-guiTypes = {
+﻿guiTypes = {
 	containerWindowType = {
 		name = "COX_land_reform_GUI_Opener"
 		size = { width = 220 height = 8 }
@@ -46,6 +46,12 @@ guiTypes = {
 		Origo = center
 		clipping = no
 		moveable = yes
+		click_to_front = yes
+		#透明背景：给窗口一块可点击/可拖拽的底，否则整个窗口没有拖拽面，只能关掉才能点别处
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_tiled_window_transparent"
+		}
 		
 
 		iconType = {

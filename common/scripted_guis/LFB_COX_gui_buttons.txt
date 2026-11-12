@@ -1,0 +1,48 @@
+scripted_gui = {
+
+	#土改 GUI / 抗日战争 GUI 的启动按钮，挂在国家界面政治页
+	COX_gui_buttons = {
+		window_name = "COX_gui_buttons"
+		context_type = player_context
+		parent_window_token = politics_tab
+
+		visible = {
+			tag = COX
+			OR = {
+				has_country_flag = COX_landreform_ongoing
+				has_country_flag = COX_GAW_GUI_Avaliable
+			}
+		}
+
+		effects = {
+			COX_landreform_button_click = {
+				if = {
+					limit = { has_country_flag = COX_land_reform_GUI_visible_flag }
+					clr_country_flag = COX_land_reform_GUI_visible_flag
+				}
+				else = {
+					set_country_flag = COX_land_reform_GUI_visible_flag
+				}
+				COX_landreform_refresh = yes
+			}
+			COX_gaw_button_click = {
+				if = {
+					limit = { has_country_flag = COX_GAW_GUI_visible }
+					clr_country_flag = COX_GAW_GUI_visible
+				}
+				else = {
+					set_country_flag = COX_GAW_GUI_visible
+				}
+			}
+		}
+
+		triggers = {
+			COX_landreform_button_visible = {
+				has_country_flag = COX_landreform_ongoing
+			}
+			COX_gaw_button_visible = {
+				has_country_flag = COX_GAW_GUI_Avaliable
+			}
+		}
+	}
+}
