@@ -1,0 +1,17 @@
+on_actions = {
+	#联合政府路线：解放东北的后续——伪满不复存在时，西满洲的东北人民自治军接管全境
+	on_daily = {
+		effect = {
+			if = {
+				limit = {
+					tag = COX
+					has_country_flag = COX_IF_Northeast_pending
+					MAN = { exists = no }
+					DMN = { exists = yes }
+				}
+				clr_country_flag = COX_IF_Northeast_pending
+				DMN_Coalition_Goverment_get_Northeast_effect = yes
+			}
+		}
+	}
+}

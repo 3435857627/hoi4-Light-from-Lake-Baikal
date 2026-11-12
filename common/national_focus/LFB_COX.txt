@@ -3632,6 +3632,8 @@ focus_tree = {#联合政府
 		relative_position_id = COX_Unfinished_Business
 		completion_reward = {
 			add_stability = 0.1
+			#解放东北：与中华人民共和国路线对称，触发「雪消时节」
+			country_event = { id = LFBCG.918 days = 0 }
 		}
 	}
 	focus = {

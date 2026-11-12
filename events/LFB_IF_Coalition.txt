@@ -29,8 +29,13 @@ country_event = {
 	option = {
 		name = LFBCG.918.a
 		hidden_effect = {
-			DMN = {
-				add_ideas = DMN_Northern_Spring
+			#东北尚未收复：挂标记，伪满消失后由东北人民自治军接管西满洲
+			set_country_flag = COX_IF_Northeast_pending
+			if = {
+				limit = { DMN = { exists = yes } }
+				DMN = {
+					add_ideas = DMN_Northern_Spring
+				}
 			}
 		}
 	}
