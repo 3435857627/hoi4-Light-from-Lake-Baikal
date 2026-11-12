@@ -58,6 +58,8 @@ guiTypes = {
 			name = "PRC_tugai_GUI_dibant"            
 			position = { x = 0 y = 0 }
 			spriteType = "GFX_PRC_tugai_GUI_diban"
+			#底板 1200x815 盖满整个窗口，会吃掉鼠标按下事件，导致无法拖动；设为鼠标穿透
+			alwaystransparent = yes
 
 		}	
 		iconType = {
