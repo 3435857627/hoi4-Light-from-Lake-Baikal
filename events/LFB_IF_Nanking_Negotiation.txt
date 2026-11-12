@@ -848,6 +848,13 @@ country_event = {
 		name = LFBUG.102.a
 		custom_effect_tooltip = LFBUG_102_a_tt
 		hidden_effect = {
+			#如果已经成立联合政府（或云南已不存在），这条内战线不再执行，
+			#否则会出现“改名成中国人民解放军但没有战争”的坏档
+			if = {
+				limit = {
+					NOT = { has_country_flag = COX_negotiation_end }
+					YUN = { exists = yes }
+				}
 			set_global_flag = LFB_IF_COX_YUN_war
 			YUN = {
 				set_popularities = {
@@ -975,6 +982,7 @@ country_event = {
 				retire_character = QIN_Jiang_Jingguo
 			}
 			country_event = { id = LFBUG.1002 days = 1 }
+			}
 		}
 	}
 		
@@ -1023,6 +1031,13 @@ country_event = {
 		name = LFBUG.202.a
 		custom_effect_tooltip = LFBUG_202_a_tt
 		hidden_effect = {
+			#如果已经成立联合政府（或云南已不存在），这条内战线不再执行，
+			#否则会出现“改名成中国人民解放军但没有战争”的坏档
+			if = {
+				limit = {
+					NOT = { has_country_flag = COX_negotiation_end }
+					YUN = { exists = yes }
+				}
 			set_global_flag = LFB_IF_COX_YUN_war
 			COX = {
 				set_cosmetic_tag = COX_civil_war
@@ -1153,6 +1168,7 @@ country_event = {
 				}
 			}
 			country_event = { id = LFBUG.1002 days = 1 }
+			}
 		}
 	}
 		
