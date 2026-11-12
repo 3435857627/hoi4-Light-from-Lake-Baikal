@@ -29,14 +29,20 @@ country_event = {
 	option = {
 		name = LFBCG.918.a
 		hidden_effect = {
-			#东北尚未收复：挂标记，伪满消失后由东北人民自治军接管西满洲
-			set_country_flag = COX_IF_Northeast_pending
+			#东北人民自治军接管西满洲：改名、换意识形态、成为最低级傀儡，并播新闻
 			if = {
 				limit = { DMN = { exists = yes } }
 				DMN = {
+					set_cosmetic_tag = DMN_four_eastern_provinces
+					set_politics = { ruling_party = despotism }
 					add_ideas = DMN_Northern_Spring
 				}
+				set_autonomy = {
+					target = DMN
+					autonomy_state = autonomy_puppet
+				}
 			}
+			news_event = { id = LFBCG.1644 days = 0 }
 		}
 	}
 }

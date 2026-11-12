@@ -42,10 +42,54 @@ country_event = {
 	option = {
 		name = LFB_IF_PRC.918.a
 		hidden_effect = {
-			DMN = {
-				add_ideas = DMN_Northern_Spring
+			#东北民主联军接管西满洲：换意识形态为中共中央东北局、成为最低级傀儡，并播新闻
+			if = {
+				limit = { DMN = { exists = yes } }
+				DMN = {
+					set_cosmetic_tag = DMN_communist_northeast_bureau
+					set_politics = { ruling_party = communist_1 }
+					set_party_name = {
+						ideology = communist_1
+						name = DMN_communist_1_party
+						long_name = DMN_communist_1_party_long
+					}
+					add_ideas = DMN_Northern_Spring
+				}
+				set_autonomy = {
+					target = DMN
+					autonomy_state = autonomy_puppet
+				}
 			}
+			news_event = { id = LFB_IF_PRC.1645 days = 0 }
 		}
+	}
+}
+
+news_event = { 
+	id = LFB_IF_PRC.1645
+	picture = GFX_Coalition_Government_Northeast
+	title = LFB_IF_PRC.1645.t
+	desc = LFB_IF_PRC.1645.desc
+	is_triggered_only = yes
+	major = yes
+	option = { 
+		trigger = {
+			tag = COX
+		}
+		name = LFB_IF_PRC.1645.a 
+	}
+	option = { 
+		trigger = {
+			tag = JAP
+		}
+		name = LFB_IF_PRC.1645.b 
+	}
+	option = { 
+		trigger = {
+			NOT = { tag = COX }
+			NOT = { tag = JAP }
+		}
+		name = LFB_IF_PRC.1645.c
 	}
 }
 

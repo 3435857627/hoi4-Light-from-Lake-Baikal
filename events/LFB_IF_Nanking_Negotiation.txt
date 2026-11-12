@@ -742,15 +742,6 @@ country_event = {
 				tree = COX_Coalition_Government
 				keep_completed = no
 			}
-			#东北未收复（伪满仍在）时，西满洲的东北人民自治军登场，并播「西满洲剧变」新闻
-			if = {
-				limit = { MAN = { exists = yes } }
-				if = {
-					limit = { DMN = { exists = yes } }
-					DMN_Coalition_Goverment_effect = yes
-				}
-				news_event = { id = LFBCG.1644 days = 0 }
-			}
 		}
 	}
 }

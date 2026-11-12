@@ -1,6 +1,6 @@
 add_namespace = LFB_NE
 
-#玩家强行对满洲国开战并击败它：与共荣圈白和，满洲国保留，西满洲傀儡按路线改名
+#玩家强行对满洲国开战并击败它：与共荣圈白和收场，满洲国保留；傀儡的改名/换意识形态已在「未竟之事」里完成
 country_event = {
 	id = LFB_NE.1
 	title = LFB_NE.1.t
@@ -20,29 +20,9 @@ country_event = {
 	option = {
 		name = LFB_NE.1.a
 		hidden_effect = {
-			#与共荣圈白和：满洲国不被吞并，战争就此结束
+			#与共荣圈白和：满洲国不被吞并，战争到此为止
 			every_enemy_country = {
 				white_peace = COX
-			}
-			#傀儡改名：联合政府线 -> 东四省临时政府；PRC 线 -> 中共中央东北局
-			if = {
-				limit = { DMN = { exists = yes } }
-				if = {
-					limit = { has_country_flag = COX_negotiation_end }
-					DMN = {
-						set_cosmetic_tag = DMN_four_eastern_provinces
-					}
-				}
-				else = {
-					DMN = {
-						set_politics = { ruling_party = communist_1 }
-						set_party_name = {
-							ideology = communist_1
-							name = DMN_communist_1_party
-							long_name = DMN_communist_1_party_long
-						}
-					}
-				}
 			}
 		}
 	}
