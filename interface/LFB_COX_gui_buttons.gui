@@ -15,10 +15,21 @@ guiTypes = {
 			oversound = ui_menu_over
 		}
 
+		#土改进行中时，抗日按钮让到右边，避免和土改按钮叠在一起
+		buttonType = {
+			name = "COX_gaw_button_shifted"
+			spriteType = "GFX_COX_gaw_button"
+			position = { x = 310 y = 36 }
+			pdx_tooltip = "COX_gaw_button_tt"
+			clicksound = click_ok
+			oversound = ui_menu_over
+		}
+
+		#土改没在进行时，抗日按钮补到左边这个空位（原土改按钮的位置）
 		buttonType = {
 			name = "COX_gaw_button"
 			spriteType = "GFX_COX_gaw_button"
-			position = { x = 310 y = 36 }
+			position = { x = 238 y = 36 }
 			pdx_tooltip = "COX_gaw_button_tt"
 			clicksound = click_ok
 			oversound = ui_menu_over

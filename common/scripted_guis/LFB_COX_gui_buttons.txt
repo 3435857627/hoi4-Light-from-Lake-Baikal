@@ -34,14 +34,31 @@ scripted_gui = {
 					set_country_flag = COX_GAW_GUI_visible
 				}
 			}
+			#右边那个和左位同一功能的按钮（土改进行中时显示）
+			COX_gaw_button_shifted_click = {
+				if = {
+					limit = { has_country_flag = COX_GAW_GUI_visible }
+					clr_country_flag = COX_GAW_GUI_visible
+				}
+				else = {
+					set_country_flag = COX_GAW_GUI_visible
+				}
+			}
 		}
 
 		triggers = {
 			COX_landreform_button_visible = {
 				has_country_flag = COX_landreform_ongoing
 			}
+			#土改没在进行：抗日按钮占左边空位
 			COX_gaw_button_visible = {
 				has_country_flag = COX_GAW_GUI_Avaliable
+				NOT = { has_country_flag = COX_landreform_ongoing }
+			}
+			#土改在进行：抗日按钮让到右边
+			COX_gaw_button_shifted_visible = {
+				has_country_flag = COX_GAW_GUI_Avaliable
+				has_country_flag = COX_landreform_ongoing
 			}
 		}
 	}
