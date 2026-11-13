@@ -9,7 +9,7 @@ guiTypes = {
 		iconType = {
 			name = "COX_Liberation_of_Lanzhou_background_3"
 			spriteType = "GFX_Liberation_of_Lanzhou"
-			position = { x = 10 y = -360 }
+			position = { x = 10 y = -310 }
 		}
 		iconType = {
 			name = "COX_Liberation_of_Lanzhou_background_1"
