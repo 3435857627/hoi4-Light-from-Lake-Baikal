@@ -26,17 +26,17 @@
 
 | # | 国策 | id | cost | 天数 | 前置 | 完成奖励 | 备注 |
 |---|---|---|---|---|---|---|---|
-| 1 | 渗透火药桶 | `XBJ_Infiltrate_Powder_Keg` | 2 | 14 | — | +15 政治点数；事件 XBJ.1（纯文本）；隐藏：`country_has_gui` 旗标、初始化西北危机系统（8 个目标州数组、601/604/616/764/2427 设非军事区、各州混乱度/情报/控制度变量）、刷新国策树布局 | 危机 GUI 的总开关；解锁危机行动 [1] |
-| 2 | 我们保护贫苦的人民 | `XBJ_We_Protect_The_Poor` | 2 | 14 | [1] | +15 政治点数；事件 XBJ.2；解锁危机行动 [3] 设置难民营 | 三条调查线之一 |
-| 3 | 我们带来和平与安定 | `XBJ_We_Bring_Peace_And_Security` | 2 | 14 | [1] | +15 政治点数；事件 XBJ.3；解锁危机行动 [4] 派遣维和军 | 三条调查线之一 |
-| 4 | 我们带着充饥的粮食 | `XBJ_We_Carried_Enough_Food` | 2 | 14 | [1] | +15 政治点数；事件 XBJ.4；解锁危机行动 [2] 发放赈济粮 | 三条调查线之一 |
-| 5 | 支援马敦靖 | `XBJ_Support_Madunjing` | 1 | 7 | [2][3][4] | 事件 XBJ.5（1 天，随机 ±12 天）→ XBJ.14（5 天）→ XBJ.15：马惇靖加入 XBJ 成为领袖（军阀/专制）、专制支持度 +20%、获得其政府首脑理念 `XBJ_Ma_Dunjing_hog`、执行 `XBJ_Qinghai_Civilwar_setup`（转 604/764/2025 三州、首都迁 764、906 +10 电力、建「兰州新编第一军」与「甘肃兵丁」两个模板并生成部队、对 QIN 宣战、置 `LFB_XBJ_QIN_war`） | `available` 需要 `XBJ_Qinghai_Civilwar_start` 旗标（正常流程由危机行动 [5] 的事件链设置；另有 debug 决议 `XBJ_QIN_fucking`）；⚠ 若该事件已由行动 [5] 触发过（`fire_only_once`），本焦点不再触发事件链，只剩解锁 [11][12] 的作用 |
+| 1 | 渗透火药桶 | `XBJ_Infiltrate_Powder_Keg` | 2 | 14 | — | +30 政治点数；事件 XBJ.1（纯文本）；隐藏：`country_has_gui` 旗标、初始化西北危机系统（8 个目标州数组、601/604/616/764/2427 设非军事区、各州混乱度/情报/控制度变量）、刷新国策树布局 | 危机 GUI 的总开关；解锁危机行动 [1] |
+| 2 | 我们保护贫苦的人民 | `XBJ_We_Protect_The_Poor` | 2 | 14 | [1] | +30 政治点数；事件 XBJ.2；解锁危机行动 [3] 设置难民营 | 三条调查线之一 |
+| 3 | 我们带来和平与安定 | `XBJ_We_Bring_Peace_And_Security` | 2 | 14 | [1] | +30 政治点数；事件 XBJ.3；解锁危机行动 [4] 派遣维和军 | 三条调查线之一 |
+| 4 | 我们带着充饥的粮食 | `XBJ_We_Carried_Enough_Food` | 2 | 14 | [1] | +30 政治点数；事件 XBJ.4；解锁危机行动 [2] 发放赈济粮 | 三条调查线之一 |
+| 5 | 支援马敦靖 | `XBJ_Support_Madunjing` | 1 | 7 | [2][3][4] | +30 政治点数；事件 XBJ.5（1 天，随机 ±12 天）→ XBJ.14（5 天）→ XBJ.15：马惇靖加入 XBJ 成为领袖（军阀/专制）、专制支持度 +20%、获得其政府首脑理念 `XBJ_Ma_Dunjing_hog`、执行 `XBJ_Qinghai_Civilwar_setup`（转 604/764/2025 三州、首都迁 764、906 +10 电力、建「兰州新编第一军」与「甘肃兵丁」两个模板并生成部队、对 QIN 宣战、置 `LFB_XBJ_QIN_war`） | `available` 需要 `XBJ_Qinghai_Civilwar_start` 旗标（正常流程由危机行动 [5] 的事件链设置；另有 debug 决议 `XBJ_QIN_fucking`）；⚠ 若该事件已由行动 [5] 触发过（`fire_only_once`），本焦点不再触发事件链，只剩解锁 [11][12] 的作用 |
 | 6 | 尘埃落定 | `XBJ_The_Dust_Settles` | 2 | 14 | [5] | 事件 XBJ.6（清 `LFB_XBJ_QIN_war`）；获得理念 `XBJ_Qinghai_Crisis`（稳定 −20%、战争支持 −20%、PP −0.5、占领区抵抗增长 +25%）；给 601/616/906/2025 各 +2/+2/+4/+3 每月混乱度 | `available = { always = no }`，正常不可点；bypass：`QIN 不存在` ⇒ **实际在灭掉青马后自动完成**，实际耗时可视为 0 |
-| 7 | 新疆土改的经验 | `XBJ_Experience_Of_Xinjiang_Land_Reform` | 2 | 14 | [6] | 事件 XBJ.7（纯文本）；解锁危机行动 [7] 分配土地 | 五条建设线之一（青海人民政府前置） |
-| 8 | 清扫流寇 | `XBJ_Pursue_The_Aggressors` | 2 | 14 | [6] | 事件 XBJ.8（选项效果仅 `add_manpower = 1`，疑为占位/笔误）；解锁危机行动 [9] 打击流寇 | 同上 |
-| 9 | 接管破产商会 | `XBJ_Take_Over_Chamber_Of_Commerce` | 2 | 14 | [6] | 一次性 GDP +5%（`temp_econ_GDP_boost_percentage = 0.05` + `econ_GDP_boost_once_percentage`）；GDP 增长率 +1（`gdp_growth_temp = 1` + `econ_gdp_growth_change`）；事件 XBJ.9 | 全树唯一直接给经济的国策 |
-| 10 | 国有化湟中实业 | `XBJ_Nationalized_Huangzhong` | 2 | 14 | [6] | 事件 XBJ.10（纯文本）；原计划的经济效果 `econ_pus_change` 被注释掉 | ⚠ 目前**没有任何机械奖励** |
-| 11 | 打击门阀 | `XBJ_Crack_Down_On_Iman_System` | 2 | 14 | [6] | 事件 XBJ.11；解锁危机行动 [8] 清理门宦；事件链 XBJ.17（+5 天，纯文本） | 五条建设线之一 |
+| 7 | 新疆土改的经验 | `XBJ_Experience_Of_Xinjiang_Land_Reform` | 2 | 14 | [6] | +30 政治点数；事件 XBJ.7（纯文本）；解锁危机行动 [7] 分配土地 | 五条建设线之一（青海人民政府前置） |
+| 8 | 清扫流寇 | `XBJ_Pursue_The_Aggressors` | 2 | 14 | [6] | +30 政治点数；事件 XBJ.8（选项效果仅 `add_manpower = 1`，疑为占位/笔误）；解锁危机行动 [9] 打击流寇 | 同上 |
+| 9 | 接管破产商会 | `XBJ_Take_Over_Chamber_Of_Commerce` | 2 | 14 | [6] | +30 政治点数；一次性 GDP +5%（`temp_econ_GDP_boost_percentage = 0.05` + `econ_GDP_boost_once_percentage`）；GDP 增长率 +1（`gdp_growth_temp = 1` + `econ_gdp_growth_change`）；事件 XBJ.9 | 全树唯一直接给经济的国策 |
+| 10 | 国有化湟中实业 | `XBJ_Nationalized_Huangzhong` | 2 | 14 | [6] | +30 政治点数；事件 XBJ.10（纯文本）；原计划的经济效果 `econ_pus_change` 被注释掉 | ⚠ 目前**没有任何机械奖励** |
+| 11 | 打击门阀 | `XBJ_Crack_Down_On_Iman_System` | 2 | 14 | [6] | +30 政治点数；事件 XBJ.11；解锁危机行动 [8] 清理门宦；事件链 XBJ.17（+5 天，纯文本） | 五条建设线之一 |
 | 12 | 青海人民政府 | `XBJ_Qinghai_Peoples_Government` | 2 | 14 | [7][8][9][10][11] | 事件 XBJ.12；`set_cosmetic_tag = XBJ_QGNPG`（国名/旗改为「青甘宁革命根据地」） | `available`：拥有 601/604/616/764/906/2025 任一州 |
 | 13 | 防范东部之敌 | `XBJ_Guard_Against_Enemies_In_The_East` | 2 | 14 | [12] | 事件 XBJ.13 + XBJ.18（+5 天，纯文本）；解锁危机行动 [13] 整修边防 | 树终点，无其他机械奖励 |
 
@@ -73,7 +73,7 @@
 
 > **2026-11-10 修正**：危机行动 11（召集边防民兵）/ 12（筹措军备）的状态判定原本写 `state = 2022`——2022 不在危机地图数组里（TNO 1.10 里它是南极「Ronne Ice Shelf」），按钮永远不会出现。已把 `update_task` 里 12 处 `state = 2022` 改为 `state = 2433`（焉耆，危机数组中代表新疆的后方州，`controller = 4`），并把 `XBJ_NWC_Getregion_XJ` 的「新疆」标签同步改为 2433。编制与数量未改动。
 
-1. **直接数值奖励很少**：四个调查国策各 +15 PP（共 60 PP）、`接管破产商会` 一次性 GDP +5% 与增长 +1；其余全是「解锁行动 + 剧情事件」。
+1. **PP 奖励**：10 个国策各 +30 PP（合计 300 PP；`尘埃落定`、`青海人民政府`、`防范东部之敌` 不给），`接管破产商会` 另给一次性 GDP +5% 与增长 +1；其余全是「解锁行动 + 剧情事件」。
 2. **`国有化湟中实业` 目前没有机械奖励**（经济效果被注释），是本树最大的空奖励点。
 3. **`清扫流寇` 的事件选项是 `add_manpower = 1`**（1 人力），与「+950 人力」的后续行动不匹配，疑似占位或笔误。
 4. **`支援马敦靖` 的奖励事件受 `fire_only_once` 影响**：正常流程里危机行动 [5] 会先触发 XBJ.5，导致焦点本身不再跑马惇靖/内战 setup（只剩开锁 [11][12]）。若期望「点国策才开内战」，需要把行动 [5] 的事件改成别的链或去掉该焦点的事件触发。

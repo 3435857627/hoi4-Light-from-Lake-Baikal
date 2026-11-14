@@ -18,7 +18,7 @@ focus_tree = {
 		}
 		cost = 2
 		completion_reward = {
-			add_political_power = 15
+			add_political_power = 30
 			country_event = { id = XBJ.1 }
 			hidden_effect = {
 				set_country_flag = country_has_gui
@@ -45,7 +45,7 @@ focus_tree = {
 			has_completed_focus = XBJ_Infiltrate_Powder_Keg
 		}
 		completion_reward = {
-			add_political_power = 15
+			add_political_power = 30
 			country_event = { id = XBJ.2 days = 1 random = 12}
 			hidden_effect = {
 				XBJ_northwest_crisis_gui_update_visual_value = yes
@@ -71,7 +71,7 @@ focus_tree = {
 			has_completed_focus = XBJ_Infiltrate_Powder_Keg
 		}
 		completion_reward = {
-			add_political_power = 15
+			add_political_power = 30
 			country_event = { id = XBJ.3 days = 1 random = 12}
 			hidden_effect = {
 				XBJ_northwest_crisis_gui_update_visual_value = yes
@@ -97,7 +97,7 @@ focus_tree = {
 			has_completed_focus = XBJ_Infiltrate_Powder_Keg
 		}
 		completion_reward = {
-			add_political_power = 15
+			add_political_power = 30
 			country_event = { id = XBJ.4 days = 1 random = 12}
 			hidden_effect = {
 				XBJ_northwest_crisis_gui_update_visual_value = yes
@@ -128,6 +128,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			add_political_power = 30
 			country_event = { id = XBJ.5 days = 1 random = 12}
 			hidden_effect = {
 				XBJ_northwest_crisis_gui_update_visual_value = yes
@@ -196,6 +197,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			add_political_power = 30
 			country_event = { id = XBJ.7 days = 1 }
 			hidden_effect = {
 				XBJ_northwest_crisis_gui_update_visual_value = yes
@@ -217,6 +219,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			add_political_power = 30
 			country_event = { id = XBJ.8 days = 1 }
 			hidden_effect = {
 				XBJ_northwest_crisis_gui_update_visual_value = yes
@@ -238,6 +241,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			add_political_power = 30
 			set_temp_variable = { temp_econ_GDP_boost_percentage = 0.05 }
 			econ_GDP_boost_once_percentage = yes
 			set_temp_variable = { gdp_growth_temp = 1 } 
@@ -262,6 +266,7 @@ focus_tree = {
 		}
 		relative_position_id = XBJ_The_Dust_Settles
 		completion_reward = {
+			add_political_power = 30
 			#set_temp_variable = { pus_temp = 2 }
 			#econ_pus_change = yes
 			country_event = { id = XBJ.10 }
@@ -284,6 +289,7 @@ focus_tree = {
 		}
 		relative_position_id = XBJ_The_Dust_Settles
 		completion_reward = {
+			add_political_power = 30
 			country_event = { id = XBJ.11 }
 			hidden_effect = {
 				XBJ_northwest_crisis_gui_update_visual_value = yes
