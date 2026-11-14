@@ -1,0 +1,30 @@
+state = {
+	id = 2430
+	name = "STATE_2430"
+
+	history = {
+		owner = XIN
+		add_core_of = XIN
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			14679 11
+		}
+		victory_points = {
+			19427 1
+		}
+		add_extra_state_shared_building_slots = 1
+		set_variable = { china_state_ref = 43 }
+		set_variable = { china_region_ref = 5 }
+		set_state_flag = GDP_category_rural
+	}
+
+	provinces = {
+		7850 7866 12526 12601 14679 16904 19427 19673
+	}
+	manpower = 840454
+	buildings_max_level_factor = 1.000
+	state_category = rural
+	local_supplies = 0.000
+}

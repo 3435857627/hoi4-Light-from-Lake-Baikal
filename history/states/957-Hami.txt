@@ -1,0 +1,30 @@
+state = {
+	id = 957
+	name = "STATE_957"
+
+	history = {
+		owner = XIN
+		add_core_of = XIN
+		buildings = {
+			air_base = 1
+			infrastructure = 2
+		}
+		victory_points = {
+			1781 1
+		}
+		victory_points = {
+			19420 1
+		}
+		set_variable = { china_state_ref = 43 }
+		set_variable = { china_region_ref = 5 }
+		set_state_flag = state_renamings
+	}
+
+	provinces = {
+		1781 1838 4704 4843 7732 10839 12524 12598 12671 19420
+	}
+	manpower = 796822
+	buildings_max_level_factor = 1.000
+	state_category = rural
+	local_supplies = 0.000
+}

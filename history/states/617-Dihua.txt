@@ -1,0 +1,49 @@
+state = {
+	id = 617
+	name = "STATE_617"
+	resources = {
+		steel = 8.000
+		oil = 12.000
+		chromium = 4.000
+	}
+
+	history = {
+		owner = XIN
+		add_core_of = XIN
+		buildings = {
+			infrastructure = 3
+			offices = 1
+			barracks = 1
+			thermoelectric_plant = 2
+			air_base = 1
+		}
+		victory_points = {
+			17208 17
+		}
+		victory_points = {
+			10614 1
+		}
+		victory_points = {
+			19425 1
+		}
+		victory_points = {
+			17216 3
+		}
+		victory_points = {
+			12656 1
+		}
+		add_extra_state_shared_building_slots = 2
+		set_state_flag = GDP_category_town
+		set_variable = { china_state_ref = 43 }
+		set_variable = { china_region_ref = 5 }
+		set_state_flag = state_renamings
+	}
+
+	provinces = {
+		5016 8042 8086 9914 10614 10674 10885 12656 19398 19407 19414 19417 19424 19425 19644 17208 17216
+	}
+	manpower = 1202502
+	buildings_max_level_factor = 1.000
+	state_category = town
+	local_supplies = 0.000
+}

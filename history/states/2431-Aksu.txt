@@ -1,0 +1,34 @@
+state = {
+	id = 2431
+	name = "STATE_2431"
+	resources = {
+		oil = 12.000
+	}
+
+	history = {
+		owner = XIN
+		add_core_of = XIN
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			17210 2
+		}
+		victory_points = {
+			4682 1
+		}
+		victory_points = {
+			19766 1
+		}
+		set_variable = { china_state_ref = 43 }
+		set_variable = { china_region_ref = 5 }
+	}
+
+	provinces = {
+		1703 4682 4828 12907 19386 19400 19403 19410 19423 19725 19766 17210
+	}
+	manpower = 1134912
+	buildings_max_level_factor = 1.000
+	state_category = rural
+	local_supplies = 0.000
+}
