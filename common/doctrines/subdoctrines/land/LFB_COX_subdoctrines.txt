@@ -43,6 +43,7 @@ COX_red_army = { #陆军核心：工农红军（赤卫队）
 	rewards = {
 		# 1 乌鲁木齐改编：把杂牌编进同一套建制与补给 -> 补「补给消耗」
 		sanwan_reorganization = {
+			attrition = -0.10
 			land_reinforce_rate = 0.02
 			red_Guards = {
 				supply_consumption_factor = -0.10
@@ -141,6 +142,7 @@ COX_harassment_sabotage = { #火力支援：袭扰破坏（赤卫队破坏小组
 		}
 		# 2 诱敌深入：放进来打、分散隐蔽 -> 堑壕 + 对空生存
 		mine_warfare = {
+			attrition = -0.10
 			cas_damage_reduction = 0.10
 			red_Guards_anti_tank = {
 				entrenchment = 1
@@ -148,6 +150,7 @@ COX_harassment_sabotage = { #火力支援：袭扰破坏（赤卫队破坏小组
 		}
 		# 3 地道作战：地下网路 -> 堑壕值/堑壕速度 + 防御战术卡
 		sparrow_warfare = {
+			attrition = -0.10
 			dig_in_speed_factor = 0.20
 			enable_tactic = tactic_delay
 			red_Guards_anti_tank = {
