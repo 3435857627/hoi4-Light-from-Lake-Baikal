@@ -720,128 +720,6 @@ second_land_reform = {
 #	}
 #}
 
-
-COX_early_industrial_development = {
-	COX_Refurbishment_of_old_equipment = {
-		visible = {
-			has_completed_focus = COX_Evaluate_Industry_Level
-			has_completed_focus = COX_Renew_The_Old_Facilities
-		}
-		available = {
-			has_manpower > 100
-		}
-		complete_effect = {
-			add_manpower = -100
-		}
-		cost = 100
-		days_remove = 14
-		days_re_enable = 14
-		remove_effect = {
-			set_temp_variable = {
-				temp_COX_eid_machine_tool = 1
-			}
-			COX_eid_COX_eid_machine_tool_change = yes
-		}
-	}
-	COX_Imported_Buryat_equipment = {
-		visible = {
-			has_completed_focus = COX_Evaluate_Industry_Level
-			has_completed_focus = COX_Import_New_Machinery_From_Buryatia
-		}
-		available = {
-		}
-		complete_effect = {
-			set_temp_variable = {
-				money_reserves_temp = -0.005
-			}
-			econ_money_reserves_change_raw_money = yes
-		}
-		days_remove = 14
-		days_re_enable = 14
-		remove_effect = {
-			set_temp_variable = {
-				temp_COX_eid_machine_tool = 1
-			}
-			COX_eid_COX_eid_machine_tool_change = yes
-		}
-	}
-	COX_Training_skilled_workers = { 
-		visible = {
-			has_completed_focus = COX_Evaluate_Industry_Level
-			has_completed_focus = COX_Workers_Training_Agency
-		}
-		available = {
-		}
-		complete_effect = {
-		}
-		cost = 50
-		days_remove = 14
-		days_re_enable = 14
-		remove_effect = {
-			COX_eid_worker_proficiency_increase = yes
-		}
-	}
-	COX_Preparing_for_night_school_for_workers = {
-		visible = {
-			has_completed_focus = COX_Evaluate_Industry_Level
-		}
-		available = {
-		}
-		complete_effect = {
-		}
-		cost = 50
-		days_remove = 14
-		fire_only_once = yes
-		remove_effect = {
-			add_to_variable = {
-				COX_eid_worker_proficiency = 0.3
-			}
-			clamp_variable = {
-				var = COX_eid_worker_proficiency
-				max = 2
-				min = 0
-			}
-			custom_effect_tooltip = COX_eid_worker_proficiency_increase_greatly
-		}
-	}
-	eid_gui_debug1 = {
-		visible = {
-			is_debug = yes
-		}
-		available = {
-			always = yes
-		}
-		complete_effect = {
-			add_to_variable = {
-				COX_eid_machine_tool = 15
-				COX_eid_gui_reflesh = yes
-			}
-		}
-	}
-	eid_gui_debug2 = {
-		visible = {
-			is_debug = yes
-		}
-		available = {
-			always = yes
-		}
-		complete_effect = {
-			for_loop_effect = {
-				start = 0
-				end = COX_eid_machine_tool
-				random_owned_controlled_state = {
-					add_resource = {
-						type = power
-						amount = 1
-					}
-				}
-			}
-		}
-	}
-}
-
-
-
 ######################
 # 调试决议 进入新世界 #
 ######################
@@ -1313,7 +1191,6 @@ Open_the_Gate_of_Steiner = {
 				transfer_state = 1602
 				add_state_core = 1602
 
-				
 				set_politics = {
 					ruling_party = socialist
 					last_election = "1936.1.1"

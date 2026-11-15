@@ -215,21 +215,6 @@ defined_text = {
 	}
 }
 defined_text = {
-	name = Get_COX_eid_gui_effect_text
-	text = {
-		trigger = {
-			check_variable = { COX_eid_exchange_mode = 1 }
-		}
-		localization_key = COX_eid_gui_effect_text1
-	}
-	text = {
-		trigger = {
-			check_variable = { COX_eid_exchange_mode = 2 }
-		}
-		localization_key = COX_eid_gui_effect_text2
-	}
-}
-defined_text = {
 	name = GetAssortedLawsCOX
 	text = {
 		trigger = {
@@ -280,7 +265,6 @@ defined_text = {
 		localization_key = COX_interim_constiution_law_desc
 	}
 }
-
 
 defined_text = {
 	name = Get_LFB_NC_MEN_state

@@ -2955,6 +2955,7 @@ country_event = {
 	fire_only_once = yes
 	immediate = {
 		hidden_effect = {
+			set_global_flag = LFB_COX_Northwest_crisis_ongoing
 			COX = {
 				COX_Liu_Shaoqi = {
 					set_nationality = XBJ

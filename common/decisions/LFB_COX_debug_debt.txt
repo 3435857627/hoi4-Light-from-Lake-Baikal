@@ -1,0 +1,122 @@
+# 负债系统调试（一次性/可重复点击，仅 debug 可见）
+COX_debug_debt = {
+	COX_debug_debt_status = {
+		visible = {
+			always = yes
+		}
+		available = {
+			always = yes
+		}
+		cost = 0
+		days_remove = 0
+		complete_effect = {
+			calculate_debt_to_GDP_ratio = yes
+			update_economy_tab = yes
+			log = "[GetDateText]: [Root.GetName]: DEBT_DEBUG; national_debt=[?national_debt]; debt_to_GDP_ratio=[?debt_to_GDP_ratio]; GDP=[?GDP]; interest_rates=[?interest_rates]"
+		}
+	}
+	COX_debug_debt_add_10m = {
+		visible = {
+			always = yes
+		}
+		available = {
+			always = yes
+		}
+		cost = 0
+		days_remove = 0
+		complete_effect = {
+			if = {
+				limit = { has_variable = national_debt }
+				add_to_variable = { national_debt = 0.01 }
+			}
+			else = {
+				set_variable = { national_debt = 0.01 }
+			}
+			calculate_debt_to_GDP_ratio = yes
+			update_economy_tab = yes
+			log = "[GetDateText]: [Root.GetName]: DEBT_DEBUG; national_debt=[?national_debt]; debt_to_GDP_ratio=[?debt_to_GDP_ratio]; GDP=[?GDP]; interest_rates=[?interest_rates]"
+		}
+	}
+	COX_debug_debt_add_30m = {
+		visible = {
+			always = yes
+		}
+		available = {
+			always = yes
+		}
+		cost = 0
+		days_remove = 0
+		complete_effect = {
+			if = {
+				limit = { has_variable = national_debt }
+				add_to_variable = { national_debt = 0.03 }
+			}
+			else = {
+				set_variable = { national_debt = 0.03 }
+			}
+			calculate_debt_to_GDP_ratio = yes
+			update_economy_tab = yes
+			log = "[GetDateText]: [Root.GetName]: DEBT_DEBUG; national_debt=[?national_debt]; debt_to_GDP_ratio=[?debt_to_GDP_ratio]; GDP=[?GDP]; interest_rates=[?interest_rates]"
+		}
+	}
+	COX_debug_debt_add_100m = {
+		visible = {
+			always = yes
+		}
+		available = {
+			always = yes
+		}
+		cost = 0
+		days_remove = 0
+		complete_effect = {
+			if = {
+				limit = { has_variable = national_debt }
+				add_to_variable = { national_debt = 0.1 }
+			}
+			else = {
+				set_variable = { national_debt = 0.1 }
+			}
+			calculate_debt_to_GDP_ratio = yes
+			update_economy_tab = yes
+			log = "[GetDateText]: [Root.GetName]: DEBT_DEBUG; national_debt=[?national_debt]; debt_to_GDP_ratio=[?debt_to_GDP_ratio]; GDP=[?GDP]; interest_rates=[?interest_rates]"
+		}
+	}
+	COX_debug_debt_add_500m = {
+		visible = {
+			always = yes
+		}
+		available = {
+			always = yes
+		}
+		cost = 0
+		days_remove = 0
+		complete_effect = {
+			if = {
+				limit = { has_variable = national_debt }
+				add_to_variable = { national_debt = 0.5 }
+			}
+			else = {
+				set_variable = { national_debt = 0.5 }
+			}
+			calculate_debt_to_GDP_ratio = yes
+			update_economy_tab = yes
+			log = "[GetDateText]: [Root.GetName]: DEBT_DEBUG; national_debt=[?national_debt]; debt_to_GDP_ratio=[?debt_to_GDP_ratio]; GDP=[?GDP]; interest_rates=[?interest_rates]"
+		}
+	}
+	COX_debug_debt_reset = {
+		visible = {
+			always = yes
+		}
+		available = {
+			always = yes
+		}
+		cost = 0
+		days_remove = 0
+		complete_effect = {
+			set_variable = { national_debt = 0 }
+			calculate_debt_to_GDP_ratio = yes
+			update_economy_tab = yes
+			log = "[GetDateText]: [Root.GetName]: DEBT_DEBUG; national_debt=[?national_debt]; debt_to_GDP_ratio=[?debt_to_GDP_ratio]; GDP=[?GDP]; interest_rates=[?interest_rates]"
+		}
+	}
+}

@@ -84,22 +84,6 @@ COX_coring_category = {
 	visible_when_empty = no
 }
 
-
-COX_early_industrial_development = {
-	icon = GFX_second_land_reform
-	allowed = {
-		tag = COX
-	}
-	visible = {
-		has_completed_focus = COX_Evaluate_Industry_Level
-	}
-	available = {
-		always = yes
-	}
-	visible_when_empty = yes
-	scripted_gui = COX_eid_gui
-}
-
 COX_Liberation_of_Lanzhou = {
 	icon = GFX_Liberation_of_Lanzhou2
 	allowed = {

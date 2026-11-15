@@ -1,0 +1,423 @@
+# =============================================================
+# COX 新疆工业恢复决议组（含效果，瞬间完成）
+# =============================================================
+COX_industry_recovery = {
+
+	COX_Rec_Continue_Hami_Aksu_Railway = {   # 继续哈密-阿克苏铁路
+		visible = {
+			has_completed_focus = COX_Evaluate_Industry_Level
+			has_completed_focus = COX_Fix_The_Old_Paths_In_Xinjiang
+		}
+		available = {
+			has_completed_focus = COX_Fix_The_Old_Paths_In_Xinjiang
+		}
+		cost = 25
+		days_remove = 0
+		fire_only_once = yes
+		complete_effect = {
+			build_railway = {
+				level = 1
+				fallback = yes
+				path = { 19392 19402 7702 19386 4682 17210 }
+			}
+			if = {
+				limit = { has_variable = national_debt }
+				add_to_variable = { national_debt = 0.01 }
+			}
+			else = {
+				set_variable = { national_debt = 0.01 }
+			}
+			calculate_debt_to_GDP_ratio = yes
+			update_economy_tab = yes
+		}
+	}
+
+	COX_Rec_Urumqi_Hami_Railway = {   # 修建乌鲁木齐-哈密铁路
+		visible = {
+			has_completed_focus = COX_Evaluate_Industry_Level
+			has_completed_focus = COX_A_New_Road_Design
+		}
+		available = {
+			has_completed_focus = COX_A_New_Road_Design
+		}
+		cost = 25
+		days_remove = 0
+		fire_only_once = yes
+		complete_effect = {
+			build_railway = {
+				level = 1
+				fallback = yes
+				path = { 17208 10614 5016 7732 19420 }
+			}
+			if = {
+				limit = { has_variable = national_debt }
+				add_to_variable = { national_debt = 0.01 }
+			}
+			else = {
+				set_variable = { national_debt = 0.01 }
+			}
+			calculate_debt_to_GDP_ratio = yes
+			update_economy_tab = yes
+		}
+	}
+
+	COX_Rec_Link_Southern_Xinjiang = {   # 链接南疆
+		visible = {
+			has_completed_focus = COX_Evaluate_Industry_Level
+			has_completed_focus = COX_A_New_Road_Design
+		}
+		available = {
+			has_completed_focus = COX_A_New_Road_Design
+		}
+		cost = 50
+		days_remove = 0
+		fire_only_once = yes
+		complete_effect = {
+			build_railway = {
+				level = 1
+				fallback = yes
+				path = { 17210 19400 12119 1766 }
+			}
+			if = {
+				limit = { has_variable = national_debt }
+				add_to_variable = { national_debt = 0.01 }
+			}
+			else = {
+				set_variable = { national_debt = 0.01 }
+			}
+			calculate_debt_to_GDP_ratio = yes
+			update_economy_tab = yes
+		}
+	}
+
+	COX_Rec_Resettle_Border_Refugees = {   # 再安置边境难民
+		visible = {
+			has_completed_focus = COX_Evaluate_Industry_Level
+		}
+		available = {
+		}
+		cost = 50
+		days_remove = 0
+		fire_only_once = yes
+		complete_effect = {
+			957 = {
+				add_manpower = -200000
+				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+			}
+			2433 = {
+				add_manpower = -150000
+				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+			}
+			617 = {
+				add_manpower = 150000
+				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+			}
+			958 = {
+				add_manpower = 100000
+				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+			}
+			619 = {
+				add_manpower = 50000
+				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+			}
+			2431 = {
+				add_manpower = 50000
+				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+			}
+			recalculate_GDP_and_PUs_on_demand = yes
+		}
+	}
+
+	COX_Rec_Promote_Internal_Trade = {   # 推动省内贸易
+		visible = {
+			has_completed_focus = COX_Evaluate_Industry_Level
+		}
+		available = {
+			has_decision = COX_Rec_Continue_Hami_Aksu_Railway
+			has_decision = COX_Rec_Urumqi_Hami_Railway
+			has_decision = COX_Rec_Link_Southern_Xinjiang
+		}
+		cost = 25
+		days_remove = 0
+		fire_only_once = yes
+		complete_effect = {
+			2433 = {
+				set_temp_variable = { state_value_multiplier_temp = 1.1 }
+				econ_state_value_change_multiply_specified_state = yes
+			}
+			957 = {
+				set_temp_variable = { state_value_multiplier_temp = 1.1 }
+				econ_state_value_change_multiply_specified_state = yes
+			}
+			2430 = {
+				set_temp_variable = { state_value_multiplier_temp = 1.1 }
+				econ_state_value_change_multiply_specified_state = yes
+			}
+			2431 = {
+				set_temp_variable = { state_value_multiplier_temp = 1.15 }
+				econ_state_value_change_multiply_specified_state = yes
+			}
+			619 = {
+				set_temp_variable = { state_value_multiplier_temp = 1.05 }
+				econ_state_value_change_multiply_specified_state = yes
+			}
+			958 = {
+				set_temp_variable = { state_value_multiplier_temp = 1.05 }
+				econ_state_value_change_multiply_specified_state = yes
+			}
+			set_temp_variable = { gdp_growth_temp = 1 }
+			econ_gdp_growth_change = yes
+			recalculate_GDP_and_PUs_on_demand = yes
+		}
+	}
+
+	COX_Rec_Yamasu_Iron_Mine = {   # 发掘雅满苏铁矿
+		visible = {
+			has_completed_focus = COX_Evaluate_Industry_Level
+			has_completed_focus = COX_Production_And_Construction_Corps
+		}
+		available = {
+			has_completed_focus = COX_Production_And_Construction_Corps
+		}
+		cost = 25
+		days_remove = 0
+		fire_only_once = yes
+		complete_effect = {
+			957 = {
+				add_resource = {
+					type = steel
+					amount = 20
+				}
+			}
+		}
+	}
+
+	COX_Rec_Sino_Soviet_Friendship_Steelworks = {   # 建立中苏友谊铁厂
+		visible = {
+			has_completed_focus = COX_Evaluate_Industry_Level
+			has_completed_focus = COX_Import_New_Machinery_From_Buryatia
+		}
+		available = {
+			has_completed_focus = COX_Import_New_Machinery_From_Buryatia
+			has_decision = COX_Rec_Urumqi_Hami_Railway
+		}
+		cost = 30
+		days_remove = 0
+		fire_only_once = yes
+		complete_effect = {
+			set_temp_variable = { pus_temp = 2 }
+			econ_pus_change = yes
+			if = {
+				limit = { has_variable = national_debt }
+				add_to_variable = { national_debt = 0.03 }
+			}
+			else = {
+				set_variable = { national_debt = 0.03 }
+			}
+			calculate_debt_to_GDP_ratio = yes
+			update_economy_tab = yes
+			TNO_improve_industrial_equipment_med = yes
+		}
+	}
+
+	COX_Rec_Renovate_Dihua_Cement_Plant = {   # 翻新迪化洋灰厂
+		visible = {
+			has_completed_focus = COX_Evaluate_Industry_Level
+			has_completed_focus = COX_Renew_The_Old_Facilities
+		}
+		available = {
+			has_completed_focus = COX_Renew_The_Old_Facilities
+		}
+		cost = 30
+		days_remove = 0
+		fire_only_once = yes
+		complete_effect = {
+			set_temp_variable = { pus_temp = 2 }
+			econ_pus_change = yes
+		}
+	}
+
+	COX_Rec_Reorganize_Dihua_Arsenal = {   # 重组迪化兵工厂
+		visible = {
+			has_completed_focus = COX_Evaluate_Industry_Level
+			has_completed_focus = COX_Renew_The_Old_Facilities
+		}
+		available = {
+			has_completed_focus = COX_Renew_The_Old_Facilities
+		}
+		cost = 30
+		days_remove = 0
+		fire_only_once = yes
+		complete_effect = {
+			set_temp_variable = { pus_temp = 2 }
+			econ_pus_change = yes
+		}
+	}
+
+	COX_LT_Weihuliang_Power_Plant = {   # 苇湖梁火电厂
+		visible = {
+			has_completed_focus = COX_Xinjiang_Industry_Rehabilitation
+		}
+		available = {
+			is_ai = yes
+			has_global_flag = LFB_COX_Northwest_crisis_ongoing
+		}
+		cost = 25
+		days_remove = 0
+		fire_only_once = yes
+		ai_will_do = { factor = 1000 }
+		complete_effect = {
+			617 = {
+				add_building_construction = {
+					type = thermoelectric_plant
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	COX_LT_Southern_Xinjiang_Power_Plant = {   # 南疆火电厂
+		visible = {
+			has_completed_focus = COX_Xinjiang_Industry_Rehabilitation
+		}
+		available = {
+			is_ai = yes
+			has_global_flag = LFB_COX_Northwest_crisis_ongoing
+		}
+		cost = 25
+		days_remove = 0
+		fire_only_once = yes
+		ai_will_do = { factor = 1000 }
+		complete_effect = {
+			619 = {
+				add_building_construction = {
+					type = thermoelectric_plant
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	COX_LT_Ili_Hydropower = {   # 伊犁水电
+		visible = {
+			has_completed_focus = COX_Xinjiang_Industry_Rehabilitation
+		}
+		available = {
+			is_ai = yes
+			has_global_flag = LFB_COX_Northwest_crisis_ongoing
+		}
+		cost = 25
+		days_remove = 0
+		fire_only_once = yes
+		ai_will_do = { factor = 1000 }
+		complete_effect = {
+			2430 = {
+				add_building_construction = {
+					type = hydroelectric_plant
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	COX_LT_Kashgar_Cotton_Mill = {   # 喀什棉纺厂
+		visible = {
+			has_completed_focus = COX_Xinjiang_Industry_Rehabilitation
+		}
+		available = {
+			has_decision = COX_LT_Southern_Xinjiang_Power_Plant
+			is_ai = yes
+			has_global_flag = LFB_COX_Northwest_crisis_ongoing
+		}
+		cost = 25
+		days_remove = 0
+		fire_only_once = yes
+		ai_will_do = { factor = 1000 }
+		complete_effect = {
+			set_temp_variable = { pus_temp = 2 }
+			econ_pus_change = yes
+			619 = {
+				set_temp_variable = { state_value_multiplier_temp = 1.15 }
+				econ_state_value_change_multiply_specified_state = yes
+			}
+		}
+	}
+
+	COX_LT_October_Tractor_Plant = {   # 十月拖拉机厂
+		visible = {
+			has_completed_focus = COX_Xinjiang_Industry_Rehabilitation
+		}
+		available = {
+			has_decision = COX_LT_Kashgar_Cotton_Mill
+			is_ai = yes
+			has_global_flag = LFB_COX_Northwest_crisis_ongoing
+		}
+		cost = 25
+		days_remove = 0
+		fire_only_once = yes
+		ai_will_do = { factor = 1000 }
+		complete_effect = {
+			set_temp_variable = { pus_temp = 2 }
+			econ_pus_change = yes
+			if = {
+				limit = { has_variable = national_debt }
+				add_to_variable = { national_debt = 0.03 }
+			}
+			else = {
+				set_variable = { national_debt = 0.03 }
+			}
+			calculate_debt_to_GDP_ratio = yes
+			update_economy_tab = yes
+		}
+	}
+
+	COX_LT_Urumqi_Aluminium_Plant = {   # 乌鲁木齐铝厂
+		visible = {
+			has_completed_focus = COX_Xinjiang_Industry_Rehabilitation
+		}
+		available = {
+			has_decision = COX_LT_Ili_Hydropower
+			is_ai = yes
+			has_global_flag = LFB_COX_Northwest_crisis_ongoing
+		}
+		cost = 25
+		days_remove = 0
+		fire_only_once = yes
+		ai_will_do = { factor = 1000 }
+		complete_effect = {
+			617 = {
+				add_resource = {
+					type = aluminium
+					amount = 12
+				}
+			}
+		}
+	}
+
+	COX_LT_Xingxingxia_Tungsten_Mine = {   # 开发星星峡钨矿
+		visible = {
+			has_completed_focus = COX_Xinjiang_Industry_Rehabilitation
+		}
+		available = {
+			has_decision = COX_LT_Southern_Xinjiang_Power_Plant
+			is_ai = yes
+			has_global_flag = LFB_COX_Northwest_crisis_ongoing
+		}
+		cost = 25
+		days_remove = 0
+		fire_only_once = yes
+		ai_will_do = { factor = 1000 }
+		complete_effect = {
+			957 = {
+				add_resource = {
+					type = tungsten
+					amount = 15
+				}
+			}
+		}
+	}
+
+}

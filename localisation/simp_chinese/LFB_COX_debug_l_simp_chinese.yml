@@ -1,0 +1,15 @@
+﻿l_simp_chinese:
+
+ COX_debug_debt:0 "【调试】负债系统"
+ COX_debug_debt_status:0 "查看当前债务（写入 game.log）"
+ COX_debug_debt_status_desc:0 "点击后把 national_debt / debt_to_GDP_ratio / GDP / interest_rates 写入 game.log，不改数据。"
+ COX_debug_debt_add_10m:0 "负债 +10M（0.01B）"
+ COX_debug_debt_add_10m_desc:0 "按设计文档的 10M 加债，观察经济页的 National Debt 与利息。"
+ COX_debug_debt_add_30m:0 "负债 +30M（0.03B）"
+ COX_debug_debt_add_30m_desc:0 "按设计文档的 30M 加债。"
+ COX_debug_debt_add_100m:0 "负债 +100M（0.1B）"
+ COX_debug_debt_add_100m_desc:0 "加 1 亿，观察债务比和 GDP 增长惩罚。"
+ COX_debug_debt_add_500m:0 "负债 +500M（0.5B）"
+ COX_debug_debt_add_500m_desc:0 "加到 GDP 的一半，观察利息与增长惩罚是否明显。"
+ COX_debug_debt_reset:0 "负债清零"
+ COX_debug_debt_reset_desc:0 "把 national_debt 置 0，重新计算债务比。"

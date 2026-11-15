@@ -1297,7 +1297,6 @@ focus_tree = {#土改后建设时期
 				days = 0
 				random = 12
 			}
-			COX_eid_startup = yes
 		}
 	}
 	focus = {

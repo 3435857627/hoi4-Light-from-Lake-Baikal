@@ -1,0 +1,13 @@
+# 负债系统调试类别（仅 debug 模式可见）
+COX_debug_debt = {
+	icon = GFX_decision_generic_decision
+	allowed = {
+		tag = COX
+	}
+	visible = {
+		is_debug = yes
+	}
+	available = {
+		always = yes
+	}
+}

@@ -1,0 +1,15 @@
+# COX 工业恢复决议组类别（骨架）
+# 注意：不再挂 scripted_gui（机床兑换机制已删除）
+COX_industry_recovery = {
+	icon = GFX_second_land_reform
+	allowed = {
+		tag = COX
+	}
+	visible = {
+		always = no	# TODO 切换为：has_completed_focus = COX_Evaluate_Industry_Level
+	}
+	available = {
+		always = yes
+	}
+	visible_when_empty = yes
+}

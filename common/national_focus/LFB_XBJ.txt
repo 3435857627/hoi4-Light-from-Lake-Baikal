@@ -340,6 +340,8 @@ focus_tree = {
 		completion_reward = {
 			country_event = { id = XBJ.13 days = 1 }
 			hidden_effect = {
+				set_global_flag = LFB_COX_Northwest_crisis_ended
+				clr_global_flag = LFB_COX_Northwest_crisis_ongoing
 				XBJ_northwest_crisis_gui_update_visual_value = yes
 			}
 		}
