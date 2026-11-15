@@ -117,6 +117,18 @@
  GAN_17:"缺衣少食"
  GAN_18:"缺枪少弹"
  GAN_19:"但我们仍要战斗……"
+#框架国策（占位）
+GAN_Seal_From_The_West:0 "捧印西来"
+GAN_Be_Prepared:0 "有备无患"
+GAN_Old_Day_Spirits:0 "旧日魂灵"
+GAN_Three_Camps:0 "三本营帐假乱真"
+GAN_Northwest_Golden_Crow:0 "西北金乌"
+#辻政信上台后的框架国策（占位）
+GAN_Army_From_Tokyo:0 "大军从东京来"
+GAN_Administration_Misrule:0 "公署误国"
+GAN_Conscript_Labor_And_Fortify:0 "征夫筑城"
+GAN_Under_The_Scorching_Sun:0 "灼日之下"
+GAN_No_Grass_Grows:0 "寸草不生"
 
 #民族精神
 Ning_Ma:"宁系马家"

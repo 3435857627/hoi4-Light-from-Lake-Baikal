@@ -19,6 +19,10 @@ country_event = {
 			add_ideas = {
 				Sphere_Imp_Protectorate
 			}
+			load_focus_tree = {
+				tree = GAN_Tsuji_Takeover
+				keep_completed = no
+			}
 		}
 		news_event = { id = GAN.1001 days = 0 }
 	}

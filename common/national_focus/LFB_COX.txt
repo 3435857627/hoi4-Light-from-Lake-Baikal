@@ -1311,53 +1311,22 @@ focus_tree = {#土改后建设时期
 			focus = COX_Evaluate_Industry_Level
 		}
 		completion_reward = {
-			set_temp_variable = {
-				state_value_multiplier_temp = 1.1
-			}
-			random_owned_controlled_state = {
-				econ_spend_money_once_effect_raw_money = yes
+			617 = {
 				add_building_construction = {
 					type = infrastructure
-					level = 1
+					level = 2
 					instant_build = yes
 				}
-			}
-			set_temp_variable = {
-				state_value_multiplier_temp = 1.1
-			}
-			random_owned_controlled_state = {
-				econ_spend_money_once_effect_raw_money = yes
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
+				set_temp_variable = {
+					state_value_multiplier_temp = 1.1
 				}
-			}
-			set_temp_variable = {
-				state_value_multiplier_temp = 1.1
-			}
-			random_owned_controlled_state = {
-				econ_spend_money_once_effect_raw_money = yes
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			set_temp_variable = {
-				temp_econ_GDP_boost_percentage = 0.01
+				econ_state_value_change_multiply_specified_state = yes
 			}
 			country_event = {
 				id = COX.79
 				days = 0
 				random = 12
 			}
-			build_railway = {
-				level = 1
-				fallback = yes
-				path = { 19392 19422 19386 12907 17210 }
-			}
-			custom_effect_tooltip = COX_Finish_Sheng_Railway_tt
 		}
 	}
 	focus = {
@@ -1371,34 +1340,22 @@ focus_tree = {#土改后建设时期
 			focus = COX_Fix_The_Old_Paths_In_Xinjiang
 		}
 		completion_reward = {
-			set_temp_variable = {
-				state_value_multiplier_temp = 1.15
-			}
 			TNO_improve_industrial_equipment_med = yes
-			random_owned_controlled_state = {
-				econ_spend_money_once_effect_raw_money = yes
+			957 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 1
 					instant_build = yes
 				}
 			}
-			set_temp_variable = {
-				state_value_multiplier_temp = 1.15
-			}
-			random_owned_controlled_state = {
-				econ_spend_money_once_effect_raw_money = yes
+			2433 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 1
 					instant_build = yes
 				}
 			}
-			set_temp_variable = {
-				state_value_multiplier_temp = 1.15
-			}
-			random_owned_controlled_state = {
-				econ_spend_money_once_effect_raw_money = yes
+			619 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -3565,7 +3522,6 @@ focus_tree = {#联合政府
 		}
 		x = -2
 		y = 1
-		relative_position_id = COX_Broken_Blade_Sinking_Into_The_Sea
 		completion_reward = {
 			add_stability = 0.1
 			TNO_improve_army_professionalism_low = yes
@@ -3580,7 +3536,6 @@ focus_tree = {#联合政府
 		}
 		x = -2
 		y = 2
-		relative_position_id = COX_Try_Traitors
 		completion_reward = {
 			add_stability = 0.1
 		}
@@ -3594,7 +3549,6 @@ focus_tree = {#联合政府
 		}
 		x = -2
 		y = 3
-		relative_position_id = COX_Wash_Away_The_Filth
 		completion_reward = {
 			add_stability = 0.1
 		}
@@ -3611,7 +3565,6 @@ focus_tree = {#联合政府
 		}
 		x = -2
 		y = 4
-		relative_position_id = COX_The_Homeland_Shines_Anew
 		completion_reward = {
 			add_stability = 0.1
 			country_event = { id = LFBCG.111 days = 0 }
@@ -3629,7 +3582,6 @@ focus_tree = {#联合政府
 		}
 		x = -2
 		y = 4
-		relative_position_id = COX_Unfinished_Business
 		completion_reward = {
 			add_stability = 0.1
 			#解放东北：与中华人民共和国路线对称，触发「雪消时节」
@@ -3645,7 +3597,6 @@ focus_tree = {#联合政府
 		}
 		x = 2
 		y = 1
-		relative_position_id = COX_In_The_National_Assembly
 		completion_reward = {
 			custom_effect_tooltip = The_National_Assembly_tt
 			TNO_improve_admin_efficiency_low = yes
@@ -3663,7 +3614,6 @@ focus_tree = {#联合政府
 		}
 		x = 1
 		y = 2
-		relative_position_id = COX_Economic_Integration
 		completion_reward = {
 			add_stability = 0.1
 		}
@@ -3677,7 +3627,6 @@ focus_tree = {#联合政府
 		}
 		x = 1
 		y = 3
-		relative_position_id = COX_Rebuild_In_Documents	
 		completion_reward = {
 			country_event = { id = LFBCG.8 days = 0 }
 			#北京
@@ -3707,7 +3656,6 @@ focus_tree = {#联合政府
 		}
 		x = 1
 		y = 4
-		relative_position_id = COX_Dissension
 		completion_reward = {
 			add_stability = 0.1
 		}
@@ -3721,7 +3669,6 @@ focus_tree = {#联合政府
 		}
 		x = 3
 		y = 2
-		relative_position_id = COX_Army_And_Country
 		completion_reward = {
 			add_political_power = 20
 			add_stability = 0.05
@@ -3736,7 +3683,6 @@ focus_tree = {#联合政府
 		}
 		x = 3
 		y = 3
-		relative_position_id = COX_Uncontrolled_Ocean
 		completion_reward = {
 			add_stability = 0.1
 			country_event = { id = LFBCG.123 days = 0 }
@@ -3751,7 +3697,6 @@ focus_tree = {#联合政府
 		}
 		x = 3
 		y = 4
-		relative_position_id = COX_Not_Passed
 		completion_reward = {
 			add_stability = 0.1
 			TNO_worsen_admin_efficiency_low = yes

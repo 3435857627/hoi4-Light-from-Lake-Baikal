@@ -9,91 +9,64 @@ focus_tree = {
 	}	
     default = no
 
+    # ===== 框架国策（占位骨架：无任何效果，统一 35 天 = cost 5） =====
+    # 捧印西来
     focus = {
-        id = GAN_1
-        icon = GFX_goal_Unstable_footing
-        cost = 3.00
-        x = 9
+        id = GAN_Seal_From_The_West
+        icon = GFX_goal_GAN_Seal_From_The_West
+        cost = 5.00
+        x = 0
         y = 0
     }
-
+    # 有备无患（无图标素材，用全透明占位图标以示留空）
     focus = {
-        id = GAN_2
-        icon = GFX_goal_Request_a_supply
-        cost = 3.00
+        id = GAN_Be_Prepared
+        icon = GFX_goal_GAN_blank
+        cost = 5.00
         prerequisite = {
-            focus = GAN_1
+            focus = GAN_Seal_From_The_West
         }
-        x = 9
+        x = -2
         y = 1
     }
+    # 旧日魂灵
     focus = {
-        id = GAN_3
-        icon = GFX_goal_GAN_3
-        cost = 3.00
+        id = GAN_Old_Day_Spirits
+        icon = GFX_goal_GAN_Old_Day_Spirits
+        cost = 5.00
         prerequisite = {
-            focus = GAN_2
+            focus = GAN_Seal_From_The_West
         }
-        x = 9
+        x = 0
+        y = 1
+    }
+    # 三本营帐假乱真
+    focus = {
+        id = GAN_Three_Camps
+        icon = GFX_goal_GAN_Three_Camps
+        cost = 5.00
+        prerequisite = {
+            focus = GAN_Seal_From_The_West
+        }
+        x = 2
+        y = 1
+    }
+    # 西北金乌（三个并列分支全部完成后可点）
+    focus = {
+        id = GAN_Northwest_Golden_Crow
+        icon = GFX_goal_GAN_Northwest_Golden_Crow
+        cost = 5.00
+        prerequisite = {
+            focus = GAN_Be_Prepared
+        }
+        prerequisite = {
+            focus = GAN_Old_Day_Spirits
+        }
+        prerequisite = {
+            focus = GAN_Three_Camps
+        }
+        x = 0
         y = 2
-    }
-    focus = {
-        id = GAN_4
-        icon = GFX_goal_GAN_4
-        cost = 3.00
-        prerequisite = {
-            focus = GAN_3
-        }
-        x = 8
-        y = 3
-    }
-    focus = {
-        id = GAN_5
-        icon = GFX_goal_GAN_5
-        cost = 3.00
-        prerequisite = {
-            focus = GAN_3
-        }
-        x = 10
-        y = 3
-    }
-    focus = {
-        id = GAN_6
-        icon = GFX_goal_GAN_6
-        cost = 3.00
-        prerequisite = {
-            focus = GAN_4
-        }
-        prerequisite = {
-            focus = GAN_5
-        }
-        x = 9
-        y = 4
-    }
-    focus = {
-        id = GAN_7
-        icon = GFX_goal_GAN_7
-        cost = 3.00
-        prerequisite = {
-            focus = GAN_6
-        }
-
-        x = 9
-        y = 5
-        completion_reward = {
-            country_event = { id = GAN.114514 days = 1 random = 12 }
-        }
-    }
-    focus = {
-        id = GAN_8
-        icon = GFX_goal_The_Empire_great_victory
-        cost = 3.00
-        prerequisite = {
-            focus = GAN_7
-        }
-
-        x = 9
-        y = 6
     }
 }
 focus_tree = {
@@ -204,5 +177,69 @@ focus_tree = {
         }
         x = 9
         y = 7
+    }
+}
+focus_tree = {
+    id = GAN_Tsuji_Takeover
+    country = {
+		factor = 0
+	}
+    default = no
+
+    # ===== 辻政信上台后的框架国策（占位骨架：无任何效果，统一 35 天 = cost 5；无图素材，用全透明图标留空） =====
+    # 大军从东京来
+    focus = {
+        id = GAN_Army_From_Tokyo
+        icon = GFX_goal_GAN_blank
+        cost = 5.00
+        x = 0
+        y = 0
+    }
+    # 公署误国
+    focus = {
+        id = GAN_Administration_Misrule
+        icon = GFX_goal_GAN_blank
+        cost = 5.00
+        prerequisite = {
+            focus = GAN_Army_From_Tokyo
+        }
+        x = -2
+        y = 1
+    }
+    # 征夫筑城
+    focus = {
+        id = GAN_Conscript_Labor_And_Fortify
+        icon = GFX_goal_GAN_blank
+        cost = 5.00
+        prerequisite = {
+            focus = GAN_Army_From_Tokyo
+        }
+        x = 2
+        y = 1
+    }
+    # 灼日之下（左右两条并列全部完成后可点）
+    focus = {
+        id = GAN_Under_The_Scorching_Sun
+        icon = GFX_goal_GAN_blank
+        cost = 5.00
+        prerequisite = {
+            focus = GAN_Administration_Misrule
+        }
+        prerequisite = {
+            focus = GAN_Conscript_Labor_And_Fortify
+        }
+        x = 0
+        y = 2
+    }
+    # 寸草不生
+    focus = {
+        id = GAN_No_Grass_Grows
+        icon = GFX_goal_GAN_blank
+        cost = 5.00
+        prerequisite = {
+            focus = GAN_Under_The_Scorching_Sun
+        }
+        x = 0
+        y = 3
     }
 }

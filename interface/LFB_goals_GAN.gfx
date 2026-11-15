@@ -611,4 +611,180 @@ spriteTypes = {
         }
         legacy_lazy_load = no
     }
+	# ===== 框架国策图标（捧印西来 / 旧日魂灵 / 三本营帐假乱真 / 西北金乌） =====
+	# 捧印西来
+	spriteType = {
+		name = "GFX_goal_GAN_Seal_From_The_West"
+		textureFile = "gfx/interface/goals/GAN/GAN_Seal_From_The_West.png"
+	}
+	spriteType = {
+		name = "GFX_goal_GAN_Seal_From_The_West_shine"
+		textureFile = "gfx/interface/goals/GAN/GAN_Seal_From_The_West.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GAN/GAN_Seal_From_The_West.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GAN/GAN_Seal_From_The_West.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	# 旧日魂灵
+	spriteType = {
+		name = "GFX_goal_GAN_Old_Day_Spirits"
+		textureFile = "gfx/interface/goals/GAN/GAN_Old_Day_Spirits.png"
+	}
+	spriteType = {
+		name = "GFX_goal_GAN_Old_Day_Spirits_shine"
+		textureFile = "gfx/interface/goals/GAN/GAN_Old_Day_Spirits.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GAN/GAN_Old_Day_Spirits.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GAN/GAN_Old_Day_Spirits.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	# 三本营帐假乱真
+	spriteType = {
+		name = "GFX_goal_GAN_Three_Camps"
+		textureFile = "gfx/interface/goals/GAN/GAN_Three_Camps.png"
+	}
+	spriteType = {
+		name = "GFX_goal_GAN_Three_Camps_shine"
+		textureFile = "gfx/interface/goals/GAN/GAN_Three_Camps.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GAN/GAN_Three_Camps.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GAN/GAN_Three_Camps.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	# 西北金乌
+	spriteType = {
+		name = "GFX_goal_GAN_Northwest_Golden_Crow"
+		textureFile = "gfx/interface/goals/GAN/GAN_Northwest_Golden_Crow.png"
+	}
+	spriteType = {
+		name = "GFX_goal_GAN_Northwest_Golden_Crow_shine"
+		textureFile = "gfx/interface/goals/GAN/GAN_Northwest_Golden_Crow.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GAN/GAN_Northwest_Golden_Crow.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GAN/GAN_Northwest_Golden_Crow.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	# 空图标：给「没有图标素材」的占位国策用，全透明，避免按钮上出现 ERROR 占位图
+	spriteType = {
+		name = "GFX_goal_GAN_blank"
+		textureFile = "gfx/interface/goals/GAN/GAN_blank.png"
+	}
+	spriteType = {
+		name = "GFX_goal_GAN_blank_shine"
+		textureFile = "gfx/interface/goals/GAN/GAN_blank.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GAN/GAN_blank.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GAN/GAN_blank.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
 }

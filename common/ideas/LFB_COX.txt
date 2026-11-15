@@ -662,7 +662,7 @@ ideas = {
 				war_support_factor = 1000
 				command_power_gain = 10
 				max_command_power = 1000
-				communism_drift = 1
+				master_ideology_drift = 1
 			}
 		}
 		COX_Peoples_Army = {
