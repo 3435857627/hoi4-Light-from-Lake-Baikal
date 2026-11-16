@@ -186,11 +186,11 @@ focus_tree = {
 	}
     default = no
 
-    # ===== 辻政信上台后的框架国策（占位骨架：无任何效果，统一 35 天 = cost 5；无图素材，用全透明图标留空） =====
+    # ===== 辻政信上台后的框架国策（占位骨架：无任何效果，统一 35 天 = cost 5；征夫筑城 / 寸草不生暂无图素材，用全透明图标留空） =====
     # 大军从东京来
     focus = {
         id = GAN_Army_From_Tokyo
-        icon = GFX_goal_GAN_blank
+        icon = GFX_goal_GAN_Army_From_Tokyo
         cost = 5.00
         x = 0
         y = 0
@@ -198,7 +198,7 @@ focus_tree = {
     # 公署误国
     focus = {
         id = GAN_Administration_Misrule
-        icon = GFX_goal_GAN_blank
+        icon = GFX_goal_GAN_Administration_Misrule
         cost = 5.00
         prerequisite = {
             focus = GAN_Army_From_Tokyo
@@ -220,7 +220,7 @@ focus_tree = {
     # 灼日之下（左右两条并列全部完成后可点）
     focus = {
         id = GAN_Under_The_Scorching_Sun
-        icon = GFX_goal_GAN_blank
+        icon = GFX_goal_GAN_Under_The_Scorching_Sun
         cost = 5.00
         prerequisite = {
             focus = GAN_Administration_Misrule

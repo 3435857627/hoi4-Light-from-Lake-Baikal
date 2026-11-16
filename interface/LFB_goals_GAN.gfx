@@ -787,7 +787,110 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
-	# 有备无患（GAN_Be_Prepared）：素材取自 TNO goals/Generic/focus_generic_accept_their_aid.dds
+	# 辻政信上台后框架国策图标（大军从东京来 / 公署误国 / 灼日之下）
+	spriteType = {
+		name = "GFX_goal_GAN_Army_From_Tokyo"
+		textureFile = "gfx/interface/goals/GAN/GAN_Army_From_Tokyo.png"
+	}
+	spriteType = {
+		name = "GFX_goal_GAN_Army_From_Tokyo_shine"
+		textureFile = "gfx/interface/goals/GAN/GAN_Army_From_Tokyo.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GAN/GAN_Army_From_Tokyo.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GAN/GAN_Army_From_Tokyo.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_goal_GAN_Administration_Misrule"
+		textureFile = "gfx/interface/goals/GAN/GAN_Administration_Misrule.png"
+	}
+	spriteType = {
+		name = "GFX_goal_GAN_Administration_Misrule_shine"
+		textureFile = "gfx/interface/goals/GAN/GAN_Administration_Misrule.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GAN/GAN_Administration_Misrule.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GAN/GAN_Administration_Misrule.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_goal_GAN_Under_The_Scorching_Sun"
+		textureFile = "gfx/interface/goals/GAN/GAN_Under_The_Scorching_Sun.png"
+	}
+	spriteType = {
+		name = "GFX_goal_GAN_Under_The_Scorching_Sun_shine"
+		textureFile = "gfx/interface/goals/GAN/GAN_Under_The_Scorching_Sun.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GAN/GAN_Under_The_Scorching_Sun.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GAN/GAN_Under_The_Scorching_Sun.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+# 有备无患（GAN_Be_Prepared）：素材取自 TNO goals/Generic/focus_generic_accept_their_aid.dds
 	spriteType = {
 		name = "GFX_goal_GAN_Be_Prepared"
 		textureFile = "gfx/interface/goals/GAN/GAN_Be_Prepared.dds"
