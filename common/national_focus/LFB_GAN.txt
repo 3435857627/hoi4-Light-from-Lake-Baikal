@@ -21,7 +21,7 @@ focus_tree = {
     # 有备无患（无图标素材，用全透明占位图标以示留空）
     focus = {
         id = GAN_Be_Prepared
-        icon = GFX_goal_GAN_blank
+        icon = GFX_goal_GAN_Be_Prepared
         cost = 5.00
         prerequisite = {
             focus = GAN_Seal_From_The_West
