@@ -925,4 +925,74 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
+	# 征夫筑城 / 寸草不生（2026-11-17 补）
+	spriteType = {
+		name = "GFX_goal_GAN_Conscript_Labor_And_Fortify"
+		textureFile = "gfx/interface/goals/GAN/GAN_Conscript_Labor_And_Fortify.png"
+	}
+	spriteType = {
+		name = "GFX_goal_GAN_Conscript_Labor_And_Fortify_shine"
+		textureFile = "gfx/interface/goals/GAN/GAN_Conscript_Labor_And_Fortify.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GAN/GAN_Conscript_Labor_And_Fortify.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GAN/GAN_Conscript_Labor_And_Fortify.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_goal_GAN_No_Grass_Grows"
+		textureFile = "gfx/interface/goals/GAN/GAN_No_Grass_Grows.png"
+	}
+	spriteType = {
+		name = "GFX_goal_GAN_No_Grass_Grows_shine"
+		textureFile = "gfx/interface/goals/GAN/GAN_No_Grass_Grows.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GAN/GAN_No_Grass_Grows.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GAN/GAN_No_Grass_Grows.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
 }
