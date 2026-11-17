@@ -226,6 +226,8 @@
   COX_landreform_local_unrest_decrease_extra_large_tt: "\n  极大幅降低当地动乱"
   COX_landreform_local_unrest_decrease_untra_tt: "\n  极大幅降低当地动乱"
   COX_landreform_local_unrest_decrease_untra_ultra_tt: "\n  极大幅降低当地动乱"
+  COX_landreform_local_unrest_decrease_ultra_tt: "\n  极大幅降低当地动乱"
+  COX_landreform_local_unrest_decrease_ultra_ultra_tt: "\n  极大幅降低当地动乱"
 
   COX_landreform_local_support_change_increase_tt: "\n  提升当地支持增长的速率"
   COX_landreform_local_unrest_change_increase_tt: "\n  提升当地动乱增长的速率"
@@ -276,6 +278,9 @@
 
   COX_landreform_militia_change_gain_tt: "开始在每月结算时获得少量民兵"
   COX_landreform_dec_401_trigger: "我们在其他地区已经积累了土地改革的经验"
+  COX_landreform_dec_226_unrest_check: "东疆的动乱倾向需达到 70 或以上"
+  COX_landreform_dec_100_tt: "该决议当前不可用"
+  COX_landreform_any_region_ongoing_trigger_tt: "我们已在某个地区开展土地改革"
   COX_landreform_not_cooldown_tt: "尚未处于决议冷却期"
 
   COX_landreform_local_progress_tt: "[?COX_landreform_local_progress_tt_value]"

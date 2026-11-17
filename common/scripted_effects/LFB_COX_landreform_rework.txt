@@ -2603,7 +2603,7 @@ COX_landreform_dec_311_effect = {#可重复
     custom_effect_tooltip = COX_landreform_dec_repeatable_tt
     COX_landreform_militia_loss_minor = yes
     custom_effect_tooltip = COX_landreform_local_unrest_change_decrease_tt
-    619 = {
+    618 = {
         COX_landreform_local_unrest_decrease_small = yes
     }
     hidden_effect = {
@@ -2787,7 +2787,7 @@ COX_landreform_dec_406_effect = {
     }
     custom_effect_tooltip = COX_landreform_region_avaliable_tt
     hidden_effect = {
-        957 = {
+        619 = {
             add_to_variable = { COX_landreform_local_unrest_change = 5 }
             set_state_flag = COX_landreform_update_avaliable
         }
