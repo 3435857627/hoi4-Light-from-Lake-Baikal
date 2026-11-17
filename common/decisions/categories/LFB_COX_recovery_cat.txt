@@ -6,7 +6,11 @@ COX_industry_recovery = {
 		tag = COX
 	}
 	visible = {
-		always = no	# TODO 切换为：has_completed_focus = COX_Evaluate_Industry_Level
+		#评估工业现状后解锁整组；新疆工业复苏是另一条支线，单独点完也要能看到
+		OR = {
+			has_completed_focus = COX_Evaluate_Industry_Level
+			has_completed_focus = COX_Xinjiang_Industry_Rehabilitation
+		}
 	}
 	available = {
 		always = yes
