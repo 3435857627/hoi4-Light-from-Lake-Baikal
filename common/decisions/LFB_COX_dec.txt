@@ -441,8 +441,11 @@ second_land_reform = {
 		timeout_effect = {
 			custom_effect_tooltip = COX_landreform_monthly_effect_tt
 			hidden_effect = {
-				COX_landreform_update = yes
-				activate_mission = COX_landreform_monthly_effect
+				if = {
+					limit = { has_country_flag = COX_landreform_ongoing }
+					COX_landreform_update = yes
+					activate_mission = COX_landreform_monthly_effect
+				}
 			}
 		}
 	}
@@ -480,6 +483,8 @@ second_land_reform = {
 		complete_effect = {
 			set_country_flag = COX_land_reform_succeeded
 			COX_landreform_cheat_effect = yes
+			remove_mission = COX_landreform_monthly_effect
+			remove_mission = COX_landreform_deadline
 			COX_landreform_end_effect = yes
 			remove_ideas = { 
 				land_reform_on_going 

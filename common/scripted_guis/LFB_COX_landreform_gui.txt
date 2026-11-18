@@ -5,6 +5,7 @@ scripted_gui = {
 		window_name = "COX_land_reform_GUI_Opener"
 		visible = {
 			tag = COX
+			has_country_flag = COX_landreform_ongoing
 		}
 		effects = {
 			COX_land_reform_GUI_Open_Button_click = {
@@ -18,7 +19,10 @@ scripted_gui = {
 				else = {
 					set_country_flag = COX_land_reform_GUI_visible_flag
 				}
-				COX_land_reform_gui_reflesh = yes
+				if = {
+					limit = { has_country_flag = COX_landreform_ongoing }
+					COX_land_reform_gui_reflesh = yes
+				}
 			}
 		}
 		triggers = {
@@ -37,6 +41,7 @@ scripted_gui = {
 		visible = {
 			tag = COX
 			has_country_flag = COX_land_reform_GUI_visible_flag
+			has_country_flag = COX_landreform_ongoing
 		}
 		dynamic_lists = {
 			PRC_tugai_GUI_Dec_Grid_Box = {

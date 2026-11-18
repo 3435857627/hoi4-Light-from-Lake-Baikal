@@ -620,26 +620,10 @@ COX_landreform_cheat_effect = {
 }
 #GUI结束效果-打包变量，输出给事件链
 COX_landreform_end_effect = {
-    #终止！
-    remove_mission = COX_landreform_cooldown_timer_3
-    remove_mission = COX_landreform_cooldown_timer_7
-    remove_mission = COX_landreform_cooldown_timer_14
-    remove_mission = COX_landreform_repdec_112_cooldown_timer
-    remove_mission = COX_landreform_repdec_116_cooldown_timer
-    remove_mission = COX_landreform_repdec_117_cooldown_timer
-    remove_mission = COX_landreform_repdec_205_cooldown_timer
-    remove_mission = COX_landreform_repdec_211_cooldown_timer
-    remove_mission = COX_landreform_repdec_221_cooldown_timer
-    remove_mission = COX_landreform_repdec_222_cooldown_timer
-    remove_mission = COX_landreform_repdec_307_cooldown_timer
-    remove_mission = COX_landreform_repdec_308_cooldown_timer
-    remove_mission = COX_landreform_repdec_311_cooldown_timer
-    remove_mission = COX_landreform_repdec_320_cooldown_timer
-    remove_mission = COX_landreform_repdec_321_cooldown_timer
-    remove_mission = COX_landreform_repdec_423_cooldown_timer
-    remove_mission = COX_landreform_repdec_426_cooldown_timer
-    remove_mission = COX_landreform_monthly_effect
-    remove_mission = COX_landreform_deadline
+    #结算缓冲：此效果由 COX_landreform_deadline 的 timeout_effect 调用。
+    #在任务超时帧内 remove_mission（尤其是 deadline 自己）会触发 C0000005 闪退；
+    #所有任务统一延迟到 COX_landreform_finish_effect（COX_Landreform.404，6 天后）清理。
+    log = "[GetDateText]: [Root.GetName]: landreform end effect (buffer, missions deferred)"
     #初始化变量
     set_variable = {
         COX_landreform_progress_export = 0
@@ -968,6 +952,27 @@ COX_landreform_roundup = {#清除有关变量
 }
 #真·结束效果，在事件链末尾触发
 COX_landreform_finish_effect = {
+    #结算缓冲期结束：此时已离开 mission timeout 帧，可安全移除任务
+    log = "[GetDateText]: [Root.GetName]: landreform finish effect (cleanup missions)"
+    remove_mission = COX_landreform_cooldown_timer_3
+    remove_mission = COX_landreform_cooldown_timer_7
+    remove_mission = COX_landreform_cooldown_timer_14
+    remove_mission = COX_landreform_repdec_112_cooldown_timer
+    remove_mission = COX_landreform_repdec_116_cooldown_timer
+    remove_mission = COX_landreform_repdec_117_cooldown_timer
+    remove_mission = COX_landreform_repdec_205_cooldown_timer
+    remove_mission = COX_landreform_repdec_211_cooldown_timer
+    remove_mission = COX_landreform_repdec_221_cooldown_timer
+    remove_mission = COX_landreform_repdec_222_cooldown_timer
+    remove_mission = COX_landreform_repdec_307_cooldown_timer
+    remove_mission = COX_landreform_repdec_308_cooldown_timer
+    remove_mission = COX_landreform_repdec_311_cooldown_timer
+    remove_mission = COX_landreform_repdec_320_cooldown_timer
+    remove_mission = COX_landreform_repdec_321_cooldown_timer
+    remove_mission = COX_landreform_repdec_423_cooldown_timer
+    remove_mission = COX_landreform_repdec_426_cooldown_timer
+    remove_mission = COX_landreform_monthly_effect
+    remove_mission = COX_landreform_deadline
     COX = {
         set_country_flag = COX_land_reform_succeeded
         clear_array = TNO_assorted_laws
