@@ -1,5 +1,7 @@
 # =============================================================
-# COX 新疆工业恢复决议组（含效果，瞬间完成）
+# COX 新疆工业恢复决议组
+# 初步重建：按策划案耗时（15~90 天），效果在完成时结算
+# 长期计划（AI）：瞬间完成
 # =============================================================
 COX_industry_recovery = {
 
@@ -12,9 +14,9 @@ COX_industry_recovery = {
 			has_completed_focus = COX_Fix_The_Old_Paths_In_Xinjiang
 		}
 		cost = 25
-		days_remove = 0
+		days_remove = 30
 		fire_only_once = yes
-		complete_effect = {
+		remove_effect = {
 			build_railway = {
 				level = 1
 				fallback = yes
@@ -29,6 +31,7 @@ COX_industry_recovery = {
 			}
 			calculate_debt_to_GDP_ratio = yes
 			update_economy_tab = yes
+			set_country_flag = COX_rec_done_rail_hk
 		}
 	}
 
@@ -41,9 +44,9 @@ COX_industry_recovery = {
 			has_completed_focus = COX_A_New_Road_Design
 		}
 		cost = 25
-		days_remove = 0
+		days_remove = 60
 		fire_only_once = yes
-		complete_effect = {
+		remove_effect = {
 			build_railway = {
 				level = 1
 				fallback = yes
@@ -58,6 +61,7 @@ COX_industry_recovery = {
 			}
 			calculate_debt_to_GDP_ratio = yes
 			update_economy_tab = yes
+			set_country_flag = COX_rec_done_rail_uh
 		}
 	}
 
@@ -70,9 +74,9 @@ COX_industry_recovery = {
 			has_completed_focus = COX_A_New_Road_Design
 		}
 		cost = 50
-		days_remove = 0
+		days_remove = 60
 		fire_only_once = yes
-		complete_effect = {
+		remove_effect = {
 			build_railway = {
 				level = 1
 				fallback = yes
@@ -87,6 +91,7 @@ COX_industry_recovery = {
 			}
 			calculate_debt_to_GDP_ratio = yes
 			update_economy_tab = yes
+			set_country_flag = COX_rec_done_rail_south
 		}
 	}
 
@@ -97,9 +102,9 @@ COX_industry_recovery = {
 		available = {
 		}
 		cost = 50
-		days_remove = 0
+		days_remove = 30
 		fire_only_once = yes
-		complete_effect = {
+		remove_effect = {
 			957 = {
 				add_manpower = -200000
 				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
@@ -125,6 +130,7 @@ COX_industry_recovery = {
 				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
 			}
 			recalculate_GDP_and_PUs_on_demand = yes
+			set_country_flag = COX_rec_done_refugee
 		}
 	}
 
@@ -133,14 +139,23 @@ COX_industry_recovery = {
 			has_completed_focus = COX_Evaluate_Industry_Level
 		}
 		available = {
-			has_decision = COX_Rec_Continue_Hami_Aksu_Railway
-			has_decision = COX_Rec_Urumqi_Hami_Railway
-			has_decision = COX_Rec_Link_Southern_Xinjiang
+			custom_trigger_tooltip = {
+				tooltip = COX_rec_need_rail_hk
+				has_country_flag = COX_rec_done_rail_hk
+			}
+			custom_trigger_tooltip = {
+				tooltip = COX_rec_need_rail_uh
+				has_country_flag = COX_rec_done_rail_uh
+			}
+			custom_trigger_tooltip = {
+				tooltip = COX_rec_need_rail_south
+				has_country_flag = COX_rec_done_rail_south
+			}
 		}
 		cost = 25
-		days_remove = 0
+		days_remove = 15
 		fire_only_once = yes
-		complete_effect = {
+		remove_effect = {
 			2433 = {
 				set_temp_variable = { state_value_multiplier_temp = 1.1 }
 				econ_state_value_change_multiply_specified_state = yes
@@ -168,6 +183,24 @@ COX_industry_recovery = {
 			set_temp_variable = { gdp_growth_temp = 1 }
 			econ_gdp_growth_change = yes
 			recalculate_GDP_and_PUs_on_demand = yes
+			set_country_flag = COX_rec_done_trade
+		}
+	}
+
+	COX_Rec_Technician_Training = {   # 技工培训
+		visible = {
+			has_completed_focus = COX_Evaluate_Industry_Level
+			has_completed_focus = COX_Workers_Training_Agency
+		}
+		available = {
+			has_completed_focus = COX_Workers_Training_Agency
+		}
+		cost = 25
+		days_remove = 15
+		fire_only_once = yes
+		remove_effect = {
+			TNO_improve_industrial_expertise_med = yes
+			set_country_flag = COX_rec_done_training
 		}
 	}
 
@@ -180,15 +213,16 @@ COX_industry_recovery = {
 			has_completed_focus = COX_Production_And_Construction_Corps
 		}
 		cost = 25
-		days_remove = 0
+		days_remove = 90
 		fire_only_once = yes
-		complete_effect = {
+		remove_effect = {
 			957 = {
 				add_resource = {
 					type = steel
 					amount = 20
 				}
 			}
+			set_country_flag = COX_rec_done_iron
 		}
 	}
 
@@ -199,12 +233,15 @@ COX_industry_recovery = {
 		}
 		available = {
 			has_completed_focus = COX_Import_New_Machinery_From_Buryatia
-			has_decision = COX_Rec_Urumqi_Hami_Railway
+			custom_trigger_tooltip = {
+				tooltip = COX_rec_need_rail_uh
+				has_country_flag = COX_rec_done_rail_uh
+			}
 		}
 		cost = 30
-		days_remove = 0
+		days_remove = 90
 		fire_only_once = yes
-		complete_effect = {
+		remove_effect = {
 			set_temp_variable = { pus_temp = 2 }
 			econ_pus_change = yes
 			if = {
@@ -217,6 +254,7 @@ COX_industry_recovery = {
 			calculate_debt_to_GDP_ratio = yes
 			update_economy_tab = yes
 			TNO_improve_industrial_equipment_med = yes
+			set_country_flag = COX_rec_done_steel
 		}
 	}
 
@@ -229,11 +267,12 @@ COX_industry_recovery = {
 			has_completed_focus = COX_Renew_The_Old_Facilities
 		}
 		cost = 30
-		days_remove = 0
+		days_remove = 90
 		fire_only_once = yes
-		complete_effect = {
+		remove_effect = {
 			set_temp_variable = { pus_temp = 2 }
 			econ_pus_change = yes
+			set_country_flag = COX_rec_done_cement
 		}
 	}
 
@@ -246,11 +285,12 @@ COX_industry_recovery = {
 			has_completed_focus = COX_Renew_The_Old_Facilities
 		}
 		cost = 30
-		days_remove = 0
+		days_remove = 90
 		fire_only_once = yes
-		complete_effect = {
+		remove_effect = {
 			set_temp_variable = { pus_temp = 2 }
 			econ_pus_change = yes
+			set_country_flag = COX_rec_done_arsenal
 		}
 	}
 
@@ -274,6 +314,7 @@ COX_industry_recovery = {
 					instant_build = yes
 				}
 			}
+			set_country_flag = COX_rec_done_lt_power_w
 		}
 	}
 
@@ -297,6 +338,7 @@ COX_industry_recovery = {
 					instant_build = yes
 				}
 			}
+			set_country_flag = COX_rec_done_lt_power_s
 		}
 	}
 
@@ -320,6 +362,7 @@ COX_industry_recovery = {
 					instant_build = yes
 				}
 			}
+			set_country_flag = COX_rec_done_lt_hydro
 		}
 	}
 
@@ -328,7 +371,10 @@ COX_industry_recovery = {
 			has_completed_focus = COX_Xinjiang_Industry_Rehabilitation
 		}
 		available = {
-			has_decision = COX_LT_Southern_Xinjiang_Power_Plant
+			custom_trigger_tooltip = {
+				tooltip = COX_rec_need_lt_power_s
+				has_country_flag = COX_rec_done_lt_power_s
+			}
 			is_ai = yes
 			has_global_flag = LFB_COX_Northwest_crisis_ongoing
 		}
@@ -343,6 +389,7 @@ COX_industry_recovery = {
 				set_temp_variable = { state_value_multiplier_temp = 1.15 }
 				econ_state_value_change_multiply_specified_state = yes
 			}
+			set_country_flag = COX_rec_done_lt_cotton
 		}
 	}
 
@@ -351,7 +398,10 @@ COX_industry_recovery = {
 			has_completed_focus = COX_Xinjiang_Industry_Rehabilitation
 		}
 		available = {
-			has_decision = COX_LT_Kashgar_Cotton_Mill
+			custom_trigger_tooltip = {
+				tooltip = COX_rec_need_lt_cotton
+				has_country_flag = COX_rec_done_lt_cotton
+			}
 			is_ai = yes
 			has_global_flag = LFB_COX_Northwest_crisis_ongoing
 		}
@@ -371,6 +421,7 @@ COX_industry_recovery = {
 			}
 			calculate_debt_to_GDP_ratio = yes
 			update_economy_tab = yes
+			set_country_flag = COX_rec_done_lt_tractor
 		}
 	}
 
@@ -379,7 +430,10 @@ COX_industry_recovery = {
 			has_completed_focus = COX_Xinjiang_Industry_Rehabilitation
 		}
 		available = {
-			has_decision = COX_LT_Ili_Hydropower
+			custom_trigger_tooltip = {
+				tooltip = COX_rec_need_lt_hydro
+				has_country_flag = COX_rec_done_lt_hydro
+			}
 			is_ai = yes
 			has_global_flag = LFB_COX_Northwest_crisis_ongoing
 		}
@@ -394,6 +448,7 @@ COX_industry_recovery = {
 					amount = 12
 				}
 			}
+			set_country_flag = COX_rec_done_lt_aluminium
 		}
 	}
 
@@ -402,7 +457,10 @@ COX_industry_recovery = {
 			has_completed_focus = COX_Xinjiang_Industry_Rehabilitation
 		}
 		available = {
-			has_decision = COX_LT_Southern_Xinjiang_Power_Plant
+			custom_trigger_tooltip = {
+				tooltip = COX_rec_need_lt_power_s
+				has_country_flag = COX_rec_done_lt_power_s
+			}
 			is_ai = yes
 			has_global_flag = LFB_COX_Northwest_crisis_ongoing
 		}
@@ -417,6 +475,7 @@ COX_industry_recovery = {
 					amount = 15
 				}
 			}
+			set_country_flag = COX_rec_done_lt_tungsten
 		}
 	}
 

@@ -1474,7 +1474,8 @@ focus_tree = {#土改后建设时期
 			focus = COX_Evaluate_Industry_Level
 		}
 		completion_reward = {
-			TNO_improve_industrial_equipment_low = yes
+			custom_effect_tooltip = COX_equip_dev_rapid_tt
+			add_to_variable = { industrial_equipment_monthly_change = 3 }
 			custom_effect_tooltip = check_old_machines
 			add_resource = { type = power amount = 10 }
 			country_event = {
@@ -1495,7 +1496,8 @@ focus_tree = {#土改后建设时期
 			focus = COX_Renew_The_Old_Facilities
 		}
 		completion_reward = {
-			TNO_improve_industrial_equipment_low = yes
+			custom_effect_tooltip = COX_equip_dev_tt
+			add_to_variable = { industrial_equipment_monthly_change = 2 }
 			custom_effect_tooltip = buy_new_machines
 			country_event = {
 				id = COX.84
