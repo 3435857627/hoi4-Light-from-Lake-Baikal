@@ -759,6 +759,35 @@ Open_the_Gate_of_Steiner = {
 			GAN_invasion_start_effects = yes
 		}
 	}
+	debug_GAN_gansu_return = {
+		icon = GFX_decision_generic_decision
+		visible = {
+			is_debug = yes
+			GAN = { exists = yes }
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			GAN = {
+				set_cosmetic_tag = GAN_GS
+				GAN_Yang_Yuchun = {
+					promote_character = yes
+				}
+				set_politics = {
+					ruling_party = despotism
+				}
+				add_popularity = {
+					ideology = despotism
+					popularity = 0.3
+				}
+			}
+			news_event = { id = LFB_GAN_news.1 days = 0 }
+		}
+	}
 	debug_COX_northwest_period_first_five_year_plan = {
 		icon = GFX_Mao_comes_as_a_lightning
 		visible = {

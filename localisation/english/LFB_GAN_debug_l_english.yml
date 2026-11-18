@@ -1,0 +1,14 @@
+﻿l_english:
+ # Gansu debug decision (kept in the "Gateway of the Steiner" debug category)
+ debug_GAN_gansu_return:0 "Bring Lanzhou Back to the Motherland"
+ debug_GAN_gansu_return_desc:0 "Test only: reorganise the Northwestern Security Command into Gansu Province, install Yang Yuchun as its head of government, raise the new flag, and fire the restoration news event."
+
+ # Cosmetic tag
+ GAN_GS:0 "Gansu Province"
+ GAN_GS_DEF:0 "Gansu Province"
+ GAN_GS_ADJ:0 "Gansu"
+
+ # News
+ LFB_GAN_news.1.t:0 "[Get_newspaper_header]Nanjing Declares the Restoration of Gansu's Sovereignty"
+ LFB_GAN_news.1.d:0 "Only yesterday, the Japanese army flag that had hung at the head of the Zhongshan Bridge for years finally came down. According to reports, the Japanese ambassador to China and Xue Pengyuan, head of the Asian Department of the National Government, signed the Memorandum on the Transfer of Civil and Military Administration in Gansu Province. The more than fifty thousand men of the Northwestern Area Army are to march east at once, while the air unit at Gongxingdun airfield was already flown out to Baotou last week. The commander, Tsuji Masanobu, pleaded illness and did not attend the signing. The withdrawal had long been foreseeable; the Japanese, hard pressed in the Cold War, have no strength left for a vast army that has won no victories.\n\nNanjing, for its part, calls it \"the return of sovereignty\". The editorial in Zhonghua Ribao ranks it alongside the return of the concessions in 1943, and counts it as another achievement of Peaceful National Construction."
+ LFB_GAN_news.1.a:0 "The Eastern Devils can no longer hold their knives."

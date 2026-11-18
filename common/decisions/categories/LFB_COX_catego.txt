@@ -8,6 +8,8 @@ Open_the_Gate_of_Steiner = {
 			tag = COX
 			tag = BRY
 			tag = XBJ
+			tag = GAN
+			tag = CHI
 		}
 		is_debug = yes
 		is_ai = no

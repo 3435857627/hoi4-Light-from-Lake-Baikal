@@ -1,0 +1,14 @@
+add_namespace = LFB_GAN_news
+
+news_event = {
+	id = LFB_GAN_news.1
+	title = { text = LFB_GAN_news.1.t }
+	desc = { text = LFB_GAN_news.1.d }
+	picture = GFX_LFB_news_gansu_return
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = LFB_GAN_news.1.a
+	}
+}

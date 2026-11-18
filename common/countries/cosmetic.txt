@@ -2639,3 +2639,8 @@ MYA_northern_riots = {
 	color_ui = rgb { 0 0 0 }
 }
 ####
+# Gansu Province (debug decision)
+GAN_GS = {
+	color = rgb { 170 62 60 }
+	color_ui = rgb { 170 62 60 }
+}

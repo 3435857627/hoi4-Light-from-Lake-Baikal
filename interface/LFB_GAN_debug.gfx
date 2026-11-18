@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_LFB_news_gansu_return"
+		textureFile = "gfx/event_pictures/news_event/GFX_LFB_news_gansu_return.png"
+	}
+}
