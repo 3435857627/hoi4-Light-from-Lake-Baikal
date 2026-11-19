@@ -137,7 +137,7 @@ COX_landreform_startup = {
         set_variable = { COX_landreform_local_unrest_change = 0 }
         set_variable = { COX_landreform_local_support = 15 }
         set_variable = { COX_landreform_local_support_increase_factor = 0.5 }
-        set_variable = { COX_landreform_local_support_decrease_factor = 2 }
+        set_variable = { COX_landreform_local_support_decrease_factor = 0.2 }
         set_variable = { COX_landreform_local_militia_demand = 15000 }
     }
     COX_landreform_refresh = yes
@@ -555,10 +555,10 @@ COX_landreform_update_calc = {
             check_variable = { COX_landreform_local_infrastructure > COX_landreform_local_infrastructure_expectation }
         }
         set_temp_variable = {
-            temp_COX_landreform_local_support_change = COX_landreform_local_infrastructure_expectation
+            temp_COX_landreform_local_support_change = COX_landreform_local_infrastructure
         }
         subtract_from_temp_variable= {
-            temp_COX_landreform_local_support_change = COX_landreform_local_infrastructure
+            temp_COX_landreform_local_support_change = COX_landreform_local_infrastructure_expectation
         }
         multiply_temp_variable = {
             temp_COX_landreform_local_support_change = COX_landreform_local_support_increase_factor
