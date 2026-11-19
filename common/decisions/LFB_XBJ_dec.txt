@@ -340,7 +340,7 @@ XBJ_northwest_crisis = {
 										state = 764										#
 										state = 906
 										state = 601
-										state = 2025										#
+										state = 2427										#
 									}
 								}
 								NOT = {

@@ -47,7 +47,7 @@ XBJ_Northwest_crisis_task_button_click_enabled_trigger = {
 		limit = { 
 			check_variable = { XBJ_northwest_crisis_this_state_task_id = 1 }
 			NOT = {
-				764 = {
+				2427 = {
 					check_variable = { XBJ_Northwest_crisis_controller = 4 }
 				}
 				604 = {
@@ -55,7 +55,7 @@ XBJ_Northwest_crisis_task_button_click_enabled_trigger = {
 				}
 			}
 			NOT = {
-				check_variable = { XBJ_northwest_crisis_target^XBJ_northwest_crisis_acted_state = 764 }
+				check_variable = { XBJ_northwest_crisis_target^XBJ_northwest_crisis_acted_state = 2427 }
 				check_variable = { XBJ_northwest_crisis_target^XBJ_northwest_crisis_acted_state = 604 }
 			}
 		}

@@ -125,9 +125,16 @@ scripted_gui = {
 				clr_country_flag = XBJ_Northwest_crisis_gui_visible
 			}
 			XBJ_Northwest_crisis_map_button_click = {
-				set_variable = { ROOT.XBJ_northwest_crisis_acted_state = XBJ_Northwest_crisis_map_button_i }
-				ROOT = {
-					XBJ_northwest_crisis_gui_update_visual_value = yes
+				if = {
+					limit = {
+						NOT = {
+							check_variable = { XBJ_northwest_crisis_target^XBJ_Northwest_crisis_map_button_i = 764 }
+						}
+					}
+					set_variable = { ROOT.XBJ_northwest_crisis_acted_state = XBJ_Northwest_crisis_map_button_i }
+					ROOT = {
+						XBJ_northwest_crisis_gui_update_visual_value = yes
+					}
 				}
 			}
 			XBJ_Northwest_crisis_task_button_click = {

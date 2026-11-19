@@ -437,6 +437,7 @@ XBJ_northwest_crisis_gui_update_task = {
 			NOT = {
 				state = 2433
 				state = 1302
+				state = 764
 			}
 			check_variable = {
 				XBJ_Northwest_crisis_visible = 0
@@ -456,6 +457,7 @@ XBJ_northwest_crisis_gui_update_task = {
 			NOT = {
 				state = 2433
 				state = 1302
+				state = 764
 			}
 			check_variable = {
 				XBJ_Northwest_crisis_visible > 0
@@ -472,6 +474,7 @@ XBJ_northwest_crisis_gui_update_task = {
 			NOT = {
 				state = 2433
 				state = 1302
+				state = 764
 			}
 			check_variable = {
 				XBJ_Northwest_crisis_visible > 0
@@ -491,6 +494,7 @@ XBJ_northwest_crisis_gui_update_task = {
 			NOT = {
 				state = 2433
 				state = 1302
+				state = 764
 			}
 			check_variable = {
 				XBJ_Northwest_crisis_visible > 0
@@ -507,6 +511,7 @@ XBJ_northwest_crisis_gui_update_task = {
 			NOT = {
 				state = 2433
 				state = 1302
+				state = 764
 			}
 			check_variable = {
 				XBJ_Northwest_crisis_visible > 0
@@ -526,6 +531,7 @@ XBJ_northwest_crisis_gui_update_task = {
 			NOT = {
 				state = 2433
 				state = 1302
+				state = 764
 			}
 			check_variable = {
 				XBJ_Northwest_crisis_controller = 4
@@ -545,6 +551,7 @@ XBJ_northwest_crisis_gui_update_task = {
 			NOT = {
 				state = 2433
 				state = 1302
+				state = 764
 			}
 			check_variable = {
 				XBJ_Northwest_crisis_visible > 1
@@ -564,6 +571,7 @@ XBJ_northwest_crisis_gui_update_task = {
 			NOT = {
 				state = 2433
 				state = 1302
+				state = 764
 			}
 			check_variable = {
 				XBJ_Northwest_crisis_visible > 1
@@ -583,6 +591,7 @@ XBJ_northwest_crisis_gui_update_task = {
 			NOT = {
 				state = 2433
 				state = 1302
+				state = 764
 			}
 			check_variable = {
 				XBJ_Northwest_crisis_visible > 1
@@ -602,6 +611,7 @@ XBJ_northwest_crisis_gui_update_task = {
 			NOT = {
 				state = 2433
 				state = 1302
+				state = 764
 			}
 			check_variable = {
 				XBJ_Northwest_crisis_visible > 1
@@ -817,7 +827,7 @@ XBJ_northwest_crisis_gui_working_group_task_timeout_effect = {
 		hidden_effect = {
 			if = {
 				limit = {
-					764 = {
+					2427 = {
 						check_variable = {
 							XBJ_Northwest_crisis_controller = 4
 						}
@@ -1421,7 +1431,7 @@ XBJ_northwest_crisis_gui_working_group_task_timeout_effect_tt = {
 		hidden_effect = {
 			if = {
 				limit = {
-					764 = {
+					2427 = {
 						check_variable = {
 							XBJ_Northwest_crisis_controller = 4
 						}
@@ -1755,7 +1765,7 @@ XBJ_Qinghai_Civilwar_setup = {
 	XBJ = {
 		transfer_state = 604
 		transfer_state = 764
-		transfer_state = 2025
+		transfer_state = 2427
 		906 = {
 			add_resource = {
 				type = power
@@ -1908,7 +1918,7 @@ XBJ_test = {
 					state = 1302
 					state = 906
 					state = 601
-					state = 2025
+					state = 2427
 					state = 2433
 				}
 			}

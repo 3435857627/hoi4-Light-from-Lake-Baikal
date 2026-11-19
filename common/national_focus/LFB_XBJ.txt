@@ -174,7 +174,7 @@ focus_tree = {
 						XBJ_Northwest_crisis_chaos_monthly = 4
 					}
 				}
-				2025 = {
+				2427 = {
 					add_to_variable = {
 						XBJ_Northwest_crisis_chaos_monthly = 3
 					}
@@ -316,7 +316,7 @@ focus_tree = {
 				616 = { is_owned_by = ROOT }
 				764 = { is_owned_by = ROOT }
 				906 = { is_owned_by = ROOT }
-				2025 = { is_owned_by = ROOT }
+				2427 = { is_owned_by = ROOT }
 			}
 		}
 		completion_reward = {
