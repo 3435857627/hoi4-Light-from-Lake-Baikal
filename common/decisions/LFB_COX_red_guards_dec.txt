@@ -7,12 +7,12 @@ COX_red_guards = {
 		available = {
 			command_power > 50
 		}
-		complete_effect = {
+		days_remove = 30
+		remove_effect = {
 			add_command_power = -50
 			army_experience = 20
 		}
 		custom_cost_text = decision_cost_50_cp
-		days_re_enable = 30
 		ai_will_do = { factor = 0 }
 	}
 	# ===== 一次性：陆军经验换永久精通度增长（每日 +0.25）=====
@@ -21,7 +21,8 @@ COX_red_guards = {
 		available = {
 			has_army_experience > 25
 		}
-		complete_effect = {
+		days_remove = 30
+		remove_effect = {
 			army_experience = -25
 			add_daily_mastery = {
 				amount = 0.25
@@ -41,7 +42,8 @@ COX_red_guards = {
 		available = {
 			has_completed_focus = COX_Inspect_The_Army
 		}
-		complete_effect = {
+		days_remove = 30
+		remove_effect = {
 			army_experience = 25
 			COX_old_army_idea_advance = yes
 			country_event = COX.201
@@ -57,7 +59,8 @@ COX_red_guards = {
 			has_idea = Transform_the_old_army1
 			has_manpower > 2000
 		}
-		complete_effect = {
+		days_remove = 30
+		remove_effect = {
 			add_manpower = -2000
 			army_experience = 25
 			COX_old_army_idea_advance = yes
@@ -72,15 +75,17 @@ COX_red_guards = {
 		cost = 20
 		fire_only_once = yes
 		available = {
-			has_idea = Transform_the_old_army12
+			OR = {
+				has_idea = Transform_the_old_army1
+				has_idea = Transform_the_old_army12
+			}
 		}
-		complete_effect = {
-			COX_old_army_idea_advance = yes
+		days_remove = 30
+		remove_effect = {
 			add_mastery = {
 				amount = 75
 				folder = land
 			}
-			country_event = COX.203
 		}
 		ai_will_do = { factor = 0 }
 	}
@@ -88,6 +93,11 @@ COX_red_guards = {
 	COX_Mobilize_militia_to_strengthen_border_defense = {
 		icon = GFX_Red_Army_comes_as_a_lightning
 		cost = 10
+		visible = {
+			NOT = {
+				has_idea = border_order
+			}
+		}
 		available = {
 			OR = {
 				has_idea = chaotic_band
@@ -98,7 +108,8 @@ COX_red_guards = {
 				infantry_equipment > 400
 			}
 		}
-		complete_effect = {
+		days_remove = 30
+		remove_effect = {
 			add_manpower = -4000
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
@@ -114,13 +125,14 @@ COX_red_guards = {
 		cost = 50
 		fire_only_once = yes
 		available = {
-			has_idea = Transform_the_old_army123
+			has_idea = Transform_the_old_army12
 			has_idea = chaotic_band3
 			has_equipment = {
 				infantry_equipment > 600
 			}
 		}
-		complete_effect = {
+		days_remove = 30
+		remove_effect = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
 				amount = 800
@@ -133,12 +145,14 @@ COX_red_guards = {
 				red_Guards_tech = 1
 			}
 			COX_new_army_setup = yes
+			COX_old_army_idea_advance = yes
 			army_experience = 50
 			add_mastery = {
 				amount = 100
 				folder = land
 			}
 			TNO_improve_army_professionalism_med = yes
+			country_event = COX.203
 		}
 		ai_will_do = { factor = 0 }
 	}
@@ -157,7 +171,8 @@ COX_red_guards = {
 				has_tech = infantry_aa8
 			}
 		}
-		complete_effect = {
+		days_remove = 30
+		remove_effect = {
 			set_technology = {
 				red_Guards_aa = 1
 			}

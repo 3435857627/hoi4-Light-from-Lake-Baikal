@@ -1,15 +1,15 @@
-# COX 工业恢复决议组类别（骨架）
-# 注意：不再挂 scripted_gui（机床兑换机制已删除）
+# COX 工业恢复决议组类别
+# 门槛用持久国家旗标（焦点树会被青海危机树替换，不能依赖 has_completed_focus）
 COX_industry_recovery = {
 	icon = GFX_second_land_reform
 	allowed = {
 		tag = COX
 	}
 	visible = {
-		#评估工业现状后解锁整组；新疆工业复苏是另一条支线，单独点完也要能看到
+		NOT = { has_global_flag = LFB_COX_Northwest_crisis_ended }
 		OR = {
-			has_completed_focus = COX_Evaluate_Industry_Level
-			has_completed_focus = COX_Xinjiang_Industry_Rehabilitation
+			has_country_flag = COX_rec_unlocked
+			has_country_flag = COX_lt_unlocked
 		}
 	}
 	available = {

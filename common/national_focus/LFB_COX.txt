@@ -1292,6 +1292,7 @@ focus_tree = {#土改后建设时期
 			focus = COX_A_Base_New_Born
 		}
 		completion_reward = {
+			set_country_flag = COX_rec_unlocked
 			country_event = {
 				id = COX.178
 				days = 0
@@ -1310,6 +1311,7 @@ focus_tree = {#土改后建设时期
 			focus = COX_Evaluate_Industry_Level
 		}
 		completion_reward = {
+			set_country_flag = COX_rec_focus_roads_old
 			617 = {
 				add_building_construction = {
 					type = infrastructure
@@ -1339,6 +1341,7 @@ focus_tree = {#土改后建设时期
 			focus = COX_Fix_The_Old_Paths_In_Xinjiang
 		}
 		completion_reward = {
+			set_country_flag = COX_rec_focus_roads_new
 			TNO_improve_industrial_equipment_med = yes
 			957 = {
 				add_building_construction = {
@@ -1425,6 +1428,7 @@ focus_tree = {#土改后建设时期
 			focus = COX_Temporary_Industry_Committee
 		}
 		completion_reward = {
+			set_country_flag = COX_rec_focus_corps
 			add_manpower = 2000
 			add_political_power = 50
 			TNO_improve_industrial_expertise_low = yes
@@ -1454,6 +1458,7 @@ focus_tree = {#土改后建设时期
 			focus = COX_Production_And_Construction_Corps
 		}
 		completion_reward = {
+			set_country_flag = COX_rec_focus_training
 			TNO_improve_industrial_expertise_low = yes
 			custom_effect_tooltip = COX_worker_training
 			country_event = {
@@ -1474,6 +1479,7 @@ focus_tree = {#土改后建设时期
 			focus = COX_Evaluate_Industry_Level
 		}
 		completion_reward = {
+			set_country_flag = COX_rec_focus_renew
 			custom_effect_tooltip = COX_equip_dev_rapid_tt
 			add_to_variable = { industrial_equipment_monthly_change = 3 }
 			custom_effect_tooltip = check_old_machines
@@ -1496,6 +1502,7 @@ focus_tree = {#土改后建设时期
 			focus = COX_Renew_The_Old_Facilities
 		}
 		completion_reward = {
+			set_country_flag = COX_rec_focus_import
 			custom_effect_tooltip = COX_equip_dev_tt
 			add_to_variable = { industrial_equipment_monthly_change = 2 }
 			custom_effect_tooltip = buy_new_machines
@@ -1546,6 +1553,7 @@ focus_tree = {#土改后建设时期
 			focus = COX_Promote_Locomobile_Tractors
 		}
 		completion_reward = {
+			set_country_flag = COX_lt_unlocked
 			swap_ideas = {
 				add_idea = early_industrialization
 				remove_idea = provisional_industrial_council

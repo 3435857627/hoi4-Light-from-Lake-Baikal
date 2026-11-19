@@ -360,6 +360,39 @@ on_actions = {
 				limit = {COX = {has_country_flag = COX_GAW_GUI_Avaliable}}
 				COX_GAW_GUI_alert_ckeck = yes
 			}
+			# —— 工业恢复旗标迁移（旧存档：换树前把已完成国策补成旗标）——
+			if = {
+				limit = { has_completed_focus = COX_Evaluate_Industry_Level }
+				set_country_flag = COX_rec_unlocked
+			}
+			if = {
+				limit = { has_completed_focus = COX_Xinjiang_Industry_Rehabilitation }
+				set_country_flag = COX_lt_unlocked
+			}
+			if = {
+				limit = { has_completed_focus = COX_Fix_The_Old_Paths_In_Xinjiang }
+				set_country_flag = COX_rec_focus_roads_old
+			}
+			if = {
+				limit = { has_completed_focus = COX_A_New_Road_Design }
+				set_country_flag = COX_rec_focus_roads_new
+			}
+			if = {
+				limit = { has_completed_focus = COX_Workers_Training_Agency }
+				set_country_flag = COX_rec_focus_training
+			}
+			if = {
+				limit = { has_completed_focus = COX_Production_And_Construction_Corps }
+				set_country_flag = COX_rec_focus_corps
+			}
+			if = {
+				limit = { has_completed_focus = COX_Import_New_Machinery_From_Buryatia }
+				set_country_flag = COX_rec_focus_import
+			}
+			if = {
+				limit = { has_completed_focus = COX_Renew_The_Old_Facilities }
+				set_country_flag = COX_rec_focus_renew
+			}
 		}
 	}
 }

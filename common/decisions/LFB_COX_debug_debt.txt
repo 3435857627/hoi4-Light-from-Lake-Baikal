@@ -119,4 +119,24 @@ COX_debug_debt = {
 			log = "[GetDateText]: [Root.GetName]: DEBT_DEBUG; national_debt=[?national_debt]; debt_to_GDP_ratio=[?debt_to_GDP_ratio]; GDP=[?GDP]; interest_rates=[?interest_rates]"
 		}
 	}
+	COX_debug_set_recovery_flags = {   # 补设工业恢复旗标（老存档测试用）
+		visible = {
+			always = yes
+		}
+		available = {
+			always = yes
+		}
+		cost = 0
+		days_remove = 0
+		complete_effect = {
+			set_country_flag = COX_rec_unlocked
+			set_country_flag = COX_lt_unlocked
+			set_country_flag = COX_rec_focus_roads_old
+			set_country_flag = COX_rec_focus_roads_new
+			set_country_flag = COX_rec_focus_training
+			set_country_flag = COX_rec_focus_corps
+			set_country_flag = COX_rec_focus_import
+			set_country_flag = COX_rec_focus_renew
+		}
+	}
 }
