@@ -1,0 +1,78 @@
+add_namespace = LFB_OFN
+
+# OFN 对华援助事件链
+# 1：参加抗日战争两个月后，按印度内战结果发放援助
+# 2：抗战胜利三天后，哥伦比亚特区 KMT 流亡政府解散
+
+country_event = {
+	id = LFB_OFN.1
+	title = LFB_OFN.1.t
+	desc = LFB_OFN.1.d
+	picture = GFX_LFB_OFN_event_1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = LFB_OFN.1.a
+		if = {
+			limit = {
+				NOT = { has_global_flag = IND_peaceful_reunification }
+				country_exists = IND
+				NOT = { country_exists = AZH }
+			}
+			custom_effect_tooltip = LFB_OFN.1.tt_win
+			add_ideas = COX_OFN_support
+			hidden_effect = {
+				load_oob = "LFB_OFN_volunteers"
+				create_unit = {
+					division = "name = \"OFN亚洲志愿军第一支队\" division_template = \"OFN亚洲志愿军\" start_experience_factor = 0.6 start_equipment_factor = 1.0"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"OFN亚洲志愿军第二支队\" division_template = \"OFN亚洲志愿军\" start_experience_factor = 0.6 start_equipment_factor = 1.0"
+					owner = ROOT
+				}
+				add_equipment_to_stockpile = {
+					type = APC_equipment_2
+					amount = 300
+					producer = USA
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_3
+					amount = 800
+					producer = USA
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment_2
+					amount = 200
+					producer = USA
+				}
+			}
+		}
+		else = {
+			custom_effect_tooltip = LFB_OFN.1.tt_lose
+			add_ideas = COX_OFN_support
+		}
+	}
+}
+
+country_event = {
+	id = LFB_OFN.2
+	title = LFB_OFN.2.t
+	desc = LFB_OFN.2.d
+	picture = GFX_LFB_OFN_event_2
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = LFB_OFN.2.a
+		custom_effect_tooltip = LFB_OFN.2.tt
+		hidden_effect = {
+			992 = {
+				remove_dynamic_modifier = { modifier = America_KMT }
+			}
+		}
+	}
+}

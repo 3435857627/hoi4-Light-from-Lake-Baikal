@@ -1592,6 +1592,8 @@ COX_NC_Peace_Deal_NCC_Peace_effects = {
 		clr_country_flag = country_has_gui
 		clr_country_flag = COX_GAW_GUI_Avaliable
 		set_country_flag = COX_GAW_victory
+		#抗战胜利三天后：OFN 援助续篇，哥伦比亚特区 KMT 流亡政府解散（事件 LFB_OFN.2）
+		country_event = { id = LFB_OFN.2 days = 3 }
 		remove_mission = COX_GAW_GUI_Chaos_Increase_timer
 		remove_mission = COX_GAW_GUI_NCC_Fort_timer
 		remove_mission = COX_GAW_GUI_MAN_Fort_timer

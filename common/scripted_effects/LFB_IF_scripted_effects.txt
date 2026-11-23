@@ -1038,6 +1038,8 @@ LFB_NC_GAW_Start_Effects = {
 		}
 		COX_GAW_GUI_stage_3_initialize = yes
 		set_country_flag = COX_GAW_GUI_Avaliable
+		#OFN 对华援助：参战两个月后按印度内战结果发放（事件 LFB_OFN.1）
+		country_event = { id = LFB_OFN.1 days = 60 }
 		declare_war_on = { 
 			target = JAP
 			type = annex_everything 

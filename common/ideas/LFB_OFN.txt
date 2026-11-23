@@ -1,0 +1,13 @@
+ideas = {
+	country = {
+		COX_OFN_support = {
+			picture = generic_ofn_support
+			name = COX_OFN_support
+			modifier = {
+				political_power_gain = 0.5
+				gdp_growth_modifier = 5
+				war_support_factor = 0.1
+			}
+		}
+	}
+}
