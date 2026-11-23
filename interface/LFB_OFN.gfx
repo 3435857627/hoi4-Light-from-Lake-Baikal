@@ -1,11 +1,11 @@
 spriteTypes = {
 	spriteType = {
 		name = "GFX_LFB_OFN_event_1"
-		texturefile = "gfx/event_pictures/LFB_OFN_event_1.dds"
+		texturefile = "gfx/event_pictures/LFB_OFN_event_1.png"
 	}
 	spriteType = {
 		name = "GFX_LFB_OFN_event_2"
-		texturefile = "gfx/event_pictures/LFB_OFN_event_2.dds"
+		texturefile = "gfx/event_pictures/LFB_OFN_event_2.png"
 	}
 	spriteType = {
 		name = "GFX_LFB_chinese_texticon"

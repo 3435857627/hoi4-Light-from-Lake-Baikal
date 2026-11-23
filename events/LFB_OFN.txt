@@ -24,6 +24,28 @@ country_event = {
 			custom_effect_tooltip = LFB_OFN.1.tt_win
 			hidden_effect = {
 				add_ideas = COX_OFN_support
+				# 必须先补美械，再建部队：create_unit 会立刻按库存配装满编，
+				# 顺序反了新部队就吃本国库存里的苏械（PTRS / B-4 / 0AS-45）
+				add_equipment_to_stockpile = {
+					type = APC_equipment_2
+					amount = 1200
+					producer = USA
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_3
+					amount = 2400
+					producer = USA
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_2
+					amount = 240
+					producer = USA
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment_2
+					amount = 240
+					producer = USA
+				}
 				load_oob = "LFB_OFN_volunteers"
 				# create_unit 必须在州作用域里调用（否则报 invalid scope state）
 				capital_scope = {
@@ -35,21 +57,6 @@ country_event = {
 						division = "name = \"OFN亚洲志愿军第二支队\" division_template = \"OFN亚洲志愿军\" start_experience_factor = 0.6 start_equipment_factor = 1.0"
 						owner = ROOT
 					}
-				}
-				add_equipment_to_stockpile = {
-					type = APC_equipment_2
-					amount = 1000
-					producer = USA
-				}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_3
-					amount = 2000
-					producer = USA
-				}
-				add_equipment_to_stockpile = {
-					type = anti_tank_equipment_2
-					amount = 200
-					producer = USA
 				}
 			}
 		}
