@@ -4,7 +4,7 @@ capital = 608 #Beijing
 recruit_character = NCC_Generic_Vacant
 fill_empty_minister_nochecks = yes # Please remove if you're adding ministers.
 
-recruit_character = NCC_xu_liang
+recruit_character = CHI_wang_yintai
 recruit_character = SHX_su_tiren
 
 NCC = {
@@ -13,6 +13,7 @@ NCC = {
 
 oob = "NCC_GAW"
 
+add_manpower = 500000
 set_war_support = 1.00
 set_stability = 1.00
 
@@ -36,8 +37,8 @@ set_popularities = {
 	paternalism = 15
 	despotism = 20
 	fascism = 60
+	fascism_2 = 5
 	national_socialism = 0
-	ultranationalism = 5
 	
 }
 
@@ -45,7 +46,7 @@ set_cosmetic_tag = CHI_JAP_PUP
 
 add_ideas = {
 	#Country
-	Sphere_Imp_Protectorate
+	Sphere_Fully_Dependent
 	
 	#Political
 	tno_political_parties_one_party_state

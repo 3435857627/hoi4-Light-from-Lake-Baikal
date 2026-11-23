@@ -86,10 +86,19 @@ COX_industry_recovery = {
 		days_remove = 60
 		fire_only_once = yes
 		remove_effect = {
-			build_railway = {
-				level = 1
-				fallback = yes
-				path = { 17210 19400 12119 1766 }
+			2431 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			619 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
 			}
 			if = {
 				limit = { has_variable = national_debt }
