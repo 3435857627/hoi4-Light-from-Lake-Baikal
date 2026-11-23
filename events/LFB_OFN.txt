@@ -22,25 +22,28 @@ country_event = {
 				NOT = { country_exists = AZH }
 			}
 			custom_effect_tooltip = LFB_OFN.1.tt_win
-			add_ideas = COX_OFN_support
 			hidden_effect = {
+				add_ideas = COX_OFN_support
 				load_oob = "LFB_OFN_volunteers"
-				create_unit = {
-					division = "name = \"OFN亚洲志愿军第一支队\" division_template = \"OFN亚洲志愿军\" start_experience_factor = 0.6 start_equipment_factor = 1.0"
-					owner = ROOT
-				}
-				create_unit = {
-					division = "name = \"OFN亚洲志愿军第二支队\" division_template = \"OFN亚洲志愿军\" start_experience_factor = 0.6 start_equipment_factor = 1.0"
-					owner = ROOT
+				# create_unit 必须在州作用域里调用（否则报 invalid scope state）
+				capital_scope = {
+					create_unit = {
+						division = "name = \"OFN亚洲志愿军第一支队\" division_template = \"OFN亚洲志愿军\" start_experience_factor = 0.6 start_equipment_factor = 1.0"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"OFN亚洲志愿军第二支队\" division_template = \"OFN亚洲志愿军\" start_experience_factor = 0.6 start_equipment_factor = 1.0"
+						owner = ROOT
+					}
 				}
 				add_equipment_to_stockpile = {
 					type = APC_equipment_2
-					amount = 300
+					amount = 1000
 					producer = USA
 				}
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_3
-					amount = 800
+					amount = 2000
 					producer = USA
 				}
 				add_equipment_to_stockpile = {
@@ -52,7 +55,9 @@ country_event = {
 		}
 		else = {
 			custom_effect_tooltip = LFB_OFN.1.tt_lose
-			add_ideas = COX_OFN_support
+			hidden_effect = {
+				add_ideas = COX_OFN_support
+			}
 		}
 	}
 }
