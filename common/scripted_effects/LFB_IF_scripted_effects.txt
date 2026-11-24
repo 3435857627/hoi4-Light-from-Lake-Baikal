@@ -899,6 +899,8 @@ LFB_NC_MEN_civ_war_start_effects = {
 
 	MEA = { 
 		transfer_state = 814
+		transfer_state = 2400
+		transfer_state = 2401
 		transfer_state = 2402
 	}  	
 	MEN= { 
@@ -926,8 +928,6 @@ LFB_NC_MEN_civ_war_start_effects = {
 			}
 		}
 		MEA = {
-			transfer_state = 2400
-
 			add_timed_idea = {
     			idea = MEN_attack_idea_1
     			days = 730
