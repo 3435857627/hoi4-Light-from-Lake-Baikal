@@ -2,6 +2,7 @@
 # 门槛用持久国家旗标（焦点树会被青海危机树替换，不能依赖 has_completed_focus）
 COX_industry_recovery = {
 	icon = GFX_second_land_reform
+	picture = GFX_COX_industry_recovery_pic
 	allowed = {
 		tag = COX
 	}

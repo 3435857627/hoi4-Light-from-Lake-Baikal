@@ -35,4 +35,8 @@ spriteTypes = {
         name = "Gate_of_Steiner"
         texturefile = "gfx/interface/decisions/Gate_of_Steiner.png"
     }
+    spriteType = {
+        name = "GFX_COX_industry_recovery_pic"
+        texturefile = "gfx/interface/decisions/COX_industry_recovery_pic.png"
+    }
 }

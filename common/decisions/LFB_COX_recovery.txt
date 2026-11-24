@@ -6,6 +6,7 @@
 COX_industry_recovery = {
 
 	COX_Rec_Continue_Hami_Aksu_Railway = {   # 继续哈密-阿克苏铁路
+		icon = GFX_decision_generic_train
 		visible = {
 			has_country_flag = COX_rec_unlocked
 			has_country_flag = COX_rec_focus_roads_old
@@ -39,6 +40,7 @@ COX_industry_recovery = {
 	}
 
 	COX_Rec_Urumqi_Hami_Railway = {   # 修建乌鲁木齐-哈密铁路
+		icon = GFX_decision_generic_train
 		visible = {
 			has_country_flag = COX_rec_unlocked
 			has_country_flag = COX_rec_focus_roads_new
@@ -72,6 +74,7 @@ COX_industry_recovery = {
 	}
 
 	COX_Rec_Link_Southern_Xinjiang = {   # 链接南疆
+		icon = GFX_decision_generic_infrastructure
 		visible = {
 			has_country_flag = COX_rec_unlocked
 			has_country_flag = COX_rec_focus_roads_new
@@ -114,6 +117,7 @@ COX_industry_recovery = {
 	}
 
 	COX_Rec_Resettle_Border_Refugees = {   # 再安置边境难民
+		icon = GFX_decision_generic_humanitarian_aid_increase
 		visible = {
 			has_country_flag = COX_rec_unlocked
 		}
@@ -153,6 +157,7 @@ COX_industry_recovery = {
 	}
 
 	COX_Rec_Promote_Internal_Trade = {   # 推动省内贸易
+		icon = GFX_decision_generic_money
 		visible = {
 			has_country_flag = COX_rec_unlocked
 		}
@@ -218,6 +223,7 @@ COX_industry_recovery = {
 	}
 
 	COX_Rec_Technician_Training = {   # 技工培训
+		icon = GFX_decision_generic_education
 		visible = {
 			has_country_flag = COX_rec_unlocked
 			has_country_flag = COX_rec_focus_training
@@ -238,6 +244,7 @@ COX_industry_recovery = {
 	}
 
 	COX_Rec_Yamasu_Iron_Mine = {   # 发掘雅满苏铁矿
+		icon = GFX_decision_generic_expand_mines
 		visible = {
 			has_country_flag = COX_rec_unlocked
 			has_country_flag = COX_rec_focus_corps
@@ -263,6 +270,7 @@ COX_industry_recovery = {
 	}
 
 	COX_Rec_Sino_Soviet_Friendship_Steelworks = {   # 建立中苏友谊铁厂
+		icon = GFX_decision_generic_heavy_industry
 		visible = {
 			has_country_flag = COX_rec_unlocked
 			has_country_flag = COX_rec_focus_import
@@ -298,6 +306,7 @@ COX_industry_recovery = {
 	}
 
 	COX_Rec_Renovate_Dihua_Cement_Plant = {   # 翻新迪化洋灰厂
+		icon = GFX_decision_generic_construction
 		visible = {
 			has_country_flag = COX_rec_unlocked
 			has_country_flag = COX_rec_focus_renew
@@ -319,6 +328,7 @@ COX_industry_recovery = {
 	}
 
 	COX_Rec_Reorganize_Dihua_Arsenal = {   # 重组新疆兵工厂
+		icon = GFX_decision_generic_arms_crate
 		visible = {
 			has_country_flag = COX_rec_unlocked
 			has_country_flag = COX_rec_focus_renew
@@ -340,6 +350,7 @@ COX_industry_recovery = {
 	}
 
 	COX_LT_Weihuliang_Power_Plant = {   # 苇湖梁火电厂
+		icon = GFX_decision_generic_power
 		visible = {
 			has_country_flag = COX_lt_unlocked
 		}
@@ -366,6 +377,7 @@ COX_industry_recovery = {
 	}
 
 	COX_LT_Southern_Xinjiang_Power_Plant = {   # 南疆火电厂
+		icon = GFX_decision_generic_power
 		visible = {
 			has_country_flag = COX_lt_unlocked
 		}
@@ -392,6 +404,7 @@ COX_industry_recovery = {
 	}
 
 	COX_LT_Ili_Hydropower = {   # 伊犁水电
+		icon = GFX_decision_generic_dam
 		visible = {
 			always = no
 		}
@@ -418,6 +431,7 @@ COX_industry_recovery = {
 	}
 
 	COX_LT_Kashgar_Cotton_Mill = {   # 喀什棉纺厂
+		icon = GFX_decision_generic_factory_blue
 		visible = {
 			has_country_flag = COX_lt_unlocked
 		}
@@ -447,6 +461,7 @@ COX_industry_recovery = {
 	}
 
 	COX_LT_October_Tractor_Plant = {   # 十月拖拉机厂
+		icon = GFX_decision_generic_motorized
 		visible = {
 			has_country_flag = COX_lt_unlocked
 		}
@@ -482,6 +497,7 @@ COX_industry_recovery = {
 	}
 
 	COX_LT_Urumqi_Aluminium_Plant = {   # 乌鲁木齐铝厂
+		icon = GFX_decision_generic_industry
 		visible = {
 			has_country_flag = COX_lt_unlocked
 		}
@@ -511,6 +527,7 @@ COX_industry_recovery = {
 	}
 
 	COX_LT_Xingxingxia_Tungsten_Mine = {   # 开发星星峡钨矿
+		icon = GFX_decision_generic_mining
 		visible = {
 			has_country_flag = COX_lt_unlocked
 		}
