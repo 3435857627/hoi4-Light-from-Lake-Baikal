@@ -318,7 +318,7 @@ COX_industry_recovery = {
 		}
 	}
 
-	COX_Rec_Reorganize_Dihua_Arsenal = {   # 重组迪化兵工厂
+	COX_Rec_Reorganize_Dihua_Arsenal = {   # 重组新疆兵工厂
 		visible = {
 			has_country_flag = COX_rec_unlocked
 			has_country_flag = COX_rec_focus_renew
@@ -344,8 +344,10 @@ COX_industry_recovery = {
 			has_country_flag = COX_lt_unlocked
 		}
 		available = {
-			is_ai = yes
-			has_global_flag = LFB_COX_Northwest_crisis_ongoing
+			custom_trigger_tooltip = {
+				tooltip = COX_rec_need_ai
+				is_ai = yes
+			}
 		}
 		cost = 25
 		days_remove = 0
@@ -368,8 +370,10 @@ COX_industry_recovery = {
 			has_country_flag = COX_lt_unlocked
 		}
 		available = {
-			is_ai = yes
-			has_global_flag = LFB_COX_Northwest_crisis_ongoing
+			custom_trigger_tooltip = {
+				tooltip = COX_rec_need_ai
+				is_ai = yes
+			}
 		}
 		cost = 25
 		days_remove = 0
@@ -389,11 +393,13 @@ COX_industry_recovery = {
 
 	COX_LT_Ili_Hydropower = {   # 伊犁水电
 		visible = {
-			has_country_flag = COX_lt_unlocked
+			always = no
 		}
 		available = {
-			is_ai = yes
-			has_global_flag = LFB_COX_Northwest_crisis_ongoing
+			custom_trigger_tooltip = {
+				tooltip = COX_rec_need_ai
+				is_ai = yes
+			}
 		}
 		cost = 25
 		days_remove = 0
@@ -420,8 +426,10 @@ COX_industry_recovery = {
 				tooltip = COX_rec_need_lt_power_s
 				has_country_flag = COX_rec_done_lt_power_s
 			}
-			is_ai = yes
-			has_global_flag = LFB_COX_Northwest_crisis_ongoing
+			custom_trigger_tooltip = {
+				tooltip = COX_rec_need_ai
+				is_ai = yes
+			}
 		}
 		cost = 25
 		days_remove = 0
@@ -447,8 +455,10 @@ COX_industry_recovery = {
 				tooltip = COX_rec_need_lt_cotton
 				has_country_flag = COX_rec_done_lt_cotton
 			}
-			is_ai = yes
-			has_global_flag = LFB_COX_Northwest_crisis_ongoing
+			custom_trigger_tooltip = {
+				tooltip = COX_rec_need_ai
+				is_ai = yes
+			}
 		}
 		cost = 25
 		days_remove = 0
@@ -466,6 +476,7 @@ COX_industry_recovery = {
 			}
 			calculate_debt_to_GDP_ratio = yes
 			update_economy_tab = yes
+			TNO_improve_agriculture_high = yes
 			set_country_flag = COX_rec_done_lt_tractor
 		}
 	}
@@ -476,11 +487,13 @@ COX_industry_recovery = {
 		}
 		available = {
 			custom_trigger_tooltip = {
-				tooltip = COX_rec_need_lt_hydro
-				has_country_flag = COX_rec_done_lt_hydro
+				tooltip = COX_rec_need_lt_power_w
+				has_country_flag = COX_rec_done_lt_power_w
 			}
-			is_ai = yes
-			has_global_flag = LFB_COX_Northwest_crisis_ongoing
+			custom_trigger_tooltip = {
+				tooltip = COX_rec_need_ai
+				is_ai = yes
+			}
 		}
 		cost = 25
 		days_remove = 0
@@ -506,8 +519,10 @@ COX_industry_recovery = {
 				tooltip = COX_rec_need_lt_power_s
 				has_country_flag = COX_rec_done_lt_power_s
 			}
-			is_ai = yes
-			has_global_flag = LFB_COX_Northwest_crisis_ongoing
+			custom_trigger_tooltip = {
+				tooltip = COX_rec_need_ai
+				is_ai = yes
+			}
 		}
 		cost = 25
 		days_remove = 0

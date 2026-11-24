@@ -12,8 +12,5 @@ COX_industry_recovery = {
 			has_country_flag = COX_lt_unlocked
 		}
 	}
-	available = {
-		always = yes
-	}
 	visible_when_empty = yes
 }
