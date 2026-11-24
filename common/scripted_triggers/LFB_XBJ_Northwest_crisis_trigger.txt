@@ -192,7 +192,6 @@ XBJ_Northwest_crisis_task_button_click_enabled_trigger = {
 		limit = { 
 			check_variable = { XBJ_northwest_crisis_this_state_task_id = 11 }
 		}
-		has_army_experience > 10
 		has_war = yes
 		has_completed_focus = XBJ_Support_Madunjing
 	}

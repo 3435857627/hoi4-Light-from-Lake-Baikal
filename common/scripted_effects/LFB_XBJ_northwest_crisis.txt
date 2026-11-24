@@ -1307,7 +1307,6 @@ XBJ_northwest_crisis_gui_working_group_task_complete_effect = {
 				XBJ_northwest_crisis_this_state_task_id = 11
 			}
 		}
-		army_experience = -10
 	}
 	else_if = {
 		limit = {
