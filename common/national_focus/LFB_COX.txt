@@ -1151,7 +1151,7 @@ focus_tree = {#土改后建设时期
 			focus = COX_People_Political_Consultative_Conference_of_Xinjiang
 		}
 		completion_reward = {
-			TNO_improve_academic_base_low = yes
+			TNO_improve_academic_base_high = yes
 			country_event = {
 				id = COX.76
 				days = 1
@@ -1590,6 +1590,7 @@ focus_tree = {#土改后建设时期
 			TNO_improve_political_parties_policy_effectiveness_monthly_low = yes
 			TNO_improve_army_professionalism_low = yes
 			TNO_improve_industrial_expertise_low = yes
+			TNO_improve_healthcare_high = yes
 			TNO_improve_admin_efficiency_low = yes
 			set_temp_variable = {
 				temp_econ_GDP_boost_percentage = 0.01
