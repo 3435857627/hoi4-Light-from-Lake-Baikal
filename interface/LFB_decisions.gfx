@@ -39,4 +39,8 @@ spriteTypes = {
         name = "GFX_COX_industry_recovery_pic"
         texturefile = "gfx/interface/decisions/COX_industry_recovery_pic.png"
     }
+    spriteType = {
+        name = "GFX_COX_red_guards_pic"
+        texturefile = "gfx/interface/decisions/COX_red_guards_pic.png"
+    }
 }
