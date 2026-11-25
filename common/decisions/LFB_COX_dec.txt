@@ -729,6 +729,28 @@ second_land_reform = {
 # 调试决议 进入新世界 #
 ######################
 Open_the_Gate_of_Steiner = {
+	# 调试：一键显示/隐藏「整合兰州」「工业恢复」「赤卫队」三个决议组，纯粹为了看配图
+	COX_toggle_three_decision_groups = {
+		icon = GFX_decision_generic_decision
+		visible = {
+			tag = COX
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			if = {
+				limit = { has_country_flag = COX_debug_show_decision_groups }
+				clr_country_flag = COX_debug_show_decision_groups
+			}
+			else = {
+				set_country_flag = COX_debug_show_decision_groups
+			}
+		}
+	}
 	Red_Army_comes_as_a_lightning = {
 		icon = GFX_Mao_comes_as_a_lightning
 		visible = {

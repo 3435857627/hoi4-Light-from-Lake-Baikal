@@ -7,10 +7,16 @@ COX_industry_recovery = {
 		tag = COX
 	}
 	visible = {
-		NOT = { has_global_flag = LFB_COX_Northwest_crisis_ended }
 		OR = {
-			has_country_flag = COX_rec_unlocked
-			has_country_flag = COX_lt_unlocked
+			#调试：在命运石之门里强制显示（无视西北危机是否结束）
+			has_country_flag = COX_debug_show_decision_groups
+			AND = {
+				NOT = { has_global_flag = LFB_COX_Northwest_crisis_ended }
+				OR = {
+					has_country_flag = COX_rec_unlocked
+					has_country_flag = COX_lt_unlocked
+				}
+			}
 		}
 	}
 	visible_when_empty = yes

@@ -193,3 +193,5 @@
  COX_Mobilize_militia_to_strengthen_border_defense_desc:0 "西伯利亚的土匪流寇始终是北疆挥之不去的阴霾，在土改过程中，各个聚居点都建立起了自保力量。我们可以为他们提供武器，教授他们如何利用盛世才留下的哨塔与碉楼，更进一步，这些力量可以被组织起来，形成一支机动兵力，足以压倒任何试图越境的势力，彻底确保北疆无忧。"
  COX_New_army_new_look_desc:0 "从俄罗斯归来的游子；辗转战斗二十余年的老兵；刚刚得到解放的农奴……这些迥异的人构成了崭新的工农红军，他们洋溢着昂扬的激情，准备迈向新的战场。"
  COX_organize_training_mastery:0 "组织大练兵"
+ COX_toggle_three_decision_groups:0 "调试：显示/隐藏三个决议组"
+ COX_toggle_three_decision_groups_desc:0 "点一次把「整合兰州」「新疆工业恢复计划」「赤卫队」三个决议组强制调出来（不满足解锁条件也显示），再点一次关掉。只用于检查配图排版，不改变任何存档逻辑。"

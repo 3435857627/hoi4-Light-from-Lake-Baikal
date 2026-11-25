@@ -12,6 +12,7 @@ COX_red_guards = {
 		OR = {
 			has_completed_focus = COX_Inspect_The_Army
 			has_country_flag = COX_red_army_reborn
+			has_country_flag = COX_debug_show_decision_groups	#调试：在命运石之门里强制显示
 		}
 	}
 	visible_when_empty = yes
